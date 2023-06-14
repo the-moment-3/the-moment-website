@@ -1,0 +1,52 @@
+{
+  "name": "@alife/i18n",
+  "version": "2.0.4",
+  "description": "多语言文案基础组件",
+  "main": "index.js",
+  "types": "lib/index.d.ts",
+  "author": {
+    "name": "kehao.ykh",
+    "email": "kehao.ykh@alibaba-inc.com"
+  },
+  "scripts": {
+    "lint": "tslint --fix 'src/**/*.@ts'",
+    "precommit": "npm run lint",
+    "prebuild": "npm run test",
+    "build": "tsc --build tsconfig.json",
+    "test": "jest --coverage",
+    "test-watch": "jest --coverage --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:trade-lab/i18n.git"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/jest": "^22.1.1",
+    "escape-string-regexp": "^2.0.0",
+    "husky": "0.x",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "5.x",
+    "typescript": "^3.7.3"
+  },
+  "keywords": [
+    "component",
+    "intel",
+    "i18n"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "<rootDir>/lib"
+    ],
+    "testEnvironment": "node"
+  },
+  "__npminstall_done": true,
+  "_from": "@alife/i18n@2.0.4",
+  "_resolved": "https://registry.anpm.alibaba-inc.com/@alife/i18n/-/i18n-2.0.4.tgz"
+}

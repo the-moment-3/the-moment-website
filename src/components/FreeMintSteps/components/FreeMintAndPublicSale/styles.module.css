@@ -1,0 +1,388 @@
+@media (min-width: 1200px) {
+  .container {
+    gap: 156px;
+    width: 1022px;
+    height: 456px;
+    padding: 48px 70px 48px 40px;
+    border-radius: 32px;
+    .leftSide {
+      gap: 24px;
+      width: 512px;
+      height: 456px;
+      .title {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      .counterContainer {
+        .counter {
+          gap: 36px;
+          height: 54px;
+          font-size: 45px;
+          .minus {
+            width: 20px;
+            height: 4px;
+          }
+          .count {
+            width: 32px;
+          }
+          .adds {
+            .add {
+              top: -1px;
+              left: -10px;
+              height: 4px;
+              width: 20px;
+            }
+          }
+          .minusBtn,
+          .addBtn {
+            width: 54px;
+            height: 54px;
+            border-radius: 54px;
+          }
+        }
+        .counterDesc {
+          height: 48px;
+          margin-top: 24px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      .priceContainer {
+        line-height: 32px;
+        .priceDesc {
+          gap: 12px;
+          font-size: 20px;
+        }
+        .price {
+          gap: 12px;
+          font-size: 20px;
+        }
+      }
+      .mintButton {
+        button {
+          width: 512px;
+          height: 56px;
+          border-radius: 16px;
+          font-size: 20px;
+          background-color: #bdea4d;
+        }
+      }
+      .mobileNftRemainer {
+        display: none;
+      }
+    }
+    .rightSide {
+      width: 422px;
+      height: 422px;
+      margin-top: 32px;
+      .nftBox {
+        width: 240px;
+        height: 350px;
+      }
+      .nftRemainer {
+        margin-top: 36px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    gap: 13vw;
+    width: 85.16666667vw;
+    height: 38vw;
+    padding: 4vw 5.83333333vw 4vw 3.33333333vw;
+    border-radius: 2.66666667vw;
+    .leftSide {
+      gap: 2vw;
+      width: 42.66666667vw;
+      height: 38vw;
+      .title {
+        font-size: 2vw;
+        line-height: 2.66666667vw;
+      }
+      .counterContainer {
+        .counter {
+          gap: 3vw;
+          height: 4.5vw;
+          font-size: 3.75vw;
+          .minus {
+            width: 1.66666667vw;
+            height: 0.33333333vw;
+          }
+          .count {
+            width: 2.66666667vw;
+          }
+          .adds {
+            .add {
+              top: 0.08333333vw;
+              left: -0.83333333vw;
+              height: 0.33333333vw;
+              width: 1.66666667vw;
+            }
+          }
+          .minusBtn,
+          .addBtn {
+            width: 4.5vw;
+            height: 4.5vw;
+            border-radius: 4.5vw;
+          }
+        }
+        .counterDesc {
+          height: 4vw;
+          margin-top: 2vw;
+          font-size: 1.33333333vw;
+          line-height: 2vw;
+        }
+      }
+      .priceContainer {
+        line-height: 2.66666667vw;
+        .priceDesc {
+          gap: 1vw;
+          font-size: 1.66666667vw;
+        }
+        .price {
+          gap: 1vw;
+          font-size: 1.66666667vw;
+        }
+      }
+      .mintButton {
+        button {
+          width: 42.66666667vw;
+          height: 4.66666667vw;
+          border-radius: 1.33333333vw;
+          font-size: 1.66666667vw;
+          background-color: #bdea4d;
+        }
+      }
+      .mobileNftRemainer {
+        display: none;
+      }
+    }
+    .rightSide {
+      width: 35.16666667vw;
+      height: 35.16666667vw;
+      margin-top: 2.66666667vw;
+      .nftBox {
+        width: 20vw;
+        height: 29.16666667vw;
+      }
+      .nftRemainer {
+        margin-top: 3vw;
+        font-size: 1.66666667vw;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .wrapper {
+    position: relative;
+    width: 686rpx;
+    height: 820rpx;
+    .container {
+      width: 606rpx;
+      height: 624rpx;
+      margin-top: 100rpx;
+      padding: 64rpx 40rpx 36rpx;
+      border-radius: 32rpx;
+      .leftSide {
+        width: 606rpx;
+        height: 616rpx;
+        .title {
+          font-size: 30rpx;
+          line-height: 32rpx;
+        }
+        .counterContainer {
+          margin-top: 32rpx;
+          margin-bottom: 48rpx;
+          .counter {
+            gap: 40rpx;
+            height: 64rpx;
+            font-size: 45rpx;
+            .minus {
+              width: 32rpx;
+              height: 4rpx;
+            }
+            .count {
+              width: 32rpx;
+            }
+            .adds {
+              .add {
+                top: -2rpx;
+                left: -16rpx;
+                height: 4rpx;
+                width: 32rpx;
+              }
+            }
+            .minusBtn,
+            .addBtn {
+              width: 64rpx;
+              height: 64rpx;
+              border-radius: 64rpx;
+            }
+          }
+          .counterDesc {
+            width: 502rpx;
+            height: 64rpx;
+            margin-top: 16rpx;
+            font-size: 24rpx;
+            line-height: 32rpx;
+          }
+        }
+        .priceContainer {
+          line-height: 32rpx;
+          .priceDesc {
+            gap: 16rpx;
+            font-size: 24rpx;
+          }
+          .price {
+            gap: 16rpx;
+            font-size: 24rpx;
+          }
+        }
+        .mintButton {
+          button {
+            width: 606rpx;
+            height: 88rpx;
+            margin-top: 48rpx;
+            border-radius: 32rpx;
+            font-size: 30rpx;
+            background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01GMYI431Sf56MeddGc_!!6000000002273-2-tps-606-88.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+        }
+        .mobileNftRemainer {
+          width: 606rpx;
+          height: 32rpx;
+          margin-top: 16px;
+          text-align: center;
+          color: #fff;
+          font-size: 20rpx;
+          font-weight: 600;
+        }
+      }
+      .rightSide {
+        position: absolute;
+        top: 0;
+        right: 32rpx;
+        width: 196rpx;
+        height: 284rpx;
+        .nftBox {
+          width: 196rpx;
+          height: 284rpx;
+        }
+        .nftRemainer {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(68, 68, 68, 0.55);
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    .title {
+      color: #bdea4d;
+      font-weight: 700;
+    }
+    .counterContainer {
+      .counter {
+        display: flex;
+        align-items: center;
+        color: #bdea4d;
+        font-weight: 900;
+        .minus {
+          background-color: #bdea4d;
+        }
+        .count {
+          font-weight: 900;
+        }
+        .adds {
+          position: relative;
+          .add {
+            position: absolute;
+            background-color: #bdea4d;
+          }
+          .add:nth-child(2) {
+            transform: rotate(90deg);
+          }
+        }
+        .minusBtn,
+        .addBtn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #bdea4d;
+          background-color: #5a5a5a;
+        }
+        .disabled {
+          opacity: 0.3;
+          color: #191919;
+        }
+      }
+      .counterDesc {
+        color: #ececec;
+        .discountTips {
+          color: #bdea4d;
+        }
+      }
+    }
+    .priceContainer {
+      display: flex;
+      .priceDesc {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        font-weight: 400;
+        opacity: 0.3;
+      }
+      .price {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        font-weight: 600;
+        .nftPrice,
+        .subtotal,
+        .discounts,
+        .total {
+          margin-left: auto;
+        }
+        .nftPrice,
+        .subtotal {
+          color: #ececec;
+        }
+        .discounts,
+        .total {
+          color: #bdea4d;
+        }
+      }
+    }
+    .mintButton {
+      button {
+        color: #1c1c1b;
+        font-weight: 900;
+      }
+    }
+  }
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .nftBox {
+      background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01XNfByK1kh3tvuRUWH_!!6000000004714-2-tps-202-294.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .nftRemainer {
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+}

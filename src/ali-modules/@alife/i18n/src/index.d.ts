@@ -1,0 +1,1 @@
+declare module "@alife/i18n";

@@ -1,0 +1,25 @@
+{
+  "name": "@alife/mcms_NFTwebsite_pc",
+  "version": "0.0.4",
+  "just": {
+    "type": "component/b2b-next-comp",
+    "amdBuilder": {
+      "entry": [
+        "index.js"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "publishAuthor": "undefined(undefined)",
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.0"
+  },
+  "__npminstall_done": true,
+  "_from": "@alife/mcms_NFTwebsite_pc@0.0.4",
+  "_resolved": "https://registry.anpm.alibaba-inc.com/@alife/mcms_NFTwebsite_pc/-/mcms_NFTwebsite_pc-0.0.4.tgz"
+}

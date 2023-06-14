@@ -1,0 +1,186 @@
+@media (min-width: 1200px) {
+  .blooming {
+    top: -225px;
+    left: -876px;
+    width: 1922px;
+    height: 775px;
+  }
+  .backgroundDots {
+    bottom: 60px;
+    left: 224px;
+    width: 102px;
+    height: 60px;
+  }
+  .leftSide {
+    width: 470px;
+    margin-top: 156px;
+    margin-left: 32px;
+
+    .btnWrapper {
+      gap: 12px;
+      height: 48px;
+      width: 198px;
+      margin-top: 36px;
+      border-radius: 14px;
+      font-size: 16px;
+      .icon {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+  .picture {
+    width: 660px;
+    height: 576px;
+    margin-top: 72px;
+    margin-right: 32px;
+    margin-bottom: 56px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .blooming {
+    top: -18.75vw;
+    left: -73vw;
+    width: 160.16666667vw;
+    height: 64.58333333vw;
+  }
+  .backgroundDots {
+    bottom: 5vw;
+    left: 18.66666667vw;
+    width: 8.5vw;
+    height: 5vw;
+  }
+  .leftSide {
+    width: 39.16666667vw;
+    margin-top: 13vw;
+
+    margin-left: 2.66666667vw;
+    .btnWrapper {
+      gap: 1vw;
+      height: 4vw;
+      width: 16.5vw;
+      margin-top: 3vw;
+      border-radius: 1.16666667vw;
+      font-size: 1.33333333vw;
+      .icon {
+        width: 3vw;
+        height: 3vw;
+      }
+    }
+  }
+  .picture {
+    width: 55vw;
+    height: 48vw;
+    margin-top: 6vw;
+    margin-right: 2.66666667vw;
+    margin-bottom: 4.66666667vw;
+  }
+}
+@media (max-width: 767px) {
+  .blooming {
+    top: -225rpx;
+    left: -876rpx;
+    width: 1922rpx;
+    height: 775rpx;
+  }
+  .container {
+    flex-direction: column;
+    .leftSide {
+      width: 684rpx;
+      margin-top: 120rpx;
+      margin-left: 32rpx;
+      .btnWrapper {
+        gap: 6rpx;
+        height: 64rpx;
+        width: 258rpx;
+        margin-top: 48rpx;
+        border-radius: 14rpx;
+        font-size: 24rpx;
+        .icon {
+          width: 48rpx;
+          height: 48rpx;
+        }
+      }
+    }
+  }
+  .picture {
+    width: 686rpx;
+    height: 598rpx;
+    margin-top: 80rpx;
+    margin-left: 16rpx;
+    margin-right: 48rpx;
+    margin-bottom: 48rpx;
+  }
+}
+
+.pageWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background-image: linear-gradient(180deg, #1c1c1b 0%, #1c1c1b 40%, #1f1f1d 58%, #2a2a28 100%);
+  .container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    max-width: 1200px;
+    .blooming {
+      position: absolute;
+      z-index: -5;
+      background: url(https://img.alicdn.com/imgextra/i1/O1CN012gBve41I8Qhx8QW5Q_!!6000000000848-2-tps-1922-775.png)
+        no-repeat center;
+      background-size: contain;
+    }
+    .backgroundDots {
+      position: absolute;
+      background: url(https://img.alicdn.com/imgextra/i1/O1CN01yVbVtt1ZklK9NGqKF_!!6000000003233-2-tps-102-59.png)
+        no-repeat center;
+      background-size: contain;
+    }
+    .leftSide {
+      .btnWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        font-weight: 700;
+        color: #fff;
+        background-color: #3d3d3d;
+        border: 1px solid #bdea4d;
+        .icon {
+          background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01UNuJHC1KBIPyz3pVr_!!6000000001125-2-tps-96-96.png);
+          background-size: contain;
+        }
+      }
+      .btnWrapper:hover {
+        color: #1c1c1b;
+        background-color: #bdea4d;
+      }
+      .btnWrapper:hover .icon {
+        background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01pq6EAK1w2YFsmdUD8_!!6000000006250-2-tps-96-96.png);
+      }
+    }
+    .picture {
+      opacity: 0;
+      background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01qXIK8A24FqgCHMkJs_!!6000000007362-2-tps-692-576.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.fadeIn {
+  position: relative;
+  animation: fade-in-up 1.5s forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    bottom: -15%;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}

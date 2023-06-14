@@ -1,0 +1,228 @@
+@media (min-width: 1200px) {
+  .stepContentWrapper {
+    height: 213px;
+    .stepContent {
+      height: 60px;
+      .stepContentLeft {
+        margin-right: 24px;
+        .dot {
+          width: 16px;
+          height: 16px;
+          min-height: 16px;
+          border-radius: 4px;
+        }
+        .verticalLine {
+          width: 3px;
+          background: linear-gradient(transparent 0%, transparent 50%, #c9c9c9 50%, #c9c9c9 100%);
+          background-size: 3px 12px;
+          background-repeat: repeat-y;
+          background-position: left;
+        }
+      }
+      .stepContentRight {
+        font-size: 16px;
+      }
+      .stepSpecialLastOneForTimeOut,
+      .stepSpecialLastOneForLN {
+        gap: 4px;
+        font-size: 16px;
+      }
+      .stepSpecialLastOneForLN {
+        .content {
+          width: 180px;
+          line-height: 24px;
+        }
+        .luckyNumber {
+          min-width: 88px;
+          height: 54px;
+          padding: 0 16px;
+          border-radius: 12px;
+          line-height: 54px;
+          font-size: 24px;
+        }
+      }
+    }
+    .goNowButton {
+      width: 510px;
+      height: 56px;
+      margin-top: 8px;
+      border-radius: 16px;
+      font-size: 20px;
+      line-height: 56px;
+      background-color: #bdea4d;
+    }
+    .certification {
+      width: 122px;
+      height: 140px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .stepContentWrapper {
+    height: 17.75vw;
+    .stepContent {
+      height: 5vw;
+      .stepContentLeft {
+        margin-right: 2vw;
+        .dot {
+          width: 1.33333333vw;
+          height: 1.33333333vw;
+          min-height: 1.33333333vw;
+          border-radius: 0.33333333vw;
+        }
+        .verticalLine {
+          width: 0.16666667vw;
+          background: linear-gradient(transparent 0%, transparent 50%, #c9c9c9 50%, #c9c9c9 100%);
+          background-size: 0.16666667vw 1vw;
+          background-repeat: repeat-y;
+          background-position: left;
+        }
+      }
+      .stepContentRight {
+        font-size: 1.33333333vw;
+      }
+      .stepSpecialLastOneForTimeOut,
+      .stepSpecialLastOneForLN {
+        gap: 0.33333333vw;
+        font-size: 1.33333333vw;
+      }
+      .stepSpecialLastOneForLN {
+        .content {
+          width: 15vw;
+        }
+        .luckyNumber {
+          min-width: 7.33333333vw;
+          height: 4.5vw;
+          padding: 0 1.33333333vw;
+          border-radius: 1vw;
+          line-height: 4.5vw;
+          font-size: 2vw;
+        }
+      }
+    }
+    .goNowButton {
+      width: 42.5vw;
+      height: 4.66666667vw;
+      margin-top: 0.66666667vw;
+      border-radius: 1.33333333vw;
+      font-size: 1.66666667vw;
+      line-height: 4.66666667vw;
+      background-color: #bdea4d;
+    }
+    .certification {
+      width: 10.16666667vw;
+      height: 11.66666667vw;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .stepContentWrapper {
+    height: 259rpx;
+    .stepContent {
+      height: 80rpx;
+      .stepContentLeft {
+        margin-right: 24rpx;
+        .dot {
+          width: 16rpx;
+          height: 16rpx;
+          min-height: 16rpx;
+          border-radius: 4rpx;
+        }
+        .verticalLine {
+          width: 3rpx;
+          background: linear-gradient(transparent 0%, transparent 50%, #c9c9c9 50%, #c9c9c9 100%);
+          background-size: 3rpx 10rpx;
+          background-repeat: repeat-y;
+          background-position: left;
+        }
+      }
+      .stepContentRight {
+        margin-top: -4rpx;
+        font-size: 24rpx;
+      }
+      .stepSpecialLastOneForTimeOut,
+      .stepSpecialLastOneForLN {
+        gap: 4rpx;
+        margin-top: -4rpx;
+        font-size: 24rpx;
+      }
+      .stepSpecialLastOneForLN {
+        .content {
+          max-width: 264rpx;
+          margin-right: 4rpx;
+        }
+        .luckyNumber {
+          min-width: 88rpx;
+          height: 54rpx;
+          padding: 0 16rpx;
+          border-radius: 12rpx;
+          line-height: 54rpx;
+          font-size: 24rpx;
+        }
+      }
+    }
+    .goNowButton {
+      width: 606rpx;
+      height: 88rpx;
+      border-radius: 32rpx;
+      font-size: 30rpx;
+      line-height: 80rpx;
+      background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01GMYI431Sf56MeddGc_!!6000000002273-2-tps-606-88.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .certification {
+      width: 122rpx;
+      height: 140rpx;
+    }
+  }
+}
+
+.stepContentWrapper {
+  position: relative;
+  .stepContent {
+    display: flex;
+    .stepContentLeft {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .dot {
+        background-color: #bdea4d;
+      }
+      .verticalLine {
+        height: 100%;
+      }
+    }
+    .stepContentRight {
+      font-weight: 600;
+      color: #fff;
+    }
+    .stepSpecialLastOneForTimeOut,
+    .stepSpecialLastOneForLN {
+      display: flex;
+      color: #bdea4d;
+      font-weight: 700;
+      .luckyNumber {
+        text-align: center;
+        color: #000;
+        font-weight: 900;
+        background-image: linear-gradient(129deg, #fff 0%, #f9f9f9 69%, #ededed 100%);
+      }
+    }
+  }
+  .goNowButton {
+    text-align: center;
+    color: #1c1c1b;
+    font-weight: 900;
+  }
+  .certification {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01RKeLOL1Bsxdctv6yJ_!!6000000000002-2-tps-126-143.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

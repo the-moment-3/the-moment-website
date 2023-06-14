@@ -1,0 +1,54 @@
+@media (min-width: 1200px) {
+  .container {
+    height: 48px;
+    .labelContainer {
+      .label {
+        min-width: 120px;
+        margin: 0 64px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    height: 4vw;
+    .labelContainer {
+      .label {
+        min-width: 10vw;
+        margin: 0 5.33333333vw;
+        font-size: 1.33333333vw;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    height: 48rpx;
+    .labelContainer {
+      .label {
+        min-width: 148rpx;
+        margin: 0 48rpx;
+        font-size: 20rpx;
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: auto;
+  max-width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #bdea4d;
+  border-top: 1px solid #bdea4d;
+  background-color: #1c1c1b;
+  .labelContainer {
+    display: flex;
+    .label {
+      font-weight: 500;
+      color: #bdea4d;
+    }
+  }
+}

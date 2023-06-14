@@ -1,0 +1,301 @@
+@media (min-width: 1200px) {
+  .left {
+    min-width: 160px;
+    .logoContainer {
+      margin-left: 32px;
+      margin-right: 12px;
+      .logo {
+        width: 140px;
+        height: 100%;
+      }
+    }
+    .dropdownBtn {
+      display: none;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .navItem a {
+      width: 100px;
+      font-size: 14px;
+    }
+  }
+
+  .right {
+    .translate {
+      width: 48px;
+      height: 48px;
+      margin-left: 8px;
+      margin-right: 12px;
+    }
+    .wallet {
+      width: 164px;
+      height: 40px;
+      margin-right: 12px;
+      font-size: 14px;
+      border-radius: 12px;
+      .btnIcon {
+        width: 32px;
+        height: 32px;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .left {
+    min-width: 14.33333333vw;
+    .logoContainer {
+      margin-right: 1vw;
+      margin-left: 2.66666667vw;
+      .logo {
+        width: 11.66666667vw;
+        height: 100%;
+      }
+    }
+    .dropdownBtn {
+      display: none;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .navItem a {
+      width: 8.33333333vw;
+      font-size: 1.16666667vw;
+    }
+  }
+
+  .right {
+    .translate {
+      width: 4vw;
+      height: 4vw;
+      margin-left: 0.66666667vw;
+      margin-right: 1vw;
+    }
+    .wallet {
+      width: 15.5vw;
+      height: 3.33333333vw;
+      margin-right: 1vw;
+      font-size: 1.16666667vw;
+      border-radius: 1vw;
+      .btnIcon {
+        width: 2.66666667vw;
+        height: 2.66666667vw;
+        margin-right: 0.33333333vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .left {
+    width: 280rpx;
+    min-width: 160rpx;
+    margin-left: 68rpx;
+    .logoContainer {
+      .logo {
+        width: 158rpx;
+        height: 28rpx;
+      }
+    }
+    .dropdownBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48rpx;
+      height: 48rpx;
+      padding: 0;
+      background-color: rgba(28, 28, 27, 0);
+      border: none;
+    }
+
+    .dropdownBtn.active::after {
+      position: absolute;
+      bottom: -1px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid #fff;
+    }
+    .dropdownBtn span {
+      position: absolute;
+      width: 32rpx;
+      height: 4rpx;
+      background: #fff;
+      border-radius: 2px;
+    }
+    .dropdownBtn span:nth-child(1) {
+      transform: translateY(-10rpx);
+    }
+    .dropdownBtn span:nth-child(2) {
+      transform: translateY(10rpx);
+    }
+    .dropdownBtn.active span:nth-child(1) {
+      transform: translateY(0) rotate(45deg);
+    }
+    .dropdownBtn.active span:nth-child(2) {
+      transform: translateY(0) rotate(135deg);
+    }
+    .dropdownBtn.active span:nth-child(3) {
+      opacity: 0;
+    }
+  }
+
+  .nav {
+    display: none;
+  }
+  .right {
+    margin-left: auto;
+    .media {
+      display: none;
+    }
+    .translate {
+      width: 72rpx;
+      height: 72rpx;
+      margin-right: 8rpx;
+    }
+    .wallet {
+      width: 264rpx;
+      height: 48rpx;
+      margin-right: 30rpx;
+      font-size: 24rpx;
+      border-radius: 16rpx;
+      .btnIcon {
+        width: 32rpx;
+        height: 32rpx;
+        margin-right: 2rpx;
+      }
+    }
+  }
+}
+.drawerNavItemWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.drawerNavItem {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 32rpx;
+  margin-bottom: 16rpx;
+  border-bottom: 8rpx solid #fff;
+  color: black;
+  font-size: 26rpx;
+  font-weight: 700;
+}
+.drawerNavItemWrapper:active .drawerNavItem {
+  border-bottom: 8rpx solid #bdea4d;
+}
+
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-width: 320px;
+  height: 80px;
+  color: #fff;
+  background: #1c1c1b;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+    max-width: 1200px;
+    min-width: 320px;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .logoContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      .logo {
+        display: flex;
+        align-items: center;
+        background: url(https://img.alicdn.com/imgextra/i1/O1CN01UzWkta20PEKlLAKVy_!!6000000006841-2-tps-179-36.png)
+          no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+
+  .nav {
+    .navItem {
+      height: 100%;
+    }
+    .navItem a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+
+  .navItem:hover {
+    background-color: #3d3d3d;
+    box-shadow: inset 0 -2px 0 0 #bdea4d;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    .translate {
+      background-image: url(https://img.alicdn.com/imgextra/i1/O1CN0199Ckne1NDXCZiAQIp_!!6000000001536-2-tps-96-96.png);
+      background-position: center center;
+      background-size: cover;
+      cursor: pointer;
+    }
+    .translate:hover {
+      background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01mfNLmM1kXRa4NQ4FY_!!6000000004693-2-tps-96-96.png);
+    }
+    .wallet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 600;
+      background-color: #3d3d3d;
+      border: 1px solid #bdea4d;
+      .btnIcon {
+        background: url(https://img.alicdn.com/imgextra/i2/O1CN015wMGji1yw5WADvcHZ_!!6000000006642-2-tps-48-48.png)
+          no-repeat center;
+        background-size: contain;
+      }
+    }
+    .wallet:hover {
+      color: #1c1c1b;
+      background-color: #bdea4d;
+      .btnIcon {
+        background: url(https://img.alicdn.com/imgextra/i1/O1CN01acfoc226q9J9RTJGV_!!6000000007712-2-tps-48-48.png)
+          no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+}

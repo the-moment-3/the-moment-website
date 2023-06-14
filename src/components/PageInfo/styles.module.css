@@ -1,0 +1,115 @@
+@media (min-width: 1200px) {
+  .content {
+    .logo {
+      height: 32px;
+      width: 123px;
+      border-radius: 12px;
+    }
+    .title {
+      margin-top: 24px;
+      margin-bottom: 36px;
+      font-size: 48px;
+      .icon {
+        width: 48px;
+        height: 48px;
+        margin-top: 8px;
+        margin-left: 24px;
+        border-radius: 16px;
+      }
+    }
+    .subtitle {
+      font-size: 24px;
+      line-height: 56px;
+    }
+    .desc {
+      gap: 24px;
+      font-size: 16px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .content {
+    .logo {
+      height: 2.66666667vw;
+      width: 10.25vw;
+      border-radius: 1vw;
+    }
+    .title {
+      margin-top: 2vw;
+      margin-bottom: 3vw;
+      font-size: 4vw;
+      .icon {
+        width: 4vw;
+        height: 4vw;
+        margin-top: 0.66666667vw;
+        margin-left: 2vw;
+        border-radius: 1.33333333vw;
+      }
+    }
+    .subtitle {
+      font-size: 2vw;
+      line-height: 4.66666667vw;
+    }
+    .desc {
+      gap: 2vw;
+      font-size: 1.33333333vw;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    .logo {
+      height: 48rpx;
+      width: 185rpx;
+      border-radius: 16rpx;
+    }
+    .title {
+      margin-top: 32rpx;
+      margin-bottom: 32rpx;
+      font-size: 48rpx;
+      .icon {
+        width: 48rpx;
+        height: 48rpx;
+        margin-top: 8rpx;
+        margin-left: 24rpx;
+        border-radius: 16rpx;
+      }
+    }
+    .subtitle {
+      font-size: 24rpx;
+      line-height: 56rpx;
+    }
+    .desc {
+      font-size: 24rpx;
+    }
+  }
+}
+
+.content {
+  opacity: 0;
+  .logo {
+    background: url(https://img.alicdn.com/imgextra/i3/O1CN01XU7KMe1K7dFsGQ56x_!!6000000001117-2-tps-185-48.png)
+      no-repeat center center;
+    background-size: contain;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    color: #fff;
+    .icon {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  .subtitle {
+    color: #fff;
+    font-weight: 900;
+  }
+  .desc {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0.5;
+  }
+}

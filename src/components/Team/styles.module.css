@@ -1,0 +1,197 @@
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 32px;
+    .blooming1 {
+      top: -294px;
+      left: -876px;
+      width: 1922px;
+      height: 775px;
+    }
+    .blooming2 {
+      bottom: 0;
+      left: -384px;
+      width: 1752px;
+      height: 862px;
+    }
+    .contentWrapper {
+      margin-top: 160px;
+      margin-bottom: 96px;
+    }
+    .membersWrapper {
+      gap: 24px;
+      margin-bottom: 160px;
+      .memberInfo {
+        height: 153px;
+        width: 360px;
+        .info {
+          margin-left: 28px;
+          margin-top: 40px;
+          .name {
+            font-size: 24px;
+          }
+          .position {
+            font-size: 16px;
+            line-height: 32px;
+          }
+        }
+        .avatar {
+          width: 152px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    margin: 0 2.66666667vw;
+    .blooming1 {
+      top: -24.5vw;
+      left: -73vw;
+      width: 160.16666667vw;
+      height: 64.58333333vw;
+    }
+    .blooming2 {
+      bottom: 0;
+      left: -32vw;
+      width: 146vw;
+      height: 71.83333333vw;
+    }
+    .contentWrapper {
+      margin-top: 13.33333333vw;
+      margin-bottom: 8vw;
+    }
+    .membersWrapper {
+      gap: 2vw;
+      margin-bottom: 13.33333333vw;
+      .memberInfo {
+        height: 12.75vw;
+        width: 30vw;
+        .info {
+          margin-left: 2.33333333vw;
+          margin-top: 3.33333333vw;
+          .name {
+            font-size: 2vw;
+          }
+          .position {
+            font-size: 1.33333333vw;
+            line-height: 2.66666667vw;
+          }
+        }
+        .avatar {
+          width: 12.66666667vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin: 0 32rpx;
+    .blooming1 {
+      top: -260rpx;
+      left: -694rpx;
+      width: 1922rpx;
+      height: 775rpx;
+    }
+    .contentWrapper {
+      margin-top: 148rpx;
+      margin-bottom: 40rpx;
+    }
+    .membersWrapper {
+      gap: 16rpx;
+      margin-bottom: 184rpx;
+      .memberInfo {
+        height: 153rpx;
+        width: 335rpx;
+        .info {
+          margin-left: 28rpx;
+          margin-top: 36rpx;
+          .name {
+            font-size: 30rpx;
+          }
+          .position {
+            font-size: 24rpx;
+            line-height: 32rpx;
+          }
+        }
+        .avatar {
+          width: 152rpx;
+        }
+      }
+    }
+  }
+}
+
+.pageWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background-image: linear-gradient(180deg, #1c1c1b 0%, #1c1c1b 40%, #1f1f1d 58%, #2a2a28 100%);
+  .container {
+    position: relative;
+    z-index: 5;
+    max-width: 1200px;
+    .blooming1 {
+      position: absolute;
+      z-index: -5;
+      background: url(https://img.alicdn.com/imgextra/i1/O1CN012gBve41I8Qhx8QW5Q_!!6000000000848-2-tps-1922-775.png)
+        no-repeat center;
+      background-size: contain;
+    }
+    .blooming2 {
+      position: absolute;
+      z-index: -5;
+      background: url(https://img.alicdn.com/imgextra/i1/O1CN01zjm1nJ1v2imleKsdp_!!6000000006115-2-tps-1752-862.png)
+        no-repeat center;
+      background-size: contain;
+    }
+    .membersWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      opacity: 0;
+      .memberInfo {
+        display: flex;
+        overflow: hidden;
+        /* background: rgba(68, 68, 68, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 20px; */
+        background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01UsghkU1hMxfVkhRMC_!!6000000004264-2-tps-384-153.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        .info {
+          .name {
+            font-weight: 900;
+            color: #bdea4d;
+          }
+          .position {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+          }
+        }
+        .avatar {
+          margin-left: auto;
+          /* background-color: pink; */
+        }
+      }
+    }
+  }
+}
+
+.fadeIn {
+  position: relative;
+  animation: fade-in-up 1.5s forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    bottom: -15%;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}

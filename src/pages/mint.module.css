@@ -1,0 +1,320 @@
+@media (min-width: 1200px) {
+  .wrapper {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url(https://img.alicdn.com/imgextra/i4/O1CN011c4RaF1DkpqTaZ6l6_!!6000000000255-2-tps-3000-1353.png) no-repeat
+        center center;
+    background-size: cover;
+  }
+  .top {
+    gap: 160px;
+    padding-top: 68px;
+    .topLeft {
+      margin-top: 122px;
+      margin-left: 80px;
+      .title {
+        width: 558px;
+        height: 55px;
+      }
+      .pageInfo {
+        margin-top: 24px;
+        font-size: 20px;
+      }
+    }
+    .topRight {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 228px;
+      margin-right: 174px;
+      .nftBox {
+        width: 300px;
+        height: 294px;
+        background: url(https://img.alicdn.com/imgextra/i3/O1CN01tFEcHZ1OGZRpGRe4J_!!6000000001678-2-tps-1083-975.png)
+          no-repeat top;
+        background-size: 158%;
+      }
+      .processInfo {
+        width: 300px;
+        height: 64px;
+        margin-top: -54px;
+        border-radius: 32px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .mintTop {
+    .title {
+      width: 1039px;
+      height: 96px;
+      margin-top: 54px;
+      margin-bottom: 32px;
+      font-size: 48px;
+    }
+    .winnerList {
+      width: 212px;
+      height: 48px;
+      border-radius: 16px;
+      font-size: 20px;
+    }
+    .imgWrapper {
+      width: 736px;
+      height: 72px;
+      margin-top: 96px;
+      margin-bottom: 40px;
+    }
+    .pageInfo {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .wrapper {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url(https://img.alicdn.com/imgextra/i4/O1CN011c4RaF1DkpqTaZ6l6_!!6000000000255-2-tps-3000-1353.png) no-repeat
+        center center;
+    background-size: cover;
+  }
+  .top {
+    width: 100%;
+    gap: 13.33333333vw;
+    padding-top: 5.66666667vw;
+    .topLeft {
+      margin-top: 10.16666667vw;
+      margin-left: 6.66666667vw;
+      .title {
+        width: 46.5vw;
+        height: 4.58333333vw;
+      }
+      .pageInfo {
+        margin-top: 2vw;
+        font-size: 1.66666667vw;
+      }
+    }
+    .topRight {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 19vw;
+      .nftBox {
+        width: 25vw;
+        height: 24.5vw;
+        background: url(https://img.alicdn.com/imgextra/i3/O1CN01tFEcHZ1OGZRpGRe4J_!!6000000001678-2-tps-1083-975.png)
+          no-repeat top;
+        background-size: 158%;
+      }
+      .processInfo {
+        width: 25vw;
+        height: 5.33333333vw;
+        margin-top: -4.5vw;
+        border-radius: 2.66666667vw;
+        font-size: 1.33333333vw;
+      }
+    }
+  }
+
+  .mintTop {
+    .title {
+      width: 86.58333333vw;
+      height: 8vw;
+      margin-top: 4.5vw;
+      margin-bottom: 2.66666667vw;
+      font-size: 4vw;
+    }
+    .winnerList {
+      width: 17.66666667vw;
+      height: 4vw;
+      border-radius: 1.33333333vw;
+      font-size: 1.66666667vw;
+    }
+    .imgWrapper {
+      width: 61.33333333vw;
+      height: 6vw;
+      margin-top: 8vw;
+      margin-bottom: 3.33333333vw;
+    }
+    .pageInfo {
+      font-size: 1.66666667vw;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1.5) 100%), url(https://img.alicdn.com/imgextra/i4/O1CN011c4RaF1DkpqTaZ6l6_!!6000000000255-2-tps-3000-1353.png) no-repeat;
+    background-size: 300%;
+    background-position: top center;
+  }
+  .top {
+    flex-direction: column;
+    align-items: center;
+    gap: 68rpx;
+    padding-top: 96rpx;
+    .topLeft {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title {
+        width: 630rpx;
+        height: 62rpx;
+      }
+      .pageInfo {
+        margin-top: 36rpx;
+        font-size: 24rpx;
+      }
+    }
+    .topRight {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 686rpx;
+      height: 188rpx;
+      .nftBox {
+        position: absolute;
+        top: -55rpx;
+        width: 710rpx;
+        height: 376rpx;
+        background: url(https://img.alicdn.com/imgextra/i3/O1CN01tFEcHZ1OGZRpGRe4J_!!6000000001678-2-tps-1083-975.png)
+          no-repeat -3vw 1.4vw;
+        background-size: 54%;
+      }
+      .processInfo {
+        width: 371rpx;
+        height: 84rpx;
+        margin-bottom: 28rpx;
+        border-radius: 46rpx;
+        font-size: 24rpx;
+      }
+    }
+  }
+  .mintTop {
+    .title {
+      width: 675rpx;
+      height: 96rpx;
+      margin-top: 48rpx;
+      margin-bottom: 24rpx;
+      font-size: 48rpx;
+    }
+    .winnerList {
+      width: 212rpx;
+      height: 48rpx;
+      border-radius: 16rpx;
+      font-size: 20rpx;
+    }
+    .imgWrapper {
+      width: 630rpx;
+      height: 62rpx;
+      margin-top: 96rpx;
+      margin-bottom: 40rpx;
+    }
+    .pageInfo {
+      font-size: 24rpx;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #1c1c1b;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    max-width: 1200px;
+    .top {
+      display: flex;
+      margin-top: 80px;
+      .topLeft {
+        position: relative;
+        animation: fade-in-right 2s forwards;
+        .title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 100%;
+          }
+        }
+        .pageInfo {
+          color: #fff;
+          font-weight: 400;
+          opacity: 0.5;
+        }
+      }
+      .topRight {
+        animation: fade-in-left 2s forwards;
+        position: relative;
+        .processInfo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid #000;
+          background-color: #fff;
+          .remainder {
+            font-weight: 900;
+          }
+          .projectSize {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .mintTop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 80px;
+      .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        font-weight: 900;
+      }
+      .winnerList {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1.5px solid #bdea4d;
+        color: #bdea4d;
+      }
+      .imgWrapper {
+        img {
+          width: 100%;
+        }
+      }
+      .pageInfo {
+        color: #fff;
+        font-weight: 400;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    left: -15%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  from {
+    right: -15%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}

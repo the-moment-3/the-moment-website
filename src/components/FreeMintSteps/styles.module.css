@@ -1,0 +1,113 @@
+@media (min-width: 1200px) {
+  .stepContainer {
+    gap: 20px;
+    margin: 70px 0 96px;
+    .step {
+      width: 514px;
+      height: 326px;
+      padding: 42px 32px 32px 40px;
+      border-radius: 32px;
+      .stepHeader {
+        .title {
+          font-size: 20px;
+        }
+        .info {
+          gap: 12px;
+          margin-top: 8px;
+          margin-bottom: 40px;
+          font-size: 24px;
+          .questionIcon {
+            width: 28px;
+            height: 28px;
+            border-radius: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .stepContainer {
+    gap: 1.66666667vw;
+    margin: 5.83333333vw 1.84vw 8vw;
+    .step {
+      width: 42.83333333vw;
+      height: 27.16666667vw;
+      padding: 3.5vw 2.66666667vw 2.66666667vw 3.33333333vw;
+      border-radius: 2.66666667vw;
+      .stepHeader {
+        .title {
+          font-size: 1.66666667vw;
+        }
+        .info {
+          gap: 1vw;
+          margin-top: 0.66666667vw;
+          margin-bottom: 3.33333333vw;
+          font-size: 2vw;
+          .questionIcon {
+            width: 2.33333333vw;
+            height: 2.33333333vw;
+            border-radius: 2.33333333vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .stepContainer {
+    flex-direction: column;
+    gap: 40rpx;
+    margin: 40rpx 0 96rpx;
+    .step {
+      width: 606rpx;
+      height: 405rpx;
+      padding: 48rpx 40rpx 32rpx;
+      border-radius: 32rpx;
+      .stepHeader {
+        .title {
+          font-size: 24rpx;
+        }
+        .info {
+          gap: 12rpx;
+          margin-top: 32rpx;
+          margin-bottom: 48rpx;
+          font-size: 32rpx;
+          .questionIcon {
+            width: 28rpx;
+            height: 28rpx;
+            border-radius: 28rpx;
+            font-size: 24rpx;
+          }
+        }
+      }
+    }
+  }
+}
+
+.stepContainer {
+  display: flex;
+  max-width: 1200px;
+  .step {
+    background: rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(180deg, rgba(67, 67, 67, 0.5) 0%, rgba(0, 0, 0, 0.29) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    .stepHeader {
+      .title {
+        color: #bdea4d;
+        font-weight: 700;
+      }
+      .info {
+        display: flex;
+        color: #fff;
+        font-weight: 900;
+        .questionIcon {
+          text-align: center;
+          border: 2px solid #fff;
+          color: #fff;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

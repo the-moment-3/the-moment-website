@@ -1,0 +1,49 @@
+@import '@rainbow-me/rainbowkit/styles.css';
+
+:root {
+  --primary: #3178f6;
+  --bg-primary: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  overflow-y: scroll;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro', 'SF UI', 'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: Alibaba-PuHuiTi-Regular;
+  src: url('https://gw.alipayobjects.com/os/bmw-prod/fb13d292-2c23-41c6-8484-0b1a10cbb6af.otf');
+}
+
+@font-face {
+  font-family: Alibaba-PuHuiTi-Bold;
+  src: url('https://gw.alipayobjects.com/os/bmw-prod/671b5d9c-8abd-4a80-bddd-32dc337e7b01.otf');
+}

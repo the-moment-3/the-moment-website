@@ -1,0 +1,419 @@
+@media (min-width: 1200px) {
+  .container {
+    margin-left: 24px;
+    .rightSide {
+      width: 596px;
+      height: 500px;
+      margin-top: 150px;
+    }
+    .blooming {
+      top: -425px;
+      left: -650px;
+      width: 1503px;
+      height: 1286px;
+    }
+  }
+
+  .info {
+    margin-top: 112px;
+    margin-bottom: 48px;
+    .infoTitle {
+      width: 580px;
+      font-size: 48px;
+    }
+    .infoText {
+      margin-top: 24px;
+      font-size: 16px;
+    }
+  }
+
+  .page {
+    display: none;
+  }
+
+  .timeLineContainer {
+    width: 485px;
+    margin-bottom: 68px;
+    .timeLineSide:nth-child(1) {
+      .timeLine {
+        .line:first-child {
+          border-radius: 3px 0 0 3px;
+        }
+      }
+    }
+    .timeLineSide:nth-child(2) {
+      .timeLine {
+        .line:last-child {
+          border-radius: 0 3px 3px 0;
+        }
+      }
+    }
+    .timeLineSide {
+      width: 50%;
+      .timeLineLabel {
+        height: 24px;
+        font-size: 16px;
+      }
+      .timeLine {
+        margin-top: 18px;
+        .line {
+          height: 4px;
+          width: 116px;
+        }
+        .dotActive,
+        .dotInActive {
+          top: -6px;
+          min-width: 8px;
+          height: 16px;
+          margin: 0 2px;
+          border-radius: 8px;
+        }
+      }
+      .timeLineInfo {
+        gap: 12px;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .connectBtn {
+    margin-bottom: 144px;
+    button {
+      width: 220px;
+      height: 48px;
+      font-size: 16px;
+      border-radius: 16px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    margin-left: 2vw;
+    .rightSide {
+      width: 49.66666667vw;
+      height: 41.66666667vw;
+      margin-top: 12.5vw;
+    }
+    .blooming {
+      top: -35.41666667vw;
+      left: -54.16666667vw;
+      width: 125.25vw;
+      height: 107.16666667vw;
+    }
+  }
+
+  .info {
+    margin-top: 9.33333333vw;
+    margin-bottom: 4vw;
+    .infoTitle {
+      width: 48.33333333vw;
+      font-size: 4vw;
+    }
+    .infoText {
+      margin-top: 2vw;
+      font-size: 1.33333333vw;
+    }
+  }
+
+  .page {
+    display: none;
+  }
+
+  .timeLineContainer {
+    width: 40.41666667vw;
+    margin-bottom: 5.66666667vw;
+    .timeLineSide:nth-child(1) {
+      .timeLine {
+        .line:first-child {
+          border-radius: 0.25vw 0 0 0.25vw;
+        }
+      }
+    }
+    .timeLineSide:nth-child(2) {
+      .timeLine {
+        .line:last-child {
+          border-radius: 0 0.25vw 0.25vw 0;
+        }
+      }
+    }
+    .timeLineSide {
+      width: 50%;
+      .timeLineLabel {
+        height: 2vw;
+        font-size: 1.33333333vw;
+      }
+      .timeLine {
+        margin-top: 1.5vw;
+        .line {
+          width: 9.6vw;
+          height: 0.33333333vw;
+        }
+        .dotActive,
+        .dotInActive {
+          top: -0.5vw;
+          min-width: 0.66666667vw;
+          height: 1.33333333vw;
+          margin: 0 0.16666667vw;
+          border-radius: 0.66666667vw;
+        }
+      }
+      .timeLineInfo {
+        gap: 1vw;
+        margin-top: 1.66666667vw;
+        font-size: 1.16666667vw;
+      }
+    }
+  }
+
+  .connectBtn {
+    margin-bottom: 12vw;
+    button {
+      width: 18.33333333vw;
+      height: 4vw;
+      font-size: 1.33333333vw;
+      border-radius: 1.33333333vw;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .blooming {
+    top: -496rpx;
+    left: -390rpx;
+    width: 1503rpx;
+    height: 1286rpx;
+  }
+
+  .info {
+    margin-top: 80rpx;
+    margin-bottom: 56rpx;
+    text-align: center;
+    .infoTitle {
+      width: 600rpx;
+      margin: 0 auto;
+      font-size: 50rpx;
+    }
+    .infoText {
+      width: 500rpx;
+      margin: 0 auto;
+      margin-top: 32rpx;
+      font-size: 28rpx;
+    }
+  }
+
+  .page {
+    height: 535rpx;
+  }
+
+  .timeLineContainer {
+    margin-top: 82rpx;
+    margin-bottom: 64rpx;
+    .timeLineSide:nth-child(1) {
+      .timeLine {
+        .line:first-child {
+          border-radius: 3rpx 0 0 3rpx;
+        }
+      }
+    }
+    .timeLineSide:nth-child(2) {
+      .timeLine {
+        .line:last-child {
+          border-radius: 0 3rpx 3rpx 0;
+        }
+      }
+    }
+    .timeLineSide {
+      width: 45%;
+      .timeLineLabel {
+        height: 46rpx;
+        font-size: 30rpx;
+      }
+      .timeLineLabelActive {
+        font-size: 32rpx;
+      }
+      .timeLine {
+        margin-top: 24rpx;
+        .line {
+          width: 160rpx;
+          height: 6rpx;
+        }
+        .dotActive,
+        .dotInActive {
+          top: -9rpx;
+          min-width: 12rpx;
+          height: 24rpx;
+          margin: 0 4rpx;
+          border-radius: 8rpx;
+        }
+      }
+      .timeLineInfo {
+        gap: 18rpx;
+        margin-top: 30rpx;
+        font-size: 24rpx;
+      }
+    }
+  }
+
+  .connectBtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 64rpx;
+    button {
+      width: 624rpx;
+      height: 80rpx;
+      font-size: 30rpx;
+      border-radius: 28rpx;
+      font-weight: 900;
+    }
+  }
+
+  .rightSide {
+    display: none;
+  }
+}
+
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  padding-top: 80px;
+  background-image: linear-gradient(180deg, #1c1c1b 0%, #1c1c1b 40%, #1f1f1d 58%, #2a2a28 100%);
+  .container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    .blooming {
+      position: absolute;
+      z-index: -5;
+      background: url(https://img.alicdn.com/imgextra/i4/O1CN01ykDODr1GCQwLS3eDo_!!6000000000586-2-tps-1503-1286.png)
+        no-repeat center;
+      background-size: contain;
+    }
+
+    .leftSide {
+      .info {
+        position: relative;
+        animation: fade-in-right 1.25s forwards;
+        .infoTitle {
+          color: #fff;
+          font-weight: 900;
+        }
+        .infoText {
+          opacity: 0.5;
+          color: #fff;
+          font-weight: 400;
+        }
+      }
+      .page {
+        position: relative;
+        animation: fade-in-left 1.25s forwards;
+      }
+      .timeLineContainer {
+        position: relative;
+        animation: fade-in-right 1.25s forwards;
+        display: flex;
+        justify-content: center;
+        max-width: 1200px;
+        .timeLineSide {
+          color: #6d6d6c;
+          text-align: center;
+          .timeLineLabel {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            font-weight: 600;
+          }
+          .timeLineLabelActive {
+            color: #bdea4d;
+            font-weight: 900;
+          }
+          .timeLine {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            .lineInActive {
+              background-color: #6d6d6c;
+            }
+            .lineActive {
+              background-color: #bdea4d;
+            }
+
+            .dot {
+              position: relative;
+            }
+            .dotActive {
+              background-color: #bdea4d;
+            }
+            .dotInActive {
+              background-color: #6d6d6c;
+            }
+          }
+          .timeLineInfo {
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+          }
+          .timeLineInfo div:nth-child(1) {
+            opacity: 0.3;
+            color: #fff;
+          }
+          .timeLineInfo div:nth-child(2) {
+            opacity: 0.3;
+            color: #bdea4d;
+          }
+          .timeLineInfoActive div:nth-child(1) {
+            opacity: 1;
+            color: #fff;
+          }
+          .timeLineInfoActive div:nth-child(2) {
+            opacity: 1;
+            color: #bdea4d;
+          }
+        }
+      }
+      .connectBtn {
+        position: relative;
+        animation: fade-in-right 1.25s forwards;
+        button {
+          color: #1c1c1b;
+          background-color: #bdea4d;
+          border: none;
+        }
+      }
+    }
+    .rightSide {
+      animation: fade-in-left 1.25s forwards;
+      position: relative;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+@keyframes fade-in-right {
+  from {
+    left: -15%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  from {
+    right: -15%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}

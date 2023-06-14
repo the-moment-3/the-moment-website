@@ -1,0 +1,173 @@
+@media (min-width: 1200px) {
+  .top {
+    gap: 156px;
+    font-size: 16px;
+    .title {
+      margin-bottom: 8px;
+    }
+    .content {
+      gap: 12px;
+    }
+    .lost {
+      gap: 12px;
+      .winnerList {
+        width: 94px;
+        height: 32px;
+        margin-top: -4px;
+        border-radius: 16px;
+        font-size: 14px;
+        line-height: 32px;
+      }
+    }
+  }
+  .bottom {
+    gap: 8px;
+    height: 123px;
+    width: 510px;
+    margin-top: 36px;
+    border-radius: 24px;
+    .title {
+      font-size: 16px;
+      line-height: 28px;
+    }
+    .number {
+      font-size: 32px;
+    }
+    .content {
+      width: 410px;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .top {
+    gap: 13vw;
+    font-size: 1.33333333vw;
+    .title {
+      margin-bottom: 0.66666667vw;
+    }
+    .content {
+      gap: 1vw;
+    }
+    .lost {
+      gap: 1vw;
+      .winnerList {
+        width: 7.83333333vw;
+        height: 2.66666667vw;
+        margin-top: -0.33333333vw;
+        border-radius: 1.33333333vw;
+        font-size: 1.16666667vw;
+        line-height: 2.66666667vw;
+      }
+    }
+  }
+  .bottom {
+    gap: 0.66666667vw;
+    height: 10.25vw;
+    width: 42.5vw;
+    margin-top: 3vw;
+    border-radius: 2vw;
+    .title {
+      font-size: 1.33333333vw;
+      line-height: 2.33333333vw;
+    }
+    .number {
+      font-size: 2.66666667vw;
+    }
+    .content {
+      width: 34.16666667vw;
+      text-align: center;
+      font-size: 1.33333333vw;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .top {
+    gap: 122rpx;
+    font-size: 24rpx;
+    .title {
+      margin-bottom: 16rpx;
+    }
+    .content {
+      gap: 12px;
+    }
+    .lost {
+      gap: 8rpx;
+      .winnerList {
+        width: 132rpx;
+        height: 36rpx;
+        margin-top: -4rpx;
+        border-radius: 20rpx;
+        font-size: 20rpx;
+        line-height: 36rpx;
+      }
+    }
+  }
+  .bottom {
+    gap: 12rpx;
+    height: 148rpx;
+    width: 604rpx;
+    margin-top: 40rpx;
+    border-radius: 32rpx;
+    .title {
+      font-size: 24rpx;
+      line-height: 28rpx;
+    }
+    .number {
+      font-size: 54rpx;
+    }
+    .content {
+      text-align: center;
+      font-size: 24rpx;
+    }
+  }
+}
+
+.top {
+  display: flex;
+  .title {
+    color: #fff;
+    font-weight: 400;
+    opacity: 0.4;
+  }
+  .content {
+    display: flex;
+    color: #fff;
+    font-weight: 600;
+  }
+  .lost {
+    display: flex;
+    color: #bdea4d;
+    font-weight: 900;
+    .winnerList {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #bdea4d;
+      color: #bdea4d;
+      font-weight: 400;
+      background-color: transparent;
+    }
+  }
+}
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  .title {
+    text-align: center;
+    color: #bdea4d;
+    font-weight: 400;
+  }
+  .number {
+    color: #bdea4d;
+    font-weight: 900;
+  }
+  .content {
+    color: #fff;
+    font-weight: 600;
+  }
+}

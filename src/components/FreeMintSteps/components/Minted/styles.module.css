@@ -1,0 +1,114 @@
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 876px;
+    height: 515px;
+    .container {
+      width: 876px;
+      height: 271px;
+      margin-top: 244px;
+      border-radius: 32px;
+      .title {
+        width: 446px;
+        margin-top: 24px;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      .content {
+        margin-top: 28px;
+        font-size: 20px;
+        line-height: 36px;
+      }
+    }
+    .nftBox {
+      top: 0;
+      right: 327px;
+      width: 222px;
+      height: 323px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .wrapper {
+    width: 73vw;
+    height: 42.91666667vw;
+    .container {
+      width: 73vw;
+      height: 22.58333333vw;
+      margin-top: 20.33333333vw;
+      border-radius: 2.66666667vw;
+      .title {
+        width: 37.16666667vw;
+        margin-top: 2vw;
+        font-size: 2vw;
+        line-height: 2.33333333vw;
+      }
+      .content {
+        margin-top: 2.33333333vw;
+        font-size: 1.66666667vw;
+        line-height: 3vw;
+      }
+    }
+    .nftBox {
+      top: 0;
+      right: 27.25vw;
+      width: 18.5vw;
+      height: 26.91666667vw;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .wrapper {
+    width: 686rpx;
+    height: 820rpx;
+    .container {
+      width: 686rpx;
+      height: 720rpx;
+      margin-top: 100rpx;
+      border-radius: 32rpx;
+      .title {
+        width: 517rpx;
+        margin-top: 126rpx;
+        font-size: 30rpx;
+        line-height: 38rpx;
+      }
+      .content {
+        margin-top: 70rpx;
+        font-size: 30rpx;
+        line-height: 38rpx;
+      }
+    }
+    .nftBox {
+      top: 0;
+      right: 216.5rpx;
+      width: 253rpx;
+      height: 369rpx;
+    }
+  }
+}
+.wrapper {
+  position: relative;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(68, 68, 68, 0.55);
+    .title {
+      text-align: center;
+      color: #bdea4d;
+      font-weight: 400;
+    }
+    .content {
+      text-align: center;
+      color: #fff;
+      font-weight: 900;
+    }
+  }
+  .nftBox {
+    position: absolute;
+    background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01XNfByK1kh3tvuRUWH_!!6000000004714-2-tps-202-294.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

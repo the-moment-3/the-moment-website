@@ -1,0 +1,6 @@
+# 忽略目录
+src/ali-modules/
+node_modules/
+coverage/
+build/
+.ice/

@@ -1,0 +1,137 @@
+@media (min-width: 1200px) {
+  .pageWrapper {
+    align-items: center;
+    .container {
+      gap: 126px;
+      margin: 174px 32px 160px;
+      .blooming1 {
+        top: -718px;
+        left: -1054px;
+        width: 3081px;
+        height: 1485px;
+      }
+      .contentWrapper {
+        width: 397px;
+      }
+      .partnersWrapper {
+        width: 609px;
+        height: 168px;
+        border-radius: 24px;
+        .partner {
+          width: 203px;
+          height: 84px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    gap: 10.5vw;
+    margin: 14.5vw 2.66666667vw 13.33333333vw;
+    .blooming1 {
+      top: -59.83333333vw;
+      left: -87.83333333vw;
+      width: 256.75vw;
+      height: 123.75vw;
+    }
+    .contentWrapper {
+      width: 33.08333333vw;
+    }
+    .partnersWrapper {
+      width: 50.75vw;
+      height: 14vw;
+      border-radius: 2vw;
+      .partner {
+        width: 16.91666667vw;
+        height: 7vw;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    gap: 40rpx;
+    margin: 140rpx 32rpx;
+    .blooming2 {
+      top: -348rpx;
+      left: -690rpx;
+      width: 1922rpx;
+      height: 775rpx;
+    }
+    .contentWrapper {
+      width: 685rpx;
+    }
+    .partnersWrapper {
+      width: 685rpx;
+      height: 192rpx;
+      border-radius: 28rpx;
+      .partner {
+        width: 228rpx;
+        height: 96rpx;
+      }
+    }
+  }
+}
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-image: linear-gradient(180deg, #1c1c1b 0%, #1c1c1b 40%, #1f1f1d 58%, #2a2a28 100%);
+  overflow: hidden;
+  .container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    .blooming1 {
+      position: absolute;
+      z-index: -5;
+      background: url(https://img.alicdn.com/imgextra/i3/O1CN01mEHgPF1ilyvFQJ21N_!!6000000004454-2-tps-3081-1485.png)
+        no-repeat center;
+      background-size: contain;
+    }
+    .blooming2 {
+      position: absolute;
+      z-index: -5;
+      background: url(https://img.alicdn.com/imgextra/i1/O1CN012gBve41I8Qhx8QW5Q_!!6000000000848-2-tps-1922-775.png)
+        no-repeat center;
+      background-size: contain;
+    }
+    .partnersWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      opacity: 0;
+      background: url(https://img.alicdn.com/imgextra/i3/O1CN01oDoMoZ1dT8YHiGIr7_!!6000000003736-2-tps-609-169.png)
+        no-repeat center;
+      background-size: contain;
+      .partner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 50%; /* temporary */
+        }
+      }
+    }
+  }
+}
+
+.fadeIn {
+  position: relative;
+  animation: fade-in-up 1.5s forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    bottom: -15%;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
