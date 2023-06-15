@@ -20,7 +20,6 @@ interface WinnerListBtnProp {
 export const WinnerListBtn = ({ winnerList, cln }: WinnerListBtnProp) => {
   const [visible, setVisible] = useState(false);
   const [showAddress, setShowAddress] = useState(true);
-  const [height, setHeight] = useState('');
   const translate = useI18n();
 
   useEffect(() => {
@@ -32,17 +31,10 @@ export const WinnerListBtn = ({ winnerList, cln }: WinnerListBtnProp) => {
   }, []);
 
   const handleCancel = () => {
-    const bd = document.querySelector('#ice-container')! as HTMLElement;
-    bd.style.height = height;
-    bd.style.overflow = 'auto';
     setVisible(false);
   };
 
   const handleClick = () => {
-    const bd = document.querySelector('#ice-container')! as HTMLElement;
-    setHeight(bd.style.height);
-    bd.style.height = '100vh';
-    bd.style.overflow = 'hidden';
     setVisible(true);
   };
 
