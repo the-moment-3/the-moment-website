@@ -107,7 +107,8 @@
   .bottom {
     gap: 12rpx;
     height: 148rpx;
-    width: 604rpx;
+    width: 540rpx;
+    padding: 0 32rpx;
     margin-top: 40rpx;
     border-radius: 32rpx;
     .title {
