@@ -140,7 +140,9 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
           </div>
           <div className={styles.mintButton}>
             <button onClick={mint}>
-              {status === StepStatus.WIN ? `Free Mint` : translate.get('nftwebsite_Congratulate.Mintnow')}
+              {status === StepStatus.WIN
+                ? translate.get('nftwebsite_zhuzao.Freemint')
+                : translate.get('nftwebsite_Congratulate.Mintnow')}
             </button>
           </div>
           <div className={styles.mobileNftRemainer}>Remaining: 500/2000</div>
