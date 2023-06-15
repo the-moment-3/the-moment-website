@@ -30,6 +30,13 @@
       height: 48px;
       margin-left: 8px;
       margin-right: 12px;
+      background-image: url(https://img.alicdn.com/imgextra/i1/O1CN0199Ckne1NDXCZiAQIp_!!6000000001536-2-tps-96-96.png);
+      background-position: center center;
+      background-size: cover;
+      cursor: pointer;
+    }
+    .translate:hover {
+      background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01mfNLmM1kXRa4NQ4FY_!!6000000004693-2-tps-96-96.png);
     }
     .wallet {
       width: 164px;
@@ -77,6 +84,13 @@
       height: 4vw;
       margin-left: 0.66666667vw;
       margin-right: 1vw;
+      background-image: url(https://img.alicdn.com/imgextra/i1/O1CN0199Ckne1NDXCZiAQIp_!!6000000001536-2-tps-96-96.png);
+      background-position: center center;
+      background-size: cover;
+      cursor: pointer;
+    }
+    .translate:hover {
+      background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01mfNLmM1kXRa4NQ4FY_!!6000000004693-2-tps-96-96.png);
     }
     .wallet {
       width: 15.5vw;
@@ -162,6 +176,13 @@
       width: 72rpx;
       height: 72rpx;
       margin-right: 8rpx;
+      background-image: url(https://img.alicdn.com/imgextra/i1/O1CN0199Ckne1NDXCZiAQIp_!!6000000001536-2-tps-96-96.png);
+      background-position: center center;
+      background-size: cover;
+      cursor: pointer;
+    }
+    .translate:active {
+      background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01mfNLmM1kXRa4NQ4FY_!!6000000004693-2-tps-96-96.png);
     }
     .wallet {
       width: 264rpx;
@@ -265,15 +286,6 @@
     display: flex;
     align-items: center;
     margin-left: auto;
-    .translate {
-      background-image: url(https://img.alicdn.com/imgextra/i1/O1CN0199Ckne1NDXCZiAQIp_!!6000000001536-2-tps-96-96.png);
-      background-position: center center;
-      background-size: cover;
-      cursor: pointer;
-    }
-    .translate:hover {
-      background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01mfNLmM1kXRa4NQ4FY_!!6000000004693-2-tps-96-96.png);
-    }
     .wallet {
       display: flex;
       align-items: center;
