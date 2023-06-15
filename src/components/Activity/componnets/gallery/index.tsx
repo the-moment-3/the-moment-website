@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { throttle } from '@/utils/throttle';
 import styles from './styles.module.css';
 
 const nftImages = [
@@ -30,14 +31,14 @@ const nftImages = [
 export const Gallery = () => {
   const [leftMove, setLeftMove] = useState(0);
 
-  const hanlderScroll = () => {
+  const hanlderScroll = useCallback(() => {
     setLeftMove(window.scrollY);
-  };
+  }, []);
 
   useEffect(() => {
-    window.addEventListener('scroll', hanlderScroll);
+    window.addEventListener('scroll', throttle(hanlderScroll, 16) as EventListenerOrEventListenerObject);
     return () => {
-      window.removeEventListener('scroll', hanlderScroll);
+      window.removeEventListener('scroll', throttle(hanlderScroll, 16) as EventListenerOrEventListenerObject);
     };
   }, []);
 
