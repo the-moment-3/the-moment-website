@@ -27,7 +27,7 @@ export const Culture = ({ pageIdx }: { pageIdx?: string }) => {
               icon={'https://img.alicdn.com/imgextra/i2/O1CN01O5quAb1jY4VtZgBom_!!6000000004559-2-tps-72-72.png'}
               ref={refs['pageInfo']}
             />
-            <a>
+            <a href="https://discord.gg/themoment3" target="_blank">
               <div className={styles.btnWrapper} ref={refs['btnWrapper']}>
                 <div className={styles.icon}></div>
                 <span>{translate.get('nftwebsite_introduc.JoinDiscord')}</span>
