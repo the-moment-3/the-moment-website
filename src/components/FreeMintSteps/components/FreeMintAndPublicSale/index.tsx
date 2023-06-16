@@ -128,7 +128,6 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
                 : translate.get('nftwebsite_Congratulate.Mintnow')}
             </button>
           </div>
-          {/* <div className={styles.mobileNftRemainer}>{`Remaining: ${totalMintedAmount}/${collectionSize}`}</div> */}
           <div className={styles.mobileNftRemainer}>
             {translate.get('nftwebsite_Congratulate.Remaining1', '', { 0: totalMintedAmount, 1: collectionSize })}
           </div>
