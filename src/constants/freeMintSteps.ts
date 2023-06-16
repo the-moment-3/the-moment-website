@@ -6,4 +6,5 @@ export enum StepStatus {
   WIN = 'win',
   MINTED = 'minted',
   PUBLIC_SALE = 'public-sale',
+  FREE_MINT_FOR_ALL = 'free-mint-for-all',
 }
