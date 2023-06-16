@@ -25,6 +25,7 @@ export const StepOne = ({ status }: { status: StepStatus }) => {
     [StepStatus.MINTED]: completedTaskStep,
     [StepStatus.WIN]: [],
     [StepStatus.PUBLIC_SALE]: [],
+    [StepStatus.FREE_MINT_FOR_ALL]: [],
   };
 
   const stepContent = getStepContent[status];
