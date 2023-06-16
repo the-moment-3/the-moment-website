@@ -56,23 +56,26 @@ const Steps = ({ label, date, price, active }: { label?: string; date: string; p
 
 export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
   const { address, openModal } = useSiwe();
-  const [{ allowListStartTime, publicStartTime }] = store.useModel('onchain');
+  const [{ taskStartTime, allowListStartTime, allowListEndTime, publicStartTime }] = store.useModel('onchain');
   const [{ time }] = store.useModel('i18n');
   const translate = useI18n();
 
-  const canPublicSale = dayjs(NOW).diff(dayjs('2023-7-7T14').valueOf()) >= 0;
+  const hasTaskStart = dayjs(NOW).diff(taskStartTime) >= 0;
+  const hasFreeMintStart = dayjs(NOW).diff(allowListStartTime) >= 0;
+  const hasFreeMintEnd = dayjs(NOW).diff(allowListEndTime) >= 0;
+
   const timeLineSteps = [
     {
       label: translate.get('nftwebsite_zhuzao.Freemint'),
       date: `${dayjs(allowListStartTime).tz(time.timezone).format('MMM D, YYYY HH:mm')} (${time.timezoneAbbr})`,
       price: translate.get('nftwebsite_zhuzao.free'),
-      active: true,
+      active: hasFreeMintStart,
     },
     {
       label: translate.get('nftwebsite_zhuzao.Publicmint'),
       date: `${dayjs(publicStartTime).tz(time.timezone).format('MMM D, YYYY HH:mm')} (${time.timezoneAbbr})`,
       price: translate.get('nftwebsite_zhuzao.0088'),
-      active: canPublicSale,
+      active: hasFreeMintEnd,
     },
   ];
 
@@ -100,15 +103,17 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
               return <Steps label={item.label} date={item.date} price={item.price} active={item.active} key={idx} />;
             })}
           </div>
-          <div className={styles.connectBtn}>
-            {address ? (
-              <Link to="/mint">
-                <button>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
-              </Link>
-            ) : (
-              <button onClick={openModal}>{translate.get('nft_Connectwallet')}</button>
-            )}
-          </div>
+          {hasTaskStart && (
+            <div className={styles.connectBtn}>
+              {address ? (
+                <Link to="/mint">
+                  <button>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
+                </Link>
+              ) : (
+                <button onClick={openModal}>{translate.get('nft_Connectwallet')}</button>
+              )}
+            </div>
+          )}
         </div>
         <div className={styles.rightSide}>
           <img

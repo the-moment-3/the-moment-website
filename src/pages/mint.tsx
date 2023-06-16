@@ -21,8 +21,8 @@ export default () => {
     <div className={styles.wrapper}>
       <Header navAnchor={navAnchor} />
       <div className={styles.container} data-testid={currStepStatus}>
-        {[StepStatus.WIN, StepStatus.MINTED, StepStatus.PUBLIC_SALE].includes(currStepStatus) ? (
-          currStepStatus === StepStatus.PUBLIC_SALE ? (
+        {[StepStatus.WIN, StepStatus.MINTED, StepStatus.FREE_MINT_FOR_ALL].includes(currStepStatus) ? (
+          currStepStatus === StepStatus.FREE_MINT_FOR_ALL ? (
             <div className={styles.mintTop}>
               <div className={styles.imgWrapper}>
                 <img

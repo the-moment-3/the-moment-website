@@ -50,7 +50,7 @@ export const MediaIcon = ({
             key={media.name}
             style={{ width: iconSize, height: iconSize, backgroundColor: bgc }}
           >
-            <a href="">
+            <a href={media.url} target="_blank">
               <img
                 src={media.icon}
                 alt={media.name}

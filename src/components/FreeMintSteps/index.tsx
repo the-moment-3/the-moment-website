@@ -19,12 +19,13 @@ export const FreeMintSteps = ({ status }: { status: StepStatus }) => {
     [StepStatus.MINTED]: [<Minted key={StepStatus.MINTED} />],
 
     [StepStatus.PUBLIC_SALE]: [<FreeMintAndPublicSale status={status} key={StepStatus.PUBLIC_SALE} />],
+    [StepStatus.FREE_MINT_FOR_ALL]: [<FreeMintAndPublicSale status={status} key={StepStatus.FREE_MINT_FOR_ALL} />],
   };
 
   return (
     <div className={styles.stepContainer}>
       {StepConfig[status].map((step, index) => {
-        if ([StepStatus.WIN, StepStatus.PUBLIC_SALE, StepStatus.MINTED].includes(status)) {
+        if ([StepStatus.WIN, StepStatus.FREE_MINT_FOR_ALL, StepStatus.MINTED].includes(status)) {
           return step;
         } else {
           return (

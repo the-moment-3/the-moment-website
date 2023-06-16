@@ -1,19 +1,15 @@
 import { Button, Modal } from 'antd';
 import { useState, useEffect } from 'react';
-import styles from './styles.module.css';
 import { useI18n } from '@/hooks/use-i18n';
+import { GetLotteryWinnerListResponse } from '@/services/korea-nft/lottery-winner-list';
+import styles from './styles.module.css';
 
 const _winnerList = new Array(2000).fill(0).map((item, idx) => {
   return { luckyNumber: idx, address: '0x****123' };
 });
 
-export interface WinnerList {
-  luckyNumber: number;
-  address: string;
-}
-
 interface WinnerListBtnProp {
-  winnerList: WinnerList[];
+  winnerList: GetLotteryWinnerListResponse[];
   cln: string;
 }
 

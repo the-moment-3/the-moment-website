@@ -20,10 +20,10 @@
       }
     }
     .nftBox {
-      top: 0;
-      right: 327px;
-      width: 222px;
-      height: 323px;
+      top: -88px;
+      right: 105px;
+      width: 664px;
+      height: 515px;
     }
   }
 }
@@ -49,10 +49,10 @@
       }
     }
     .nftBox {
-      top: 0;
-      right: 27.25vw;
-      width: 18.5vw;
-      height: 26.91666667vw;
+      top: -7.33333333vw;
+      right: 8.75vw;
+      width: 55.33333333vw;
+      height: 42.91666667vw;
     }
   }
 }
@@ -78,10 +78,10 @@
       }
     }
     .nftBox {
-      top: 0;
-      right: 216.5rpx;
-      width: 253rpx;
-      height: 369rpx;
+      top: -84rpx;
+      right: -37rpx;
+      width: 760rpx;
+      height: 570rpx;
     }
   }
 }
@@ -107,7 +107,7 @@
   }
   .nftBox {
     position: absolute;
-    background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01XNfByK1kh3tvuRUWH_!!6000000004714-2-tps-202-294.png);
+    background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01tFEcHZ1OGZRpGRe4J_!!6000000001678-2-tps-1083-975.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
