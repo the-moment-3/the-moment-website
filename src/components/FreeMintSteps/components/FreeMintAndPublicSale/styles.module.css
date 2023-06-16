@@ -1,14 +1,12 @@
 @media (min-width: 1200px) {
   .container {
-    gap: 156px;
+    gap: 96px;
     width: 1022px;
-    height: 456px;
     padding: 48px 70px 48px 40px;
     border-radius: 32px;
     .leftSide {
       gap: 24px;
       width: 512px;
-      height: 456px;
       .title {
         font-size: 24px;
         line-height: 32px;
@@ -71,32 +69,49 @@
         display: none;
       }
     }
-    .rightSide {
+    .rightSide,
+    .rightSideLarger {
+      position: relative;
       width: 422px;
-      height: 422px;
-      margin-top: 32px;
+      padding-top: 32px;
+      .nftRemainer {
+        font-size: 20px;
+      }
+    }
+    .rightSide {
+      height: 352px;
       .nftBox {
-        width: 240px;
-        height: 350px;
+        position: absolute;
+        top: -16px;
+        width: 674px;
+        height: 514px;
       }
       .nftRemainer {
-        margin-top: 36px;
-        font-size: 20px;
+        margin-top: 326px;
+      }
+    }
+    .rightSideLarger {
+      height: 390px;
+      .nftBoxLarger {
+        position: absolute;
+        width: 736px;
+        height: 514px;
+      }
+      .nftRemainer {
+        margin-top: 386px;
       }
     }
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .container {
-    gap: 13vw;
+    gap: 8vw;
     width: 85.16666667vw;
-    height: 38vw;
     padding: 4vw 5.83333333vw 4vw 3.33333333vw;
     border-radius: 2.66666667vw;
     .leftSide {
       gap: 2vw;
       width: 42.66666667vw;
-      height: 38vw;
       .title {
         font-size: 2vw;
         line-height: 2.66666667vw;
@@ -115,7 +130,7 @@
           }
           .adds {
             .add {
-              top: 0.08333333vw;
+              top: -0.08333333vw;
               left: -0.83333333vw;
               height: 0.33333333vw;
               width: 1.66666667vw;
@@ -159,17 +174,34 @@
         display: none;
       }
     }
-    .rightSide {
+    .rightSide,
+    .rightSideLarger {
+      position: relative;
       width: 35.16666667vw;
-      height: 35.16666667vw;
-      margin-top: 2.66666667vw;
+      padding-top: 2.66666667vw;
+      .nftRemainer {
+        margin-top: 32.16666667vw;
+        font-size: 1.66666667vw;
+      }
+    }
+    .rightSide {
+      height: 29.33333333vw;
       .nftBox {
-        width: 20vw;
-        height: 29.16666667vw;
+        position: absolute;
+        top: -1.33333333vw;
+        width: 56.16666667vw;
+        height: 42.83333333vw;
       }
       .nftRemainer {
-        margin-top: 3vw;
-        font-size: 1.66666667vw;
+        margin-top: 27.16666667vw;
+      }
+    }
+    .rightSideLarger {
+      height: 32.5vw;
+      .nftBoxLarger {
+        position: absolute;
+        width: 61.33333333vw;
+        height: 42.83333333vw;
       }
     }
   }
@@ -178,16 +210,14 @@
   .wrapper {
     position: relative;
     width: 686rpx;
-    height: 820rpx;
+    height: 800rpx;
     .container {
       width: 606rpx;
-      height: 624rpx;
       margin-top: 100rpx;
       padding: 64rpx 40rpx 36rpx;
       border-radius: 32rpx;
       .leftSide {
         width: 606rpx;
-        height: 616rpx;
         .title {
           font-size: 30rpx;
           line-height: 32rpx;
@@ -262,15 +292,18 @@
           font-weight: 600;
         }
       }
-      .rightSide {
+      .rightSide,
+      .rightSideLarger {
         position: absolute;
         top: 0;
         right: 32rpx;
         width: 196rpx;
         height: 284rpx;
-        .nftBox {
-          width: 196rpx;
-          height: 284rpx;
+        .nftBox,
+        .nftBoxLarger {
+          position: absolute;
+          width: 580rpx;
+          height: 397rpx;
         }
         .nftRemainer {
           display: none;
@@ -323,6 +356,7 @@
           background-color: #5a5a5a;
         }
         .disabled {
+          cursor: auto;
           opacity: 0.3;
           color: #191919;
         }
@@ -371,14 +405,16 @@
       }
     }
   }
-  .rightSide {
+  .rightSide,
+  .rightSideLarger {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .nftBox {
-      background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01XNfByK1kh3tvuRUWH_!!6000000004714-2-tps-202-294.png);
-      background-size: contain;
-      background-repeat: no-repeat;
+    .nftBox,
+    .nftBoxLarger {
+      background: url(https://img.alicdn.com/imgextra/i3/O1CN01tFEcHZ1OGZRpGRe4J_!!6000000001678-2-tps-1083-975.png)
+        no-repeat center center;
+      background-size: cover;
     }
     .nftRemainer {
       color: #fff;

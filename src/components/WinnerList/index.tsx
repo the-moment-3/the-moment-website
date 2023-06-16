@@ -1,19 +1,15 @@
 import { Button, Modal } from 'antd';
 import { useState, useEffect } from 'react';
-import styles from './styles.module.css';
 import { useI18n } from '@/hooks/use-i18n';
+import { GetLotteryWinnerListResponse } from '@/services/korea-nft/lottery-winner-list';
+import styles from './styles.module.css';
 
 const _winnerList = new Array(2000).fill(0).map((item, idx) => {
   return { luckyNumber: idx, address: '0x****123' };
 });
 
-export interface WinnerList {
-  luckyNumber: number;
-  address: string;
-}
-
 interface WinnerListBtnProp {
-  winnerList: WinnerList[];
+  winnerList: GetLotteryWinnerListResponse[];
   cln: string;
 }
 
@@ -34,13 +30,17 @@ export const WinnerListBtn = ({ winnerList, cln }: WinnerListBtnProp) => {
     setVisible(false);
   };
 
+  const handleClick = () => {
+    setVisible(true);
+  };
+
   const handleWindowResize = () => {
     setShowAddress(window.innerWidth >= 768);
   };
 
   return (
     <div className={styles.wrapper}>
-      <Button className={cln} onClick={() => setVisible(true)} ghost>
+      <Button className={cln} onClick={handleClick} ghost>
         {translate.get('nftwebsite_lost.Winnerslist')}
       </Button>
       <Modal

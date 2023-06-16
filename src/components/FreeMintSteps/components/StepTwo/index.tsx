@@ -82,6 +82,7 @@ export const StepTwo = ({ status }: { status: StepStatus }) => {
     [StepStatus.MINTED]: { top: [], bottom: { title: '', content: '' } },
     [StepStatus.WIN]: { top: [], bottom: { title: '', content: '' } },
     [StepStatus.PUBLIC_SALE]: { top: [], bottom: { title: '', content: '' } },
+    [StepStatus.FREE_MINT_FOR_ALL]: { top: [], bottom: { title: '', content: '' } },
   };
 
   const stepContent = getStepContent[status];
