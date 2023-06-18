@@ -3,8 +3,8 @@ import { LANGUAGES, TIMEZONE, TIMEZONE_ABBR } from '@/constants/i18n';
 
 export default createModel({
   state: {
-    lang: LANGUAGES.KO,
-    time: { timezone: TIMEZONE.KST, timezoneAbbr: TIMEZONE_ABBR.KST },
+    lang: LANGUAGES.EN,
+    time: { timezone: TIMEZONE.EST, timezoneAbbr: TIMEZONE_ABBR.EST },
   },
   reducers: {
     update(state, payload) {
