@@ -154,12 +154,6 @@
       .memberInfo {
         display: flex;
         overflow: hidden;
-        /* background: rgba(68, 68, 68, 0.55);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 20px; */
-        /* background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01kVZqqG22OQsVitnak_!!6000000007110-2-tps-576-230.png);
-        background-size: contain;
-        background-repeat: no-repeat; */
         .info {
           .name {
             font-weight: 900;
@@ -172,7 +166,6 @@
         }
         .avatar {
           margin-left: auto;
-          /* background-color: pink; */
         }
       }
     }
