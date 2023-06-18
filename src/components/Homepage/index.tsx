@@ -94,8 +94,8 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
           </div>
           <div className={styles.page}>
             <img
-              src="https://img.alicdn.com/imgextra/i1/O1CN011zfeRs1oY8dyV7pyk_!!6000000005236-2-tps-948-752.png"
-              alt=""
+              src="https://img.alicdn.com/imgextra/i1/O1CN01r7htxW1MctWNcQ1Tj_!!6000000001456-2-tps-948-752.png"
+              alt="The Moment3!"
             />
           </div>
           <div className={styles.timeLineContainer}>
@@ -117,8 +117,8 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
         </div>
         <div className={styles.rightSide}>
           <img
-            src="https://img.alicdn.com/imgextra/i1/O1CN011zfeRs1oY8dyV7pyk_!!6000000005236-2-tps-948-752.png"
-            alt=""
+            src="https://img.alicdn.com/imgextra/i1/O1CN01r7htxW1MctWNcQ1Tj_!!6000000001456-2-tps-948-752.png"
+            alt="The Moment3!"
           />
         </div>
       </div>
