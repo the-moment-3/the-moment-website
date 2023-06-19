@@ -1,11 +1,12 @@
 import { forwardRef } from 'react';
+import { Link } from '@ice/runtime';
 import styles from './styles.module.css';
 
 interface PageInfoProps {
   title?: string;
   subtitle?: string;
   desc: (string | undefined)[];
-  icon?: string;
+  icon?: { img: string; url: string };
 }
 export const PageInfo = forwardRef((props: PageInfoProps, ref: React.RefObject<HTMLDivElement>) => {
   const { title, subtitle, desc, icon } = props;
@@ -15,10 +16,12 @@ export const PageInfo = forwardRef((props: PageInfoProps, ref: React.RefObject<H
       <div className={styles.title}>
         <div>{title}</div>
         {icon && (
-          <div
-            className={styles.icon}
-            style={{ background: `url(${icon}) no-repeat center`, backgroundSize: 'contain' }}
-          ></div>
+          <Link to={icon.url}>
+            <div
+              className={styles.icon}
+              style={{ background: `url(${icon.img}) no-repeat center`, backgroundSize: 'contain' }}
+            ></div>
+          </Link>
         )}
       </div>
       {subtitle && <div className={styles.subtitle}>{subtitle}</div>}

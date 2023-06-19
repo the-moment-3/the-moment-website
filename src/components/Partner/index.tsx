@@ -47,7 +47,7 @@ export const Partner = ({ pageIdx }: { pageIdx?: string }) => {
         <div className={styles.contentWrapper}>
           <PageInfo
             title={translate.get('nftwebsite_partner.Partners')}
-            desc={[translate.get('nftwebsite_partner.MeettheTeamBehindTheMoment3')]}
+            desc={[translate.get('nftwebsite_partner.holder')]}
             ref={refs['pageInfo']}
           />
         </div>

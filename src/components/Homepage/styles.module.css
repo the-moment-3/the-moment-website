@@ -87,6 +87,15 @@
       font-weight: 700;
     }
   }
+  .message {
+    :global {
+      .ant-message-notice-content {
+        height: 32px;
+        padding: 8px 16px !important;
+        border-radius: 8px;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -176,6 +185,15 @@
       font-size: 1.33333333vw;
       border-radius: 1.33333333vw;
       font-weight: 700;
+    }
+  }
+  .message {
+    :global {
+      .ant-message-notice-content {
+        height: 2.66666667vw;
+        padding: 0.66666667vw 1.33333333 !important;
+        border-radius: 0.66666667vw;
+      }
     }
   }
 }
@@ -273,6 +291,15 @@
 
   .rightSide {
     display: none;
+  }
+  .message {
+    :global {
+      .ant-message-notice-content {
+        height: 70rpx;
+        padding: 16rpx 32rpx !important;
+        border-radius: 16rpx;
+      }
+    }
   }
 }
 
@@ -393,6 +420,18 @@
   }
 }
 
+.message {
+  :global {
+    .ant-message-notice-content {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      background-color: rgba(0, 0, 0, 0.8) !important;
+      color: #fff;
+    }
+  }
+}
 img {
   max-width: 100%;
 }

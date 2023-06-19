@@ -12,7 +12,6 @@ export const Culture = ({ pageIdx }: { pageIdx?: string }) => {
     picture: { heightOffsetRatio: 0.8, className: styles.fadeIn, ref: useRef<HTMLDivElement>(null) },
   });
   const translate = useI18n();
-
   return (
     <>
       <div className={styles.pageWrapper} id={pageIdx}>
@@ -24,7 +23,10 @@ export const Culture = ({ pageIdx }: { pageIdx?: string }) => {
               title={translate.get('nft_whitepaper')}
               subtitle={translate.get('nftwebsite_culture.subtitle')}
               desc={[translate.get('nftwebsite_culture.story1'), translate.get('nftwebsite_culture.story2')]}
-              icon={'https://img.alicdn.com/imgextra/i2/O1CN01O5quAb1jY4VtZgBom_!!6000000004559-2-tps-72-72.png'}
+              icon={{
+                img: 'https://img.alicdn.com/imgextra/i2/O1CN01O5quAb1jY4VtZgBom_!!6000000004559-2-tps-72-72.png',
+                url: ' https://themoment3.ai/whitepaper.pdf',
+              }}
               ref={refs['pageInfo']}
             />
             <a href="https://discord.gg/themoment3" target="_blank">
