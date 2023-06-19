@@ -17,7 +17,7 @@
     margin-left: 32px;
 
     .btnWrapper {
-      gap: 12px;
+      gap: 8px;
       height: 48px;
       width: 198px;
       margin-top: 36px;
@@ -56,7 +56,7 @@
 
     margin-left: 2.66666667vw;
     .btnWrapper {
-      gap: 1vw;
+      gap: 0.66666667vw;
       height: 4vw;
       width: 16.5vw;
       margin-top: 3vw;

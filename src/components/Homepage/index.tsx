@@ -69,7 +69,7 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
       label: translate.get('nftwebsite_zhuzao.Freemint'),
       date: `${dayjs(allowListStartTime).tz(time.timezone).format('MMM D, YYYY HH:mm')} (${time.timezoneAbbr})`,
       price: translate.get('nftwebsite_zhuzao.free'),
-      active: hasFreeMintStart,
+      active: true,
     },
     {
       label: translate.get('nftwebsite_zhuzao.Publicmint'),
@@ -103,17 +103,16 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
               return <Steps label={item.label} date={item.date} price={item.price} active={item.active} key={idx} />;
             })}
           </div>
-          {hasTaskStart && (
-            <div className={styles.connectBtn}>
-              {address ? (
-                <Link to="/mint">
-                  <button>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
-                </Link>
-              ) : (
-                <button onClick={openModal}>{translate.get('nft_Connectwallet')}</button>
-              )}
-            </div>
-          )}
+
+          <div className={styles.connectBtn}>
+            {address ? (
+              <Link to="/mint">
+                <button>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
+              </Link>
+            ) : (
+              <button onClick={openModal}>{translate.get('nft_Connectwallet')}</button>
+            )}
+          </div>
         </div>
         <div className={styles.rightSide}>
           <img

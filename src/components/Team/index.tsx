@@ -33,7 +33,6 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
       name: translate.get('nftwebsite_team.CryptoBear'),
       position: translate.get('nftwebsite_team.Tech'),
       avatar: 'https://img.alicdn.com/imgextra/i1/O1CN017UdJuJ1m7SLJIXnpr_!!6000000004907-2-tps-576-230.png',
-      twitter: 'https://twitter.com/cryptobear_cn',
     },
     {
       name: translate.get('nftwebsite_team.Silver'),
