@@ -1,6 +1,7 @@
 import { Link } from 'ice';
 import dayjs from 'dayjs';
 import cl from 'classnames';
+import { message } from 'antd';
 import store from '@/store';
 import { useI18n } from '@/hooks/use-i18n';
 import { useSiwe } from '@/hooks/use-siwe';
@@ -55,6 +56,7 @@ const Steps = ({ label, date, price, active }: { label?: string; date: string; p
 };
 
 export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
+  const [messageApi, contextHolder] = message.useMessage();
   const { address, openModal } = useSiwe();
   const [{ taskStartTime, allowListStartTime, allowListEndTime, publicStartTime }] = store.useModel('onchain');
   const [{ time }] = store.useModel('i18n');
@@ -78,6 +80,22 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
       active: hasFreeMintEnd,
     },
   ];
+
+  const openInfo = () => {
+    messageApi.open({
+      className: styles.message,
+      type: 'info',
+      content: 'hello',
+      icon: <></>,
+      duration: 3,
+      style: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: '80px',
+      },
+    });
+  };
 
   return (
     <div className={styles.pageWrapper} id={pageIdx}>
@@ -103,14 +121,14 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
               return <Steps label={item.label} date={item.date} price={item.price} active={item.active} key={idx} />;
             })}
           </div>
-
+          {contextHolder}
           <div className={styles.connectBtn}>
             {address ? (
               <Link to="/mint">
                 <button>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
               </Link>
             ) : (
-              <button onClick={openModal}>{translate.get('nft_Connectwallet')}</button>
+              <button onClick={hasTaskStart ? openModal : openInfo}>{translate.get('nft_Connectwallet')}</button>
             )}
           </div>
         </div>
