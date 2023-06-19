@@ -33,6 +33,7 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
       name: translate.get('nftwebsite_team.CryptoBear'),
       position: translate.get('nftwebsite_team.Tech'),
       avatar: 'https://img.alicdn.com/imgextra/i1/O1CN017UdJuJ1m7SLJIXnpr_!!6000000004907-2-tps-576-230.png',
+      twitter: 'https://twitter.com/cryptobear_cn',
     },
     {
       name: translate.get('nftwebsite_team.Silver'),
@@ -60,7 +61,20 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
           </div>
           <div className={styles.membersWrapper} ref={refs['membersWrapper']}>
             {members.map((member, idx) => {
-              return (
+              return member.twitter ? (
+                <a
+                  className={styles.memberInfo}
+                  key={idx}
+                  style={{ background: `url(${member.avatar}) no-repeat`, backgroundSize: 'contain' }}
+                  href={member.twitter}
+                  target="_blank"
+                >
+                  <div className={styles.info}>
+                    <div className={styles.name}>{member.name}</div>
+                    <div className={styles.position}>{member.position}</div>
+                  </div>
+                </a>
+              ) : (
                 <div
                   className={styles.memberInfo}
                   key={idx}
@@ -70,7 +84,6 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
                     <div className={styles.name}>{member.name}</div>
                     <div className={styles.position}>{member.position}</div>
                   </div>
-                  {/* <div className={styles.avatar}></div> */}
                 </div>
               );
             })}
