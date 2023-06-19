@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
-import { Outlet, useLocation, history } from 'ice';
+import { Outlet, useLocation, useSearchParams, history } from 'ice';
+import { isProd } from '@/constants';
 import { Web3Provider } from '@/components';
 import { useSiwe } from '@/hooks/use-siwe';
 import store from '@/store';
+import loadScript from 'load-script';
 
 const routesNeedSiweSession = ['/mint'];
 
@@ -11,6 +13,7 @@ function CheckRoutes() {
   const { address, autoSignInFinished } = useSiwe();
   const [, { fetchOnchainData, fetchOnchainUserData }] = store.useModel('onchain');
   const [, { fetchTaskData, fetchLotteryWinnerList }] = store.useModel('task');
+  const [searchParams] = useSearchParams();
 
   // 页面鉴权，未登录跳转到首页
   useEffect(() => {
@@ -32,6 +35,21 @@ function CheckRoutes() {
       }
     }
   }, [autoSignInFinished, address]);
+
+  // 在开发环境或使用参数，注入 VConsole 便于手机调试
+  useEffect(() => {
+    if (!isProd || searchParams.get('vconsole') === '1') {
+      loadScript('https://unpkg.com/vconsole@latest/dist/vconsole.min.js', (e) => {
+        if (e) {
+          console.log('[vconsole] load error:', e);
+        } else {
+          console.log('[vconsole] load success.');
+          // @ts-ignore
+          new window.VConsole();
+        }
+      });
+    }
+  }, []);
 
   return null;
 }
