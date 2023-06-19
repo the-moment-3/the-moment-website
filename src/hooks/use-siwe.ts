@@ -2,6 +2,7 @@ import { getSiweNonce, getSiweSession, siweClear, siweVerify } from '@/services/
 import { useConnectModal } from '@rainbow-me/rainbowkit';
 import { useDisconnect, useWalletClient, Config } from 'wagmi';
 import { useEffect } from 'react';
+import { isMobile, isChrome } from 'react-device-detect';
 import { Modal, message } from 'antd';
 import { SiweMessage } from 'siwe';
 import store from '@/store';
@@ -109,6 +110,16 @@ export function useSiwe() {
     }
   };
 
+  // Todo:
+  // 暂时仅支持电脑端 Chrome 浏览器登录，后面再看下怎么兼容
+  const openModal = () => {
+    if (!isMobile && isChrome) {
+      openConnectModal?.();
+    } else {
+      message.error('Please use the Chrome browser on your computer.');
+    }
+  };
+
   return {
     address,
     shortAddress,
@@ -117,6 +128,6 @@ export function useSiwe() {
     autoSignIn,
     signIn,
     signOut,
-    openModal: () => openConnectModal?.(),
+    openModal,
   };
 }
