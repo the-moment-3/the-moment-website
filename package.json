@@ -25,6 +25,7 @@
     "node-polyfill-webpack-plugin": "^2.0.1",
     "number-precision": "^1.6.0",
     "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "siwe": "^2.1.4",
     "viem": "^0.3.36",
