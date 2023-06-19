@@ -1,5 +1,4 @@
 import { forwardRef } from 'react';
-import { Link } from '@ice/runtime';
 import styles from './styles.module.css';
 
 interface PageInfoProps {
