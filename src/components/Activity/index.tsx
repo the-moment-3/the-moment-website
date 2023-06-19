@@ -4,6 +4,7 @@ import { useI18n } from '@/hooks/use-i18n';
 import { Banner } from '../Banner';
 import { Gallery } from './componnets';
 import styles from './styles.module.css';
+import { Link } from '@ice/runtime';
 
 export const Activity = ({ pageIdx }: { pageIdx?: string }) => {
   const refs = useAnimation({
@@ -20,13 +21,13 @@ export const Activity = ({ pageIdx }: { pageIdx?: string }) => {
           <div className={styles.blooming}></div>
           <div className={styles.cooperationWrapper} ref={refs['cooperationWrapper']}>
             <div className={styles.logo}></div>
-            <div className={styles.desc}>{translate.get('nftwebsite_introduc.time')}</div>
+            <div className={styles.desc}>{translate.get('nftwebsite_introduc')}</div>
           </div>
-          <a>
+          <Link to={'/rules'}>
             <div className={styles.btnWrapper} ref={refs['btnWrapper']}>
               {translate.get('nft_Learnmore')}
             </div>
-          </a>
+          </Link>
         </div>
       </div>
       <Banner />

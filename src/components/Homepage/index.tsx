@@ -1,6 +1,7 @@
 import { Link } from 'ice';
 import dayjs from 'dayjs';
 import cl from 'classnames';
+import { message } from 'antd';
 import store from '@/store';
 import { useI18n } from '@/hooks/use-i18n';
 import { useSiwe } from '@/hooks/use-siwe';
@@ -55,6 +56,7 @@ const Steps = ({ label, date, price, active }: { label?: string; date: string; p
 };
 
 export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
+  const [messageApi, contextHolder] = message.useMessage();
   const { address, openModal } = useSiwe();
   const [{ taskStartTime, allowListStartTime, allowListEndTime, publicStartTime }] = store.useModel('onchain');
   const [{ time }] = store.useModel('i18n');
@@ -66,18 +68,34 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
 
   const timeLineSteps = [
     {
-      label: translate.get('nftwebsite_zhuzao.Freemint'),
-      date: `${dayjs(allowListStartTime).tz(time.timezone).format('MMM D, YYYY HH:mm')} (${time.timezoneAbbr})`,
+      label: translate.get('nftwebsite_zhu_freemint'),
+      date: translate.get('nftwebsite_zhu_75'),
       price: translate.get('nftwebsite_zhuzao.free'),
-      active: hasFreeMintStart,
+      active: true,
     },
     {
-      label: translate.get('nftwebsite_zhuzao.Publicmint'),
-      date: `${dayjs(publicStartTime).tz(time.timezone).format('MMM D, YYYY HH:mm')} (${time.timezoneAbbr})`,
-      price: translate.get('nftwebsite_zhuzao.0088'),
+      label: translate.get('nftwebsite_zhu_freeend'),
+      date: translate.get('nftwebsite_zhu_76'),
+      price: translate.get('nftwebsite_zhuzao.free'),
       active: hasFreeMintEnd,
     },
   ];
+
+  const openInfo = () => {
+    messageApi.open({
+      className: styles.message,
+      type: 'info',
+      content: translate.get('nftwebsite_Comingsoon'),
+      icon: <></>,
+      duration: 3,
+      style: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: '80px',
+      },
+    });
+  };
 
   return (
     <div className={styles.pageWrapper} id={pageIdx}>
@@ -94,7 +112,7 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
           </div>
           <div className={styles.page}>
             <img
-              src="https://img.alicdn.com/imgextra/i1/O1CN01r7htxW1MctWNcQ1Tj_!!6000000001456-2-tps-948-752.png"
+              src="https://img.alicdn.com/imgextra/i1/O1CN0192DGr2297DIXhziLX_!!6000000008020-2-tps-1062-752.png"
               alt="The Moment3!"
             />
           </div>
@@ -103,21 +121,20 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
               return <Steps label={item.label} date={item.date} price={item.price} active={item.active} key={idx} />;
             })}
           </div>
-          {hasTaskStart && (
-            <div className={styles.connectBtn}>
-              {address ? (
-                <Link to="/mint">
-                  <button>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
-                </Link>
-              ) : (
-                <button onClick={openModal}>{translate.get('nft_Connectwallet')}</button>
-              )}
-            </div>
-          )}
+          {contextHolder}
+          <div className={styles.connectBtn}>
+            {address ? (
+              <Link to="/mint">
+                <button>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
+              </Link>
+            ) : (
+              <button onClick={hasTaskStart ? openModal : openInfo}>{translate.get('nft_Connectwallet')}</button>
+            )}
+          </div>
         </div>
         <div className={styles.rightSide}>
           <img
-            src="https://img.alicdn.com/imgextra/i1/O1CN01r7htxW1MctWNcQ1Tj_!!6000000001456-2-tps-948-752.png"
+            src="https://img.alicdn.com/imgextra/i1/O1CN0192DGr2297DIXhziLX_!!6000000008020-2-tps-1062-752.png"
             alt="The Moment3!"
           />
         </div>

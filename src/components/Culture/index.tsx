@@ -12,7 +12,6 @@ export const Culture = ({ pageIdx }: { pageIdx?: string }) => {
     picture: { heightOffsetRatio: 0.8, className: styles.fadeIn, ref: useRef<HTMLDivElement>(null) },
   });
   const translate = useI18n();
-
   return (
     <>
       <div className={styles.pageWrapper} id={pageIdx}>
