@@ -6,7 +6,7 @@ interface ReplaceMDSTextProps {
 }
 
 export const ReplaceMDSText = ({ text, ReplacedTag, replaceClassName, replaceText }: ReplaceMDSTextProps) => {
-  const outsideBraces = text.split(/{[^{}]*}/g);
+  const outsideBraces = text?.split(/{[^{}]*}/g);
   const replacedInsideBraces = Object.values(replaceText).map((text, index) => {
     return (
       <ReplacedTag key={index} className={replaceClassName}>
@@ -15,7 +15,7 @@ export const ReplaceMDSText = ({ text, ReplacedTag, replaceClassName, replaceTex
     );
   });
 
-  const result = outsideBraces.reduce((prev, curr, index) => {
+  const result = outsideBraces?.reduce((prev, curr, index) => {
     const replacedText = replacedInsideBraces[index];
     if (replacedText) {
       return [...prev, curr, replacedText];

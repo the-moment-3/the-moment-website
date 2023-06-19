@@ -112,7 +112,7 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
           </div>
           <div className={styles.page}>
             <img
-              src="https://img.alicdn.com/imgextra/i1/O1CN01r7htxW1MctWNcQ1Tj_!!6000000001456-2-tps-948-752.png"
+              src="https://img.alicdn.com/imgextra/i1/O1CN0192DGr2297DIXhziLX_!!6000000008020-2-tps-1062-752.png"
               alt="The Moment3!"
             />
           </div>
@@ -134,7 +134,7 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
         </div>
         <div className={styles.rightSide}>
           <img
-            src="https://img.alicdn.com/imgextra/i1/O1CN01r7htxW1MctWNcQ1Tj_!!6000000001456-2-tps-948-752.png"
+            src="https://img.alicdn.com/imgextra/i1/O1CN0192DGr2297DIXhziLX_!!6000000008020-2-tps-1062-752.png"
             alt="The Moment3!"
           />
         </div>
