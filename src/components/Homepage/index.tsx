@@ -68,15 +68,15 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
 
   const timeLineSteps = [
     {
-      label: translate.get('nftwebsite_zhuzao.Freemint'),
-      date: `${dayjs(allowListStartTime).tz(time.timezone).format('MMM D, YYYY HH:mm')} (${time.timezoneAbbr})`,
+      label: translate.get('nftwebsite_zhu_freemint'),
+      date: translate.get('nftwebsite_zhu_75'),
       price: translate.get('nftwebsite_zhuzao.free'),
       active: true,
     },
     {
-      label: translate.get('nftwebsite_zhuzao.Publicmint'),
-      date: `${dayjs(publicStartTime).tz(time.timezone).format('MMM D, YYYY HH:mm')} (${time.timezoneAbbr})`,
-      price: translate.get('nftwebsite_zhuzao.0088'),
+      label: translate.get('nftwebsite_zhu_freeend'),
+      date: translate.get('nftwebsite_zhu_76'),
+      price: translate.get('nftwebsite_zhuzao.free'),
       active: hasFreeMintEnd,
     },
   ];
@@ -85,7 +85,7 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
     messageApi.open({
       className: styles.message,
       type: 'info',
-      content: 'hello',
+      content: translate.get('nftwebsite_Comingsoon'),
       icon: <></>,
       duration: 3,
       style: {

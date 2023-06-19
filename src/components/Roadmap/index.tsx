@@ -23,17 +23,17 @@ export const Roadmap = ({ pageIdx }: { pageIdx?: string }) => {
   const translate = useI18n();
   const roadmap = [
     {
-      quarter: translate.get('nftwebsite_roadmap.Apr'),
-      title: translate.get('nftwebsite_roadmap.Season1'),
+      quarter: translate.get('nftwebsite_roadmap.47'),
+      title: translate.get('nftwebsite_roadmap.Season.1'),
       brief: translate.get('nftwebsite_roadmap.Onlineandopenforsale'),
     },
     {
-      quarter: translate.get('nftwebsite_roadmap.Jul'),
-      title: translate.get('nftwebsite_roadmap.Benefits'),
+      quarter: translate.get('nftwebsite_roadmap.812'),
+      title: translate.get('nftwebsite_roadmap.Benefitsairdropping'),
       brief: translate.get('nftwebsite_roadmap.announceadditionalbenefits'),
     },
     {
-      quarter: translate.get('nftwebsite_roadmap.Oct'),
+      quarter: translate.get('nftwebsite_roadmap.Season.2'),
       title: translate.get('nftwebsite_roadmap.Season2'),
       brief: translate.get('nftwebsite_roadmap.Communitymembers'),
     },

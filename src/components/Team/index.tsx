@@ -40,7 +40,7 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
         name: 'Linkedin',
         icon: 'https://img.alicdn.com/imgextra/i3/O1CN01ZklXjn1ymvb8oO6tM_!!6000000006622-2-tps-200-200.png',
         hoverIcon: 'https://img.alicdn.com/imgextra/i3/O1CN01nvMDfe1hPi3MXn8Yq_!!6000000004270-2-tps-200-200.png',
-        url: 'https://www.linkedin.com/pallaswong',
+        url: 'https://www.linkedin.com/in/pallaswong',
       },
     },
     {
@@ -87,10 +87,12 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
                 >
                   <div className={styles.info}>
                     <div className={styles.name}>{member.name}</div>
-                    <div className={styles.position}>{member.position}</div>
-                    {member.twitter && member.linkedin && (
-                      <MediaIcon mediaList={[member.twitter, member.linkedin]} size={32} bgc={'#3d3d3d'} />
-                    )}
+                    <div className={styles.position}>
+                      {member.position}
+                      {member.twitter && member.linkedin && (
+                        <MediaIcon mediaList={[member.twitter, member.linkedin]} size={32} bgc={'#3d3d3d'} />
+                      )}
+                    </div>
                   </div>
                 </div>
               );
