@@ -25,8 +25,8 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
       avatar: 'https://img.alicdn.com/imgextra/i2/O1CN01I9wCQl1gzbTX3LJQ2_!!6000000004213-2-tps-576-230.png',
     },
     {
-      name: translate.get('nftwebsite_team.Pallas'),
-      position: translate.get('nftwebsite_team.Artist'),
+      name: 'Allini',
+      position: `AI ${translate.get('nftwebsite_team.Artist')}`,
       avatar: 'https://img.alicdn.com/imgextra/i1/O1CN01hHAUcz1QkSWk281BI_!!6000000002014-2-tps-576-230.png',
     },
     {

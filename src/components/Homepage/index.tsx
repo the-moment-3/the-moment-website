@@ -4,7 +4,7 @@ import cl from 'classnames';
 import store from '@/store';
 import { useI18n } from '@/hooks/use-i18n';
 import { useSiwe } from '@/hooks/use-siwe';
-import { NOW } from '@/constants/time';
+import { NOW, TASK_START_TIME, FREE_MINT_START_TIME, FREE_MINT_END_TIME } from '@/constants/time';
 import styles from './styles.module.css';
 
 const Steps = ({ label, date, price, active }: { label?: string; date: string; price?: string; active: boolean }) => {
@@ -60,9 +60,9 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
   const [{ time }] = store.useModel('i18n');
   const translate = useI18n();
 
-  const hasTaskStart = dayjs(NOW).diff(taskStartTime) >= 0;
-  const hasFreeMintStart = dayjs(NOW).diff(allowListStartTime) >= 0;
-  const hasFreeMintEnd = dayjs(NOW).diff(allowListEndTime) >= 0;
+  const hasTaskStart = dayjs(NOW).diff(TASK_START_TIME) >= 0;
+  const hasFreeMintStart = dayjs(NOW).diff(FREE_MINT_START_TIME) >= 0;
+  const hasFreeMintEnd = dayjs(NOW).diff(FREE_MINT_END_TIME) >= 0;
 
   const timeLineSteps = [
     {
