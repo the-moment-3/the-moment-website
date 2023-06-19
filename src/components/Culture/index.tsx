@@ -25,7 +25,7 @@ export const Culture = ({ pageIdx }: { pageIdx?: string }) => {
               desc={[translate.get('nftwebsite_culture.story1'), translate.get('nftwebsite_culture.story2')]}
               icon={{
                 img: 'https://img.alicdn.com/imgextra/i2/O1CN01O5quAb1jY4VtZgBom_!!6000000004559-2-tps-72-72.png',
-                url: ' https://themoment3.ai/whitepaper.pdf',
+                url: 'https://themoment3.ai/whitepaper.pdf',
               }}
               ref={refs['pageInfo']}
             />

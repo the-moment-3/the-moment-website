@@ -16,12 +16,12 @@ export const PageInfo = forwardRef((props: PageInfoProps, ref: React.RefObject<H
       <div className={styles.title}>
         <div>{title}</div>
         {icon && (
-          <Link to={icon.url}>
+          <a href={icon.url} target="_blank">
             <div
               className={styles.icon}
               style={{ background: `url(${icon.img}) no-repeat center`, backgroundSize: 'contain' }}
             ></div>
-          </Link>
+          </a>
         )}
       </div>
       {subtitle && <div className={styles.subtitle}>{subtitle}</div>}
