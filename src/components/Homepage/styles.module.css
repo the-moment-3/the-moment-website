@@ -7,9 +7,9 @@
       margin-top: 150px;
       img {
         position: absolute;
-        top: -50px;
-        left: -100px;
-        width: 750px;
+        top: -55px;
+        left: -5px;
+        width: 680px;
       }
     }
     .blooming {
@@ -113,9 +113,9 @@
       margin-top: 12.5vw;
       img {
         position: absolute;
-        top: -4.16666667vw;
-        left: -8.33333333vw;
-        width: 62.5vw;
+        top: -4.58333333vw;
+        left: -0.41666667vw;
+        width: 56.66666667vw;
       }
     }
     .blooming {
