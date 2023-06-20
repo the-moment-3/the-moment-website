@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { isMobile, isChrome } from 'react-device-detect';
 import { Modal, message } from 'antd';
 import { SiweMessage } from 'siwe';
+import { chainId } from '@/constants';
 import store from '@/store';
 import dayjs from 'dayjs';
 
@@ -17,7 +18,7 @@ async function generateMessage(address: string) {
     statement: 'Every Moment is Non-Fungible.',
     expirationTime: dayjs().add(3, 'day').toISOString(),
     version: '1',
-    chainId: 1,
+    chainId,
     nonce,
   }).prepareMessage();
 }
