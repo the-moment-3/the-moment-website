@@ -8,7 +8,7 @@ import { useSiwe } from '@/hooks/use-siwe';
 import { NOW, TASK_START_TIME, FREE_MINT_START_TIME, FREE_MINT_END_TIME } from '@/constants/time';
 import styles from './styles.module.css';
 
-const Steps = ({ label, date, price, active }: { label?: string; date: string; price?: string; active: boolean }) => {
+const Steps = ({ label, date, price, active }: { label?: string; date?: string; price?: string; active: boolean }) => {
   return (
     <div className={styles.timeLineSide}>
       <div
@@ -59,10 +59,10 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
   const [messageApi, contextHolder] = message.useMessage();
   const { address, openModal } = useSiwe();
   const [{ taskStartTime, allowListStartTime, allowListEndTime, publicStartTime }] = store.useModel('onchain');
-  const [{ time }] = store.useModel('i18n');
   const translate = useI18n();
 
-  const hasTaskStart = dayjs(NOW).diff(TASK_START_TIME) >= 0;
+  const hasTaskStart = dayjs(NOW).diff(taskStartTime) >= 0;
+
   const hasFreeMintStart = dayjs(NOW).diff(FREE_MINT_START_TIME) >= 0;
   const hasFreeMintEnd = dayjs(NOW).diff(FREE_MINT_END_TIME) >= 0;
 
