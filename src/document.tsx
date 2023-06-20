@@ -1,5 +1,24 @@
 import { Links, Main, Meta, Scripts, Title } from 'ice';
 
+// ARMS 前端监控文档
+// https://help.aliyun.com/document_detail/58663.html
+const arms = `
+  !(function(c,b,d,a){c[a]||(c[a]={});c[a].config=
+    {
+      pid:"avw4dzhvpw@a3b8db0f9e4b658",
+      appType:"web",
+      imgUrl:"https://arms-retcode-sg.aliyuncs.com/r.png?",
+      sendResource:true,
+      enableLinkTrace:true,
+      behavior:true,
+      enableSPA:true,
+      useFmp:true,
+      enableConsole:true
+    };
+  with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("crossorigin","",src=d)
+  })(window,document,"https://sdk.rum.aliyuncs.com/v1/bl.js","__bl");
+`;
+
 export default () => (
   <html>
     <head>
@@ -11,6 +30,7 @@ export default () => (
       <Links />
     </head>
     <body>
+      <script type="text/javascript" dangerouslySetInnerHTML={{ __html: arms }} />
       <Main />
       <Scripts />
     </body>

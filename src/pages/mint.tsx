@@ -55,8 +55,10 @@ export default () => {
             <div className={styles.topRight}>
               <div className={styles.nftBox}></div>
               <div className={styles.processInfo}>
-                <div className={styles.remainder}>{`Only ${5000 - onchainData.publicMintedAmount} left`}</div>
-                <div className={styles.projectSize}>{`Project size: 5000`}</div>
+                <div className={styles.remainder}>{`Only ${
+                  onchainData.collectionSize - onchainData.totalMintedAmount
+                } left`}</div>
+                <div className={styles.projectSize}>{`Project size: ${onchainData.collectionSize}`}</div>
               </div>
             </div>
           </div>
