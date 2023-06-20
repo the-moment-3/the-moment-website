@@ -28,6 +28,7 @@
           margin-top: 40px;
           .name {
             font-size: 24px;
+            margin-bottom: 4px;
           }
           .position {
             display: flex;
@@ -40,8 +41,6 @@
               [class^='mediaIcon'] {
                 position: relative;
                 top: 5px;
-                width: 26px !important;
-                height: 26px !important;
               }
             }
           }
@@ -84,6 +83,7 @@
           margin-top: 3.33333333vw;
           .name {
             font-size: 2vw;
+            margin-bottom: 0.33333333vw;
           }
           .position {
             display: flex;
@@ -94,8 +94,8 @@
               margin-left: 0.66666667vw;
               gap: 0.33333333vw;
               [class^='mediaIcon'] {
-                width: 2.66666667vw !important;
-                height: 2.66666667vw !important;
+                position: relative;
+                top: 0.41666667vw;
               }
             }
           }
@@ -131,7 +131,8 @@
           margin-left: 28rpx;
           margin-top: 36rpx;
           .name {
-            font-size: 30rpx;
+            font-size: 24rpx;
+            margin-bottom: 8rpx;
           }
           .position {
             display: flex;

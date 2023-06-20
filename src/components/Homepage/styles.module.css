@@ -5,6 +5,12 @@
       width: 596px;
       height: 500px;
       margin-top: 150px;
+      img {
+        position: absolute;
+        top: -50px;
+        left: -100px;
+        width: 750px;
+      }
     }
     .blooming {
       top: -425px;
@@ -105,6 +111,12 @@
       width: 49.66666667vw;
       height: 41.66666667vw;
       margin-top: 12.5vw;
+      img {
+        position: absolute;
+        top: -4.16666667vw;
+        left: -8.33333333vw;
+        width: 62.5vw;
+      }
     }
     .blooming {
       top: -35.41666667vw;
@@ -225,6 +237,9 @@
 
   .page {
     height: 535rpx;
+    img {
+      width: 100%;
+    }
   }
 
   .timeLineContainer {
@@ -309,7 +324,6 @@
   align-items: center;
   width: 100vw;
   padding-top: 80px;
-  background-image: linear-gradient(180deg, #1c1c1b 0%, #1c1c1b 40%, #1f1f1d 58%, #2a2a28 100%);
   .container {
     position: relative;
     z-index: 5;
@@ -431,9 +445,6 @@
       color: #fff;
     }
   }
-}
-img {
-  max-width: 100%;
 }
 
 @keyframes fade-in-right {
