@@ -41,8 +41,6 @@
               [class^='mediaIcon'] {
                 position: relative;
                 top: 5px;
-                width: 26px !important;
-                height: 26px !important;
               }
             }
           }
@@ -98,8 +96,6 @@
               [class^='mediaIcon'] {
                 position: relative;
                 top: 0.41666667vw;
-                width: 2.16666667vw !important;
-                height: 2.16666667vw !important;
               }
             }
           }
