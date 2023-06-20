@@ -49,6 +49,8 @@ function CheckRoutes() {
           new window.VConsole();
         }
       });
+      console.log('isProd:', isProd);
+      console.log('host:', window.location.host);
     }
   }, []);
 
