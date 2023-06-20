@@ -4,6 +4,7 @@ import { PageInfo } from '../PageInfo';
 import { useAnimation } from '@/hooks/use-animation';
 import styles from './styles.module.css';
 import { useI18n } from '@/hooks/use-i18n';
+import { sendEvent } from '@/utils/aemTracker';
 
 export const Culture = ({ pageIdx }: { pageIdx?: string }) => {
   const refs = useAnimation({
@@ -28,9 +29,14 @@ export const Culture = ({ pageIdx }: { pageIdx?: string }) => {
                 url: 'https://themoment3.ai/The Moment3! Whitepaper.pdf',
               }}
               ref={refs['pageInfo']}
+              pos={'Whitepaper'}
             />
             <a href="https://discord.gg/themoment3" target="_blank">
-              <div className={styles.btnWrapper} ref={refs['btnWrapper']}>
+              <div
+                className={styles.btnWrapper}
+                ref={refs['btnWrapper']}
+                onClick={() => sendEvent('PC_Discord_Whitepaper')}
+              >
                 <div className={styles.icon}></div>
                 <span>{translate.get('nftwebsite_introduc.JoinDiscord')}</span>
               </div>

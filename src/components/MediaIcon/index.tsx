@@ -2,17 +2,20 @@ import { Media } from '@/constants/media';
 import cl from 'classnames';
 import { useEffect, useState } from 'react';
 import styles from './styles.module.css';
+import { sendEvent } from '@/utils/aemTracker';
 
 export const MediaIcon = ({
   mediaList,
   size,
   cln,
   bgc,
+  pos,
 }: {
   mediaList: Media[];
   size: number;
   cln?: string;
   bgc?: string;
+  pos?: string;
 }) => {
   const [iconSize, setIconSize] = useState('');
   useEffect(() => {
@@ -50,7 +53,7 @@ export const MediaIcon = ({
             key={media.name}
             style={{ width: iconSize, height: iconSize, backgroundColor: bgc }}
           >
-            <a href={media.url} target="_blank">
+            <a href={media.url} target="_blank" onClick={() => sendEvent(`PC_${media.name}_${pos}`)}>
               <img
                 src={media.icon}
                 alt={media.name}
