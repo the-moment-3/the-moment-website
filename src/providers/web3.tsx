@@ -1,5 +1,11 @@
 import { RainbowKitProvider, connectorsForWallets } from '@rainbow-me/rainbowkit';
-import { injectedWallet, metaMaskWallet, okxWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wallets';
+import {
+  injectedWallet,
+  metaMaskWallet,
+  okxWallet,
+  trustWallet,
+  walletConnectWallet,
+} from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createConfig, WagmiConfig, useWalletClient } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
@@ -18,7 +24,12 @@ const { chains, publicClient } = configureChains(
 const connectors = connectorsForWallets([
   {
     groupName: 'Recommended',
-    wallets: [injectedWallet({ chains }), metaMaskWallet({ projectId, chains }), okxWallet({ projectId, chains })],
+    wallets: [
+      injectedWallet({ chains }),
+      metaMaskWallet({ projectId, chains }),
+      okxWallet({ projectId, chains }),
+      trustWallet({ projectId, chains }),
+    ],
   },
   {
     groupName: 'Others',
