@@ -7,7 +7,6 @@ export { MediaIcon } from './MediaIcon';
 export { Culture } from './Culture';
 export { Roadmap } from './Roadmap';
 export { Team } from './Team';
-export { Web3Provider } from './Web3Provider';
 export { Activity } from './Activity';
 export { Partner } from './Partner';
 export { WinnerListBtn } from './WinnerList';

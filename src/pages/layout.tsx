@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Outlet, useLocation, useSearchParams, history } from 'ice';
 import { isMobile } from 'react-device-detect';
 import { isProd } from '@/constants';
-import { Web3Provider } from '@/components';
+import { Web3Provider } from '@/providers/web3';
 import { useSiwe } from '@/hooks/use-siwe';
 import store from '@/store';
 import loadScript from 'load-script';
