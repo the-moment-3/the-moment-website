@@ -1,7 +1,6 @@
 export const isBuilding = typeof window === 'undefined';
 
-export const isProd =
-  !isBuilding && (window.location.host === 'themoment3.ai' || window.location.host === 'www.themoment3.ai');
+export const isProd = !isBuilding && window.location.host === 'www.themoment3.ai';
 
 export const isDev = !isProd;
 
