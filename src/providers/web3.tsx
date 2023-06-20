@@ -3,29 +3,16 @@ import { injectedWallet, metaMaskWallet, okxWallet, walletConnectWallet } from '
 import { configureChains, createConfig, WagmiConfig, useWalletClient } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
-import { goerli } from 'wagmi/chains';
 import { useEffect } from 'react';
+import { chain, alchemyApiKey, walletConnectProjectId as projectId } from '@/constants';
 import { useSiwe } from '@/hooks/use-siwe';
 
 // Wagmi 文档
 // https://wagmi.sh/react/getting-started
 
-// WalletConnect 控制台获取 projectId
-// https://cloud.walletconnect.com/app/project
-
-const projectId = 'd520d9ee9bda5c21f67275f25d777cef';
-
-// 重要
-const chain = goerli; // Todo: 现在用的是测试链
-
 const { chains, publicClient } = configureChains(
   [chain],
-  [
-    alchemyProvider({
-      apiKey: 'XZVSdeY5vQ_7Z6SVU3oeGO3-wx1hoTaj', // 前端专用 key
-    }),
-    publicProvider(),
-  ],
+  [alchemyProvider({ apiKey: alchemyApiKey }), publicProvider()],
 );
 
 const connectors = connectorsForWallets([
