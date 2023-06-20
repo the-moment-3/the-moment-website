@@ -96,8 +96,10 @@
               margin-left: 0.66666667vw;
               gap: 0.33333333vw;
               [class^='mediaIcon'] {
-                width: 2.66666667vw !important;
-                height: 2.66666667vw !important;
+                position: relative;
+                top: 0.41666667vw;
+                width: 2.16666667vw !important;
+                height: 2.16666667vw !important;
               }
             }
           }
