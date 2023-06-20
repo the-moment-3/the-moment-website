@@ -168,7 +168,7 @@ module.exports = {
     "nftwebsite_qualified.qualified": "미션 클리어! 추첨 번호: {#0001}",
     "nftwebsite_culture.story1": "모든 순간의 선택이 모여 \"내\"가 됩니다. 그렇기에 모든 순간은 무엇과도 바꿀 수 없는 소중하고 특별한 것입니다. 체인 속 영원히 변함없는 모든 순간을 담은 The Moment3! NFT를 만나보세요. ",
     "nftwebsite_early_bird_special_content": "얼라우리스트 추첨에 당첨된 참가자에게는 얼리버드 혜택이 주어집니다. 퍼블릭 민팅 시작 전에 NFT를 미리 민팅할 수 있으며, 획득한 무료 민팅 NFT 갯수만큼 할인 금액이 적용되어 자동 차감됩니다(최대 5개까지 민팅이 가능하며, 얼라우리스트 민팅은 1인당 1회만 가능합니다).",
-    "nftwebsite_shouye.Vision": "비전",
+    "nftwebsite_shouye.Vision": "일사분기",
     "nftwebsite_tasks.winners1": "추첨 수량:",
     "nftwebsite_introduc.learnmore": "지금 알아보기",
     "nft_Learnmore": "지금 알아보기",
