@@ -1,14 +1,16 @@
 import { forwardRef } from 'react';
 import styles from './styles.module.css';
+import { sendEvent } from '@/utils/aemTracker';
 
 interface PageInfoProps {
   title?: string;
   subtitle?: string;
   desc: (string | undefined)[];
   icon?: { img: string; url: string };
+  pos?: string;
 }
 export const PageInfo = forwardRef((props: PageInfoProps, ref: React.RefObject<HTMLDivElement>) => {
-  const { title, subtitle, desc, icon } = props;
+  const { title, subtitle, desc, icon, pos } = props;
   return (
     <div className={styles.content} ref={ref}>
       <div className={styles.logo}></div>
@@ -19,6 +21,7 @@ export const PageInfo = forwardRef((props: PageInfoProps, ref: React.RefObject<H
             <div
               className={styles.icon}
               style={{ background: `url(${icon.img}) no-repeat center`, backgroundSize: 'contain' }}
+              onClick={() => sendEvent(`PC_Whitepaper_${pos}`)}
             ></div>
           </a>
         )}

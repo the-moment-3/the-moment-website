@@ -9,6 +9,7 @@ import { MediaIcon } from '../MediaIcon';
 import { NavAnchor } from '@/constants/home';
 import store from '@/store';
 import styles from './styles.module.css';
+import { sendEvent } from '@/utils/aemTracker';
 
 export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
   const [drawerActive, setDrawerActive] = useState(false);
@@ -48,6 +49,7 @@ export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
   };
 
   const handleLangUpdate = () => {
+    sendEvent('PC_Translate_Header');
     i18nDispatcher.update({
       lang: i18n.lang === LANGUAGES.EN ? LANGUAGES.KO : LANGUAGES.EN,
       time:
@@ -85,6 +87,11 @@ export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
     );
   };
 
+  const connectWallet = () => {
+    sendEvent('PC_ConnectWallet_Header');
+    openModal();
+  };
+
   return (
     <div className={styles.headerWrapper} style={{ backgroundColor: `rgba(28,28,27, ${opacity})` }}>
       <div className={styles.container}>
@@ -110,7 +117,12 @@ export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
             {navAnchor.map((item) => {
               return (
                 <a className={styles.drawerNavItemWrapper} href={item.href} key={item.key}>
-                  <div className={styles.drawerNavItem}>{translate.get(item.title)}</div>
+                  <div
+                    className={styles.drawerNavItem}
+                    onClick={() => sendEvent(`PC_${translate.get(item.title)}_Drawer`)}
+                  >
+                    {translate.get(item.title)}
+                  </div>
                 </a>
               );
             })}
@@ -122,21 +134,25 @@ export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
         <div className={styles.nav}>
           {navAnchor.map((item) => {
             return (
-              <div className={styles.navItem} key={item.key}>
+              <div
+                className={styles.navItem}
+                key={item.key}
+                onClick={() => sendEvent(`PC_${translate.get(item.title)}_Header`)}
+              >
                 <a href={item.href}>{translate.get(item.title)}</a>
               </div>
             );
           })}
         </div>
         <div className={styles.right}>
-          <MediaIcon mediaList={mediaList} size={48} cln={styles.media} />
+          <MediaIcon mediaList={mediaList} size={48} cln={styles.media} pos={'Header'} />
           <div className={styles.translate} onClick={handleLangUpdate}></div>
           <Button
             className={styles.wallet}
             loading={loading}
             disabled={loading}
             onClick={() => {
-              shortAddress ? signOut() : openModal();
+              shortAddress ? signOut() : connectWallet();
             }}
           >
             <div className={styles.btnIcon}></div>

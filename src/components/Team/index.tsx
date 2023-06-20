@@ -96,7 +96,9 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
                     <div className={styles.name}>{member.name}</div>
                     <div className={styles.position}>
                       {member.position}
-                      {mediaList.length > 0 ? <MediaIcon mediaList={mediaList} size={26} bgc={'#3d3d3d'} /> : null}
+                      {mediaList.length > 0 ? (
+                        <MediaIcon mediaList={mediaList} size={26} bgc={'#3d3d3d'} pos={member.name} />
+                      ) : null}
                     </div>
                   </div>
                 </div>

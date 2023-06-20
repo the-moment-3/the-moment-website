@@ -5,6 +5,7 @@ import { Banner } from '../Banner';
 import { Gallery } from './componnets';
 import styles from './styles.module.css';
 import { Link } from '@ice/runtime';
+import { sendEvent } from '@/utils/aemTracker';
 
 export const Activity = ({ pageIdx }: { pageIdx?: string }) => {
   const refs = useAnimation({
@@ -24,7 +25,7 @@ export const Activity = ({ pageIdx }: { pageIdx?: string }) => {
             <div className={styles.desc}>{translate.get('nftwebsite_introduc')}</div>
           </div>
           <Link to={'/rules'}>
-            <div className={styles.btnWrapper} ref={refs['btnWrapper']}>
+            <div className={styles.btnWrapper} ref={refs['btnWrapper']} onClick={() => sendEvent('PC_Rules_Vision')}>
               {translate.get('nft_Learnmore')}
             </div>
           </Link>

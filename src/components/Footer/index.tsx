@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className={styles.container}>
         <div className={styles.followUsMobile}>
           <div className={styles.title}>{translate.get('nftwebsite_dibu.Followus')}</div>
-          <MediaIcon mediaList={mediaList} size={32} bgc={'#3d3d3d'} />
+          <MediaIcon mediaList={mediaList} size={32} bgc={'#3d3d3d'} pos={'Footer'} />
         </div>
         <div className={styles.copyrightWrapper}>
           <div className={styles.copyright}>{translate.get('nftwebsite_dibu.metaverse')}</div>

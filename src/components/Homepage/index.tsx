@@ -7,6 +7,7 @@ import { useI18n } from '@/hooks/use-i18n';
 import { useSiwe } from '@/hooks/use-siwe';
 import { NOW, TASK_START_TIME, FREE_MINT_START_TIME, FREE_MINT_END_TIME } from '@/constants/time';
 import styles from './styles.module.css';
+import { sendEvent } from '@/utils/aemTracker';
 
 const Steps = ({ label, date, price, active }: { label?: string; date?: string; price?: string; active: boolean }) => {
   return (
@@ -82,6 +83,7 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
   ];
 
   const openInfo = () => {
+    sendEvent('PC_MintBeforeTaskStart_Homepage');
     messageApi.open({
       className: styles.message,
       type: 'info',
@@ -97,6 +99,10 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
     });
   };
 
+  const connectWallet = () => {
+    sendEvent('PC_ConeectWallet_Homepage');
+    openModal();
+  };
   return (
     <div className={styles.pageWrapper} id={pageIdx}>
       <div className={styles.container}>
@@ -126,13 +132,15 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
             {address ? (
               hasTaskStart ? (
                 <Link to="/mint">
-                  <button>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
+                  <button onClick={() => sendEvent('PC_MintAfterTaskStart_Homepage')}>
+                    {translate.get('nftwebsite_zhuzao.Mintnow')}
+                  </button>
                 </Link>
               ) : (
                 <button onClick={openInfo}>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
               )
             ) : (
-              <button onClick={openModal}>{translate.get('nft_Connectwallet')}</button>
+              <button onClick={connectWallet}>{translate.get('nft_Connectwallet')}</button>
             )}
           </div>
         </div>

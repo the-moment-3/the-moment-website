@@ -94,7 +94,7 @@ module.exports = {
     "nftwebsite_allowlist_content": "1. 참가 인원이 2,000명 미만인 경우, 모든 참가자가 얼라우리스트로 선정됩니다.\n2. 참가 인원이 2,000명을 초과한 경우, 추첨이 진행됩니다. 2023년 7월 6일 00:00(한국시간) 기준 바이낸스 거래소 이더리움 가격의 0을 제외한 마지막 자리 숫자가 그룹 내 추첨 순번이 되며 전체 참가자는 2000개의 그룹으로 나누어집니다(2000개로 나눈 후 맞아 떨어지지 않은 나머지 참가 인원은 첫 번째 그룹부터 한명씩 추가 배정됩니다). 그 후 각 그룹의 첫 번째 인원부터 차례대로 돌아가며 순서를 매겨 추첨 순번에 해당하는 참가자가 얼라우리스트로 선정됩니다. 아래의 추가 예시를 참고해 주세요.\n",
     "nftwebsite_tase1": "미션 1: The Moment3! 트위터 계정을 팔로우 & 포스트를 리트윗해 주세요",
     "nftwebsite_public_sale": "4: 퍼블릭 세일: 약 3,555개, 0.088ETH/개, 인당 최대 5개 민팅 가능",
-    "nftwebsite_culture.subtitle": "Every Moment is non-fungible!",
+    "nftwebsite_culture.subtitle": "Every Moment is Non-fungible!",
     "nftwebsite_benefits.enjoy": "The Moment3! NFT와 함께 다양한 베네핏을 누려보세요",
     "nftwebsite_roadmap.812": "2023년 8월~12월",
     "nftwebsite_tasks.Eligible": "추첨 대기 중",
