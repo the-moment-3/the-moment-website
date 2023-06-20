@@ -209,7 +209,7 @@
   .endclause {
     font-weight: 400;
     font-size: 20rpx;
-    color: rgb(204 204 204 / 40%);
+    color: rgb(204 204 204 / 20%);
     text-align: center;
     line-height: 32rpx;
     margin-top: 60rpx;
@@ -244,6 +244,7 @@
       }
       .desc {
         font-weight: 400;
+        color: rgba(255, 255, 255, 0.5);
         .collectSize {
           display: inline-block;
           background-color: #bdea4d;
@@ -265,7 +266,7 @@
     }
     .endclause {
       font-weight: 400;
-      color: rgb(204 204 204 / 40%);
+      color: rgba(255, 255, 255, 0.2);
     }
     .footer {
       display: flex;
