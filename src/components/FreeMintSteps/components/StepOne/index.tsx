@@ -1,4 +1,5 @@
 import cl from 'classnames';
+import { Link } from '@ice/runtime';
 import { StepStatus } from '@/constants/freeMintSteps';
 import { useI18n } from '@/hooks/use-i18n';
 import store from '@/store';
@@ -57,9 +58,9 @@ export const StepOne = ({ status }: { status: StepStatus }) => {
         );
       })}
       {status === StepStatus.TASK_IN_PROGRESS && (
-        <a>
+        <Link to={'/transfer'}>
           <div className={styles.goNowButton}>{translate.get('nftwebsite_tasks.Open')}</div>
-        </a>
+        </Link>
       )}
       {[StepStatus.TASK_COMPLETED, StepStatus.LOST].includes(status) && <div className={styles.certification}></div>}
     </div>
