@@ -1,3 +1,4 @@
+import { Link } from '@ice/runtime';
 import { StepStatus } from '@/constants/freeMintSteps';
 import { useI18n } from '@/hooks/use-i18n';
 import { FreeMintAndPublicSale, Minted, StepOne, StepTwo } from './components';
@@ -36,9 +37,9 @@ export const FreeMintSteps = ({ status }: { status: StepStatus }) => {
                   {!index ? (
                     <>
                       <div>{translate.get('nftwebsite_tasks.allowlist')}</div>
-                      <a>
+                      <Link to={'/rules'}>
                         <div className={styles.questionIcon}>?</div>
-                      </a>
+                      </Link>
                     </>
                   ) : (
                     <div>{translate.get('nftwebsite_tasks.Lucky')}</div>
