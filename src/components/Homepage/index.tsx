@@ -124,11 +124,15 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
           {contextHolder}
           <div className={styles.connectBtn}>
             {address ? (
-              <Link to="/mint">
-                <button>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
-              </Link>
+              hasTaskStart ? (
+                <Link to="/mint">
+                  <button>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
+                </Link>
+              ) : (
+                <button onClick={openInfo}>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
+              )
             ) : (
-              <button onClick={hasTaskStart ? openModal : openInfo}>{translate.get('nft_Connectwallet')}</button>
+              <button onClick={openModal}>{translate.get('nft_Connectwallet')}</button>
             )}
           </div>
         </div>
