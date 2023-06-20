@@ -17,7 +17,7 @@ module.exports = {
     "nftwebsite_zhuzao.start": "Jul 6, 2023 15:00 (KST)",
     "nftwebsite_roadmap.Benefitsairdropping": "Benefits & airdropping",
     "app.check": "success",
-    "nftwebsite_roadmap.Onlineandopenforsale": "Launch and open for mint",
+    "nftwebsite_roadmap.Onlineandopenforsale": "Launch and allowlist open",
     "nftwebsite_culture.story2": "Every season we will work with our community members to select a theme, then use this theme to work with other projects, communities or companies that share our vision and value.",
     "nftwebsite_Comingsoon": "Coming soon",
     "nftwebsite_public.Unitprice": "Unit price",
