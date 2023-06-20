@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Outlet, useLocation, useSearchParams, history } from 'ice';
+import { isMobile } from 'react-device-detect';
 import { isProd } from '@/constants';
 import { Web3Provider } from '@/components';
 import { useSiwe } from '@/hooks/use-siwe';
@@ -38,7 +39,7 @@ function CheckRoutes() {
 
   // 在开发环境或使用参数，注入 VConsole 便于手机调试
   useEffect(() => {
-    if (!isProd || searchParams.get('vconsole') === '1') {
+    if (searchParams.get('vconsole') === '1' || (isMobile && !isProd)) {
       loadScript('https://unpkg.com/vconsole@latest/dist/vconsole.min.js', (e) => {
         if (e) {
           console.log('[vconsole] load error:', e);

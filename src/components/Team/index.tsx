@@ -52,6 +52,12 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
       name: translate.get('nftwebsite_team.CryptoBear'),
       position: translate.get('nftwebsite_team.Tech'),
       avatar: 'https://img.alicdn.com/imgextra/i1/O1CN017UdJuJ1m7SLJIXnpr_!!6000000004907-2-tps-576-230.png',
+      twitter: {
+        name: 'Twitter',
+        icon: 'https://img.alicdn.com/imgextra/i4/O1CN018FomBj1UPAZewCyt5_!!6000000002509-2-tps-96-96.png',
+        hoverIcon: 'https://img.alicdn.com/imgextra/i2/O1CN01fyyEyc1t293WdfTKQ_!!6000000005843-2-tps-96-96.png',
+        url: 'https://twitter.com/cryptobear_cn',
+      },
     },
     {
       name: translate.get('nftwebsite_team.Silver'),
@@ -79,6 +85,7 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
           </div>
           <div className={styles.membersWrapper} ref={refs['membersWrapper']}>
             {members.map((member, idx) => {
+              const mediaList = [member.twitter, member.linkedin].filter((m) => !!m) as Media[];
               return (
                 <div
                   className={styles.memberInfo}
@@ -89,9 +96,7 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
                     <div className={styles.name}>{member.name}</div>
                     <div className={styles.position}>
                       {member.position}
-                      {member.twitter && member.linkedin && (
-                        <MediaIcon mediaList={[member.twitter, member.linkedin]} size={32} bgc={'#3d3d3d'} />
-                      )}
+                      {mediaList.length > 0 ? <MediaIcon mediaList={mediaList} size={32} bgc={'#3d3d3d'} /> : null}
                     </div>
                   </div>
                 </div>
