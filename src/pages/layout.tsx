@@ -47,8 +47,6 @@ function CheckRoutes() {
           console.log('[vconsole] load success.');
           // @ts-ignore
           new window.VConsole();
-          console.log('isProd:', isProd);
-          console.log('host:', window.location.host);
         }
       });
     }
