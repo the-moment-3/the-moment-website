@@ -33,7 +33,7 @@ module.exports = {
     "nftwebsite_benefits.virtualworlds": "The Moment3! will continue to link up with outstanding organizations, communities and businesses so that owners of our NFTs enjoy a variety of benefits & perks via airdrops in the real and virtual worlds",
     "nftwebsite_team.FounderCobe": "Founder Cobe",
     "nftwebsite_zhuzao.end": "Jul 7, 2023 15:00 (KST)",
-    "nftwebsite_team.Project": "Project",
+    "nftwebsite_team.Project": "Product",
     "nftwebsite_Congratulate.lucky": "Congratulations! You're a winner in the lucky draw.",
     "nftwebsite_zhuzao.starttime": "Jul 6, 2023 15:00 (KST)\nPrice: Free",
     "nftwebsite_shouye.Benefits": "Benefits",
