@@ -70,7 +70,7 @@ module.exports = {
     "nftwebsite_total": "1.Total supply: 5,555",
     "nftwebsite_Congratulate.mint": "Quantity to mint",
     "nftwebsite_tase3": "Task 3:  Invite 3 friends to join AliExpress & 1 of them completes an order for US $1 or more on AliExpress",
-    "nftwebsite_shouye.Vision": "Vision",
+    "nftwebsite_shouye.Vision": "Season One",
     "nftwebsite_team.Teamunitesveterans": "The Moment3! Team unites veterans from diverse industries and backgrounds who have a track record of success. With our combined talents, we'll be bringing our NFT owners a host of benefits.",
     "nftwebsite_tasks.winners1": "Number of winners:",
     "nftwebsite_lost.Winnerslist": "Winners list",
