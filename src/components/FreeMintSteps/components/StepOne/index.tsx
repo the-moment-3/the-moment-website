@@ -1,7 +1,9 @@
+import { isMobile } from 'react-device-detect';
 import cl from 'classnames';
 import { Link } from '@ice/runtime';
 import { StepStatus } from '@/constants/freeMintSteps';
 import { useI18n } from '@/hooks/use-i18n';
+import { evoke } from '@/utils/evoke';
 import store from '@/store';
 import styles from './styles.module.css';
 
@@ -27,6 +29,15 @@ export const StepOne = ({ status }: { status: StepStatus }) => {
     [StepStatus.WIN]: [],
     [StepStatus.PUBLIC_SALE]: [],
     [StepStatus.FREE_MINT_FOR_ALL]: [],
+  };
+
+  const handleClick = () => {
+    const url = 'https://web3.aliexpress.com/korea-nft/home?_immersiveMode=true';
+    evoke(`aliexpress://goto?url=${encodeURIComponent(url)}`, {
+      fail: () => {
+        evoke('https://s.click.aliexpress.com/i/_DlKspEL', {});
+      },
+    });
   };
 
   const stepContent = getStepContent[status];
@@ -57,11 +68,16 @@ export const StepOne = ({ status }: { status: StepStatus }) => {
           </div>
         );
       })}
-      {status === StepStatus.TASK_IN_PROGRESS && (
-        <Link to={'/transfer'}>
-          <div className={styles.goNowButton}>{translate.get('nftwebsite_tasks.Open')}</div>
-        </Link>
-      )}
+      {status === StepStatus.TASK_IN_PROGRESS &&
+        (!isMobile ? (
+          <Link to={'/transfer'}>
+            <div className={styles.goNowButton}>{translate.get('nftwebsite_open.gonow')}</div>
+          </Link>
+        ) : (
+          <div className={styles.goNowButton} onClick={handleClick}>
+            {translate.get('nftwebsite_open.gonow')}
+          </div>
+        ))}
       {[StepStatus.TASK_COMPLETED, StepStatus.LOST].includes(status) && <div className={styles.certification}></div>}
     </div>
   );

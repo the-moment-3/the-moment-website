@@ -55,10 +55,15 @@ export default () => {
             <div className={styles.topRight}>
               <div className={styles.nftBox}></div>
               <div className={styles.processInfo}>
-                <div className={styles.remainder}>{`Only ${
-                  onchainData.collectionSize - onchainData.totalMintedAmount
-                } left`}</div>
-                <div className={styles.projectSize}>{`Project size: ${onchainData.collectionSize}`}</div>
+                <div className={styles.remainder}>
+                  {translate.get('nftwebsite_open.only0', '', {
+                    0: onchainData.collectionSize - onchainData.totalMintedAmount,
+                  })}
+                </div>
+
+                <div className={styles.projectSize}>
+                  {translate.get('nftwebsite_open.total0', '', { 0: onchainData.collectionSize })}
+                </div>
               </div>
             </div>
           </div>

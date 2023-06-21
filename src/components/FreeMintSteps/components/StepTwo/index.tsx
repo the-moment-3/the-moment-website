@@ -26,15 +26,15 @@ export const StepTwo = ({ status }: { status: StepStatus }) => {
     [StepStatus.TASK_IN_PROGRESS]: {
       top: [
         {
-          content: translate.get('nftwebsite_tasks.Eligible'),
+          content: translate.get('nftwebsite_open.notqualified'),
         },
         {
-          content: translate.get('nftwebsite_tasks.Jul6'),
+          content: translate.get('nftwebsite_open.75'),
         },
       ],
       bottom: {
         title: translate.get('nftwebsite_tasks.winners1'),
-        content: '2000',
+        content: '4500',
       },
     },
     [StepStatus.TASK_COMPLETED]: {
@@ -43,18 +43,18 @@ export const StepTwo = ({ status }: { status: StepStatus }) => {
           content: translate.get('nftwebsite_tasks.Eligible'),
         },
         {
-          content: translate.get('nftwebsite_tasks.Jul6'),
+          content: translate.get('nftwebsite_open.75'),
         },
       ],
       bottom: {
         title: translate.get('nftwebsite_tasks.winners1'),
-        content: '2000',
+        content: '4500',
       },
     },
     [StepStatus.TASK_NOT_COMPLETED]: {
       top: [
         {
-          content: 'Not qualified', //mds
+          content: translate.get('nftwebsite_open.notqualified'),
         },
         {
           content: `${dayjs(publicStartTime).tz(time.timezone).format('YYYY.MM.DD HH:mm')} (${time.timezoneAbbr})`, //mds
