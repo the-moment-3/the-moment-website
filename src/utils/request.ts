@@ -1,5 +1,6 @@
 import { request as iceRequest } from 'ice';
 import { HTTP_API_HOST } from '@/constants';
+import store from '@/store';
 
 export interface RequestOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
@@ -30,7 +31,8 @@ export async function request<T = any>(url: string, options: RequestOptions = {}
     withCredentials: true,
     headers: {
       ...headers,
-      'Content-Type': 'application/json',
+      'content-type': 'application/json',
+      'ethereum-address': store.getModelState('wallet').address,
     },
   });
   if (!success) throw new Error(errorMsg);

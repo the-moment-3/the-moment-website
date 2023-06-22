@@ -4,8 +4,7 @@ export default createModel({
   state: {
     address: '',
     shortAddress: '',
-    loading: false,
-    autoSignInFinished: false,
+    autoConnectFinished: false,
   },
   reducers: {
     update(state, payload) {
