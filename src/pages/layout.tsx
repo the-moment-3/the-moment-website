@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
-import { Outlet, useLocation, useSearchParams, history } from 'ice';
-import { isMobile } from 'react-device-detect';
-import { isProd } from '@/constants';
+import { Outlet, useLocation, history } from 'ice';
 import { Web3Provider } from '@/providers/web3';
 import { useWallet } from '@/hooks/use-wallet';
-import { initVConsole } from '@/utils/vconsole';
+import { useVConsole } from '@/hooks/use-vconsole';
 import store from '@/store';
 
 const routesShouldConnected = ['/mint'];
@@ -14,7 +12,6 @@ function CheckRoutes() {
   const { address, autoConnectFinished } = useWallet();
   const [, { fetchOnchainData, fetchOnchainUserData }] = store.useModel('onchain');
   const [, { fetchTaskData, fetchLotteryWinnerList }] = store.useModel('task');
-  const [searchParams] = useSearchParams();
 
   // 如果未连接钱包，重定向到首页
   useEffect(() => {
@@ -38,12 +35,7 @@ function CheckRoutes() {
     }
   }, [autoConnectFinished, address]);
 
-  // 在开发环境或使用参数注入 VConsole（便于手机调试）
-  useEffect(() => {
-    if ((isMobile && !isProd) || searchParams.get('vconsole') === '1') {
-      initVConsole();
-    }
-  }, []);
+  useVConsole();
 
   return null;
 }
