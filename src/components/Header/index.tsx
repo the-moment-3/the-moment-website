@@ -1,15 +1,15 @@
 import { Drawer, Button } from 'antd';
 import { useEffect, useState } from 'react';
-import cl from 'classnames';
 import { mediaList } from '@/constants/media';
 import { LANGUAGES, TIMEZONE, TIMEZONE_ABBR } from '@/constants/i18n';
 import { useI18n } from '@/hooks/use-i18n';
 import { useSiwe } from '@/hooks/use-siwe';
 import { MediaIcon } from '../MediaIcon';
 import { NavAnchor } from '@/constants/home';
-import store from '@/store';
-import styles from './styles.module.css';
 import { sendEvent } from '@/utils';
+import store from '@/store';
+import cl from 'classnames';
+import styles from './styles.module.css';
 
 export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
   const [drawerActive, setDrawerActive] = useState(false);
