@@ -4,7 +4,7 @@ import { PageInfo } from '../PageInfo';
 import { useAnimation } from '@/hooks/use-animation';
 import styles from './styles.module.css';
 import { useI18n } from '@/hooks/use-i18n';
-import { sendEvent } from '@/utils';
+import { sendEvent } from '@/utils/aes';
 
 export const Culture = ({ pageIdx }: { pageIdx?: string }) => {
   const refs = useAnimation({

@@ -24,7 +24,7 @@ const aplus = `
       j.async = true;
       j.id = 'beacon-aplus';
       j.setAttribute('exparams','userid=&aplus&sidx=aplusSidex&ckx=aplusCkx');
-      j.src = "//g.alicdn.com/alilog/mlog/aplus_v2.js";
+      j.src = "https://g.alicdn.com/alilog/mlog/aplus_v2.js";
       j.crossorigin = 'anonymous';
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'aplus_queue');
@@ -45,7 +45,7 @@ export default () => (
     <body>
       <script type="text/javascript" dangerouslySetInnerHTML={{ __html: arms }} />
       <script type="text/javascript" dangerouslySetInnerHTML={{ __html: aplus }} />
-      <script src="//g.alicdn.com/aes/??tracker/3.0.0/index.js,tracker-plugin-pv/3.0.1/index.js,tracker-plugin-event/3.0.0/index.js,tracker-plugin-animFluency/3.0.0/index.js"></script>
+      <script src="https://g.alicdn.com/aes/??tracker/3.0.0/index.js,tracker-plugin-pv/3.0.1/index.js,tracker-plugin-event/3.0.0/index.js,tracker-plugin-animFluency/3.0.0/index.js" />
       <Main />
       <Scripts />
     </body>

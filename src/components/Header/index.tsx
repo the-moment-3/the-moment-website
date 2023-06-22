@@ -6,7 +6,7 @@ import { useI18n } from '@/hooks/use-i18n';
 import { useSiwe } from '@/hooks/use-siwe';
 import { MediaIcon } from '../MediaIcon';
 import { NavAnchor } from '@/constants/home';
-import { sendEvent } from '@/utils';
+import { sendEvent } from '@/utils/aes';
 import store from '@/store';
 import cl from 'classnames';
 import styles from './styles.module.css';
