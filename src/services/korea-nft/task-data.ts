@@ -1,4 +1,4 @@
-import { request } from '@/utils';
+import { request } from '@/utils/request';
 
 export interface GetTaskDataResponse {
   totalFinished: boolean; // 是否完成所有任务

@@ -3,7 +3,7 @@ import cl from 'classnames';
 import { Link } from '@ice/runtime';
 import { StepStatus } from '@/constants/freeMintSteps';
 import { useI18n } from '@/hooks/use-i18n';
-import { evoke } from '@/utils';
+import { evoke } from '@/utils/evoke';
 import store from '@/store';
 import styles from './styles.module.css';
 

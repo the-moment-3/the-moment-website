@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { throttle } from '@/utils';
+import { throttle } from '@/utils/throttle';
 import styles from './styles.module.css';
 
 const nftImages = [

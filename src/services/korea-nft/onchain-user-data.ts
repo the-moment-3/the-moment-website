@@ -1,4 +1,4 @@
-import { request } from '@/utils';
+import { request } from '@/utils/request';
 
 export interface GetOnchainUserDataResponse {
   addressMintedAmount: number; // 用户已经铸造的数量

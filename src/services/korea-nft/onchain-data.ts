@@ -1,4 +1,4 @@
-import { request } from '@/utils';
+import { request } from '@/utils/request';
 
 export interface GetOnchainDataResponse {
   contractAddress: string; // NFT 智能合约地址

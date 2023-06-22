@@ -4,7 +4,7 @@ import { isMobile } from 'react-device-detect';
 import { isProd, HTTP_API_HOST } from '@/constants';
 import { Web3Provider } from '@/providers/web3';
 import { useSiwe } from '@/hooks/use-siwe';
-import { isCookieEnabled } from '@/utils';
+import { isCookieEnabled } from '@/utils/cookie';
 import store from '@/store';
 import loadScript from 'load-script';
 
@@ -47,12 +47,12 @@ function CheckRoutes() {
         } else {
           // @ts-ignore
           new window.VConsole();
-          // console.log('[vconsole] load success.');
-          // console.log('HTTP_API_HOST:', HTTP_API_HOST);
-          // console.log('isProd:', isProd);
-          // console.log('host:', window.location.host);
-          // console.log('userAgent:', navigator.userAgent);
-          // console.log('isCookieEnabled:', isCookieEnabled);
+          console.log('[vconsole] load success.');
+          console.log('HTTP_API_HOST:', HTTP_API_HOST);
+          console.log('isProd:', isProd);
+          console.log('host:', window.location.host);
+          console.log('userAgent:', navigator.userAgent);
+          console.log('isCookieEnabled:', isCookieEnabled);
         }
       });
     }
