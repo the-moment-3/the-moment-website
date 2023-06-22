@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { mediaList } from '@/constants/media';
 import { LANGUAGES, TIMEZONE, TIMEZONE_ABBR } from '@/constants/i18n';
 import { useI18n } from '@/hooks/use-i18n';
-import { useSiwe } from '@/hooks/use-siwe';
+import { useWallet } from '@/hooks/use-wallet';
 import { MediaIcon } from '../MediaIcon';
 import { NavAnchor } from '@/constants/home';
 import { sendEvent } from '@/utils/aes';
@@ -14,7 +14,7 @@ import styles from './styles.module.css';
 export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
   const [drawerActive, setDrawerActive] = useState(false);
   const [opacity, setOpacity] = useState(0.6);
-  const { shortAddress, loading, openModal, signOut } = useSiwe();
+  const { shortAddress, loading, connect, disconnect } = useWallet();
   const [i18n, i18nDispatcher] = store.useModel('i18n');
   const translate = useI18n();
 
@@ -87,11 +87,6 @@ export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
     );
   };
 
-  const connectWallet = () => {
-    sendEvent('PC_ConnectWallet_Header');
-    openModal();
-  };
-
   return (
     <div className={styles.headerWrapper} style={{ backgroundColor: `rgba(28,28,27, ${opacity})` }}>
       <div className={styles.container}>
@@ -152,7 +147,8 @@ export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
             loading={loading}
             disabled={loading}
             onClick={() => {
-              shortAddress ? signOut() : connectWallet();
+              sendEvent('PC_ConnectWallet_Header');
+              shortAddress ? disconnect() : connect();
             }}
           >
             <div className={styles.btnIcon}></div>

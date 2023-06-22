@@ -4,7 +4,7 @@ import cl from 'classnames';
 import { message } from 'antd';
 import store from '@/store';
 import { useI18n } from '@/hooks/use-i18n';
-import { useSiwe } from '@/hooks/use-siwe';
+import { useWallet } from '@/hooks/use-wallet';
 import { NOW, TASK_START_TIME, FREE_MINT_START_TIME, FREE_MINT_END_TIME } from '@/constants/time';
 import styles from './styles.module.css';
 import { sendEvent } from '@/utils/aes';
@@ -58,7 +58,7 @@ const Steps = ({ label, date, price, active }: { label?: string; date?: string; 
 
 export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
   const [messageApi, contextHolder] = message.useMessage();
-  const { address, openModal } = useSiwe();
+  const { address, connect } = useWallet();
   const [{ taskStartTime, allowListStartTime, allowListEndTime, publicStartTime }] = store.useModel('onchain');
   const translate = useI18n();
 
@@ -99,10 +99,6 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
     });
   };
 
-  const connectWallet = () => {
-    sendEvent('PC_ConeectWallet_Homepage');
-    openModal();
-  };
   return (
     <div className={styles.pageWrapper} id={pageIdx}>
       <div className={styles.container}>
@@ -140,7 +136,14 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
                 <button onClick={openInfo}>{translate.get('nftwebsite_zhuzao.Mintnow')}</button>
               )
             ) : (
-              <button onClick={connectWallet}>{translate.get('nft_Connectwallet')}</button>
+              <button
+                onClick={() => {
+                  sendEvent('PC_ConeectWallet_Homepage');
+                  connect();
+                }}
+              >
+                {translate.get('nft_Connectwallet')}
+              </button>
             )}
           </div>
         </div>

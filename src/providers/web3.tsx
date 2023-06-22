@@ -6,12 +6,10 @@ import {
   trustWallet,
   walletConnectWallet,
 } from '@rainbow-me/rainbowkit/wallets';
-import { configureChains, createConfig, WagmiConfig, useWalletClient } from 'wagmi';
+import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
-import { useEffect } from 'react';
 import { chain, alchemyApiKey, walletConnectProjectId as projectId } from '@/constants';
-import { useSiwe } from '@/hooks/use-siwe';
 
 // Wagmi 文档
 // https://wagmi.sh/react/getting-started
@@ -37,35 +35,11 @@ const connectors = connectorsForWallets([
   },
 ]);
 
-const wagmiConfig = createConfig({ publicClient, connectors });
-
-const SiweSession = () => {
-  const { autoSignInFinished, autoSignIn, signIn } = useSiwe();
-  const { data: walletClient } = useWalletClient();
-
-  // 进入页面自动登录
-  useEffect(() => {
-    autoSignIn(wagmiConfig);
-  }, []);
-
-  // 监听手动连接钱包或切换钱包，执行登录
-  useEffect(() => {
-    if (walletClient && autoSignInFinished) signIn();
-  }, [walletClient]);
-
-  return null;
-};
+const wagmiConfig = createConfig({ publicClient, connectors, autoConnect: true });
 
 export const Web3Provider = ({ children }) => (
   <WagmiConfig config={wagmiConfig}>
-    <RainbowKitProvider
-      chains={chains}
-      modalSize="compact"
-      appInfo={{
-        appName: 'The Moment3!',
-      }}
-    >
-      <SiweSession />
+    <RainbowKitProvider chains={chains} modalSize="compact" appInfo={{ appName: 'The Moment3!' }}>
       {children}
     </RainbowKitProvider>
   </WagmiConfig>
