@@ -39,7 +39,7 @@ function CheckRoutes() {
 
   // 在开发环境或使用参数注入 VConsole（便于手机调试）
   useEffect(() => {
-    if ((isMobile && !isProd) || searchParams.get('vconsole')) {
+    if ((isMobile && !isProd) || searchParams.get('vconsole') === '1') {
       initVConsole();
     }
   }, []);
