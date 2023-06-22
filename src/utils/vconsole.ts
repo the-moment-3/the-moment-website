@@ -1,6 +1,6 @@
 import loadScript from 'load-script';
 import { isProd, HTTP_API_HOST } from '@/constants';
-import { isCookieEnabled } from './cookie';
+import { supportCookie, supportCookieSameSiteNone } from './cookie';
 
 export function initVConsole() {
   loadScript('https://unpkg.com/vconsole@latest/dist/vconsole.min.js', (e) => {
@@ -14,7 +14,8 @@ export function initVConsole() {
       console.log('HTTP_API_HOST:', HTTP_API_HOST);
       console.log('host:', window.location.host);
       console.log('userAgent:', navigator.userAgent);
-      console.log('isCookieEnabled:', isCookieEnabled());
+      console.log('supportCookie:', supportCookie());
+      console.log('supportCookieSameSiteNone:', supportCookieSameSiteNone());
     }
   });
 }
