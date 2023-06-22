@@ -2,7 +2,7 @@ import { Media } from '@/constants/media';
 import cl from 'classnames';
 import { useEffect, useState } from 'react';
 import styles from './styles.module.css';
-import { sendEvent } from '@/utils/aemTracker';
+import { sendEvent } from '@/utils';
 
 export const MediaIcon = ({
   mediaList,

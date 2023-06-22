@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 import styles from './styles.module.css';
-import { sendEvent } from '@/utils/aemTracker';
+import { sendEvent } from '@/utils';
 
 interface PageInfoProps {
   title?: string;

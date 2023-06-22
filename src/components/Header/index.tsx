@@ -9,7 +9,7 @@ import { MediaIcon } from '../MediaIcon';
 import { NavAnchor } from '@/constants/home';
 import store from '@/store';
 import styles from './styles.module.css';
-import { sendEvent } from '@/utils/aemTracker';
+import { sendEvent } from '@/utils';
 
 export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
   const [drawerActive, setDrawerActive] = useState(false);

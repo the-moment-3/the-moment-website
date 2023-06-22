@@ -7,7 +7,7 @@ import { useI18n } from '@/hooks/use-i18n';
 import { useSiwe } from '@/hooks/use-siwe';
 import { NOW, TASK_START_TIME, FREE_MINT_START_TIME, FREE_MINT_END_TIME } from '@/constants/time';
 import styles from './styles.module.css';
-import { sendEvent } from '@/utils/aemTracker';
+import { sendEvent } from '@/utils';
 
 const Steps = ({ label, date, price, active }: { label?: string; date?: string; price?: string; active: boolean }) => {
   return (

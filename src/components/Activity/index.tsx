@@ -5,7 +5,7 @@ import { Banner } from '../Banner';
 import { Gallery } from './componnets';
 import styles from './styles.module.css';
 import { Link } from '@ice/runtime';
-import { sendEvent } from '@/utils/aemTracker';
+import { sendEvent } from '@/utils';
 
 export const Activity = ({ pageIdx }: { pageIdx?: string }) => {
   const refs = useAnimation({
