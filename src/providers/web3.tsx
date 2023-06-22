@@ -58,7 +58,13 @@ const SiweSession = () => {
 
 export const Web3Provider = ({ children }) => (
   <WagmiConfig config={wagmiConfig}>
-    <RainbowKitProvider chains={chains} modalSize="compact">
+    <RainbowKitProvider
+      chains={chains}
+      modalSize="compact"
+      appInfo={{
+        appName: 'The Moment3!',
+      }}
+    >
       <SiweSession />
       {children}
     </RainbowKitProvider>
