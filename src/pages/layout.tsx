@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { Outlet, useLocation, useSearchParams, history } from 'ice';
 import { isMobile } from 'react-device-detect';
-import { isProd } from '@/constants';
+import { isProd, HTTP_API_HOST } from '@/constants';
 import { Web3Provider } from '@/providers/web3';
 import { useSiwe } from '@/hooks/use-siwe';
+import { isCookieEnabled } from '@/utils';
 import store from '@/store';
 import loadScript from 'load-script';
 
@@ -37,16 +38,21 @@ function CheckRoutes() {
     }
   }, [autoSignInFinished, address]);
 
-  // 在开发环境或使用参数，注入 VConsole 便于手机调试
+  // 在开发环境或使用参数注入 VConsole（便于手机调试）
   useEffect(() => {
     if (searchParams.get('vconsole') === '1' || (isMobile && !isProd)) {
       loadScript('https://unpkg.com/vconsole@latest/dist/vconsole.min.js', (e) => {
         if (e) {
           console.log('[vconsole] load error:', e);
         } else {
-          console.log('[vconsole] load success.');
           // @ts-ignore
           new window.VConsole();
+          // console.log('[vconsole] load success.');
+          // console.log('HTTP_API_HOST:', HTTP_API_HOST);
+          // console.log('isProd:', isProd);
+          // console.log('host:', window.location.host);
+          // console.log('userAgent:', navigator.userAgent);
+          // console.log('isCookieEnabled:', isCookieEnabled);
         }
       });
     }
