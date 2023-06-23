@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'ice';
 import { Drawer, Button } from 'antd';
 import { useEffect, useState } from 'react';
 import { mediaList } from '@/constants/media';
@@ -12,15 +13,13 @@ import cl from 'classnames';
 import styles from './styles.module.css';
 
 export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
+  const { pathname } = useLocation();
+  const { shortAddress, loading, connect, disconnect } = useWallet();
   const [drawerActive, setDrawerActive] = useState(false);
   const [opacity, setOpacity] = useState(0.6);
-  const { shortAddress, loading, connect, disconnect } = useWallet();
   const [i18n, i18nDispatcher] = store.useModel('i18n');
   const translate = useI18n();
 
-  navAnchor = navAnchor.filter((item) => {
-    return item.title !== 'Homepage';
-  });
   useEffect(() => {
     handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
@@ -122,9 +121,17 @@ export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
               );
             })}
           </Drawer>
-          <a href="#/homepage" className={styles.logoContainer}>
-            <div className={styles.logo}></div>
-          </a>
+          <Link
+            to="/"
+            className={styles.logoContainer}
+            onClick={() => {
+              if (pathname === '/') {
+                window.scrollTo(0, 0);
+              }
+            }}
+          >
+            <div className={styles.logo} />
+          </Link>
         </div>
         <div className={styles.nav}>
           {navAnchor.map((item) => {
@@ -134,7 +141,17 @@ export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
                 key={item.key}
                 onClick={() => sendEvent(`PC_${translate.get(item.title)}_Header`)}
               >
-                <a href={item.href}>{translate.get(item.title)}</a>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    // Hack: 等跳转到首页之后，再加 hash 锚点
+                    setTimeout(() => {
+                      window.location.hash = item.href;
+                    });
+                  }}
+                >
+                  {translate.get(item.title)}
+                </Link>
               </div>
             );
           })}

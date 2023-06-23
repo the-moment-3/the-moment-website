@@ -6,11 +6,6 @@ export interface NavAnchor {
 
 export const navAnchor: NavAnchor[] = [
   {
-    key: '/homepage',
-    href: '#/homepage',
-    title: 'Homepage',
-  },
-  {
     key: '/vision',
     href: '#/vision',
     title: 'nftwebsite_shouye.Vision',
