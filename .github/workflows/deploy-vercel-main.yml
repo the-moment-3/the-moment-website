@@ -1,7 +1,10 @@
-name: deploy-to-vercel
-on: push
+name: deploy-vercel-main
+on:
+  push:
+    branches:
+      - main
 jobs:
-  # 同步到私人仓库 main 分支，然后就会自动触发 vercel 部署
+  # 同步到私人仓库，然后就会自动触发 vercel 部署
   git-sync:
     runs-on: ubuntu-latest
     steps:

@@ -1,0 +1,18 @@
+name: deploy-vercel-pre
+on:
+  push:
+    branches:
+      - pre
+jobs:
+  # 同步到私人仓库，然后就会自动触发 vercel 部署
+  git-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git-sync
+        uses: wei/git-sync@v3
+        with:
+          source_repo: 'git@github.com:the-moment-3/the-moment-website.git'
+          source_branch: 'pre'
+          destination_repo: 'git@github.com:mfer725/the-moment-website.git'
+          destination_branch: 'pre'
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
