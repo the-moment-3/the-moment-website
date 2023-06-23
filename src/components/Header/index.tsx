@@ -147,8 +147,15 @@ export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
             loading={loading}
             disabled={loading}
             onClick={() => {
-              sendEvent('PC_ConnectWallet_Header');
-              shortAddress ? disconnect() : connect();
+              shortAddress
+                ? () => {
+                    sendEvent('PC_DisconnectWallet_Header');
+                    disconnect();
+                  }
+                : () => {
+                    sendEvent('PC_ConnectWallet_Header');
+                    connect();
+                  };
             }}
           >
             <div className={styles.btnIcon}></div>
