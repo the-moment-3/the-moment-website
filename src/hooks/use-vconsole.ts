@@ -12,7 +12,7 @@ const egg = `
 | |  | |  | |\\ \\      / /| |  | |  | || |         | |   \\ \\| |     | |              / |
 | |  | |  | | \\ ˉˉˉˉˉˉ / | |  | |  | ||  ˉˉˉˉˉˉˉˉ|| |    \\ ˉ |     | |     |ˉˉˉˉˉˉˉˉ  /
 ˉˉˉ  ˉˉˉ  ˉˉˉ  ˉˉˉˉˉˉˉˉ  ˉˉˉ  ˉˉˉ  ˉˉˉ ˉˉˉˉˉˉˉˉˉˉ  ˉ      ˉˉˉ      ˉˉˉ      ˉˉˉˉˉˉˉˉˉˉ
-Every Moment is Non-Fungible.
+The Moment3! to da moon ~ ๑乛◡乛๑
 `;
 
 export function useVConsole() {

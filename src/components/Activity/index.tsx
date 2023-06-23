@@ -16,7 +16,7 @@ export const Activity = () => {
   const translate = useI18n();
   return (
     <>
-      <div className={styles.pageWrapper} id={getPageIdByLink('/vision')}>
+      <div className={styles.pageWrapper} id={getPageIdByLink('/season_one')}>
         <Gallery />
         <div className={styles.container}>
           <div className={styles.blooming}></div>
