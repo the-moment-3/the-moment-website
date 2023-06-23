@@ -10,7 +10,7 @@ export default () => {
   return (
     <div className={styles.home}>
       <Header navAnchor={navAnchor} />
-      <Homepage pageIdx={getPageId('/homepage')} />
+      <Homepage />
       <Activity pageIdx={getPageId('/vision')} />
       <Culture pageIdx={getPageId('/whitepaper')} />
       <Roadmap pageIdx={getPageId('/roadmap')} />

@@ -1,8 +1,6 @@
 import { defineAppConfig } from 'ice';
 
-export default defineAppConfig(() => ({
-  router: {
-    type: 'hash',
-    basename: '/', // 部署到 WebApp 之后要强制设置一下 basename
-  },
-}));
+// 应用入口配置文档
+// https://ice3.alibaba-inc.com/v3/docs/guide/basic/app
+
+export default defineAppConfig(() => ({}));
