@@ -8,7 +8,7 @@ export interface NavAnchor {
 
 export const navAnchor: NavAnchor[] = [
   {
-    link: '/vision',
+    link: '/season_one',
     title: 'nftwebsite_shouye.Vision',
   },
   {
