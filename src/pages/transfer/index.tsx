@@ -1,5 +1,5 @@
-import { LANGUAGES } from '@/constants/i18n';
 import store from '@/store';
+import { LANGUAGES } from '@/constants/i18n';
 
 export default () => {
   const [i18n] = store.useModel('i18n');
