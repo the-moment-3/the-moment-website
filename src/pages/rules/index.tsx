@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Header } from '@/components/Header';
-import { navAnchor } from '@/constants/home';
+import { navAnchor } from '@/utils/nav';
 import { useI18n } from '@/hooks/use-i18n';
 import store from '@/store';
 import classNames from 'classnames';

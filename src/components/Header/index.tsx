@@ -6,13 +6,13 @@ import { LANGUAGES, TIMEZONE, TIMEZONE_ABBR } from '@/constants/i18n';
 import { useI18n } from '@/hooks/use-i18n';
 import { useWallet } from '@/hooks/use-wallet';
 import { MediaIcon } from '../MediaIcon';
-import { NavAnchor } from '@/constants/home';
+import { navAnchor } from '@/utils/nav';
 import { sendEvent } from '@/utils/aes';
 import store from '@/store';
 import cl from 'classnames';
 import styles from './styles.module.css';
 
-export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
+export const Header = () => {
   const { pathname } = useLocation();
   const { shortAddress, loading, connect, disconnect } = useWallet();
   const [drawerActive, setDrawerActive] = useState(false);
@@ -108,53 +108,31 @@ export const Header = ({ navAnchor }: { navAnchor: NavAnchor[] }) => {
             }}
           >
             <div style={{ height: '80px' }} />
-            {navAnchor.map((item) => {
-              return (
-                <a className={styles.drawerNavItemWrapper} href={item.href} key={item.key}>
-                  <div
-                    className={styles.drawerNavItem}
-                    onClick={() => sendEvent(`PC_${translate.get(item.title)}_Drawer`)}
-                  >
-                    {translate.get(item.title)}
-                  </div>
-                </a>
-              );
-            })}
+            {navAnchor.map((item) => (
+              <Link className={styles.drawerNavItemWrapper} to={item.link} key={item.link}>
+                <div
+                  className={styles.drawerNavItem}
+                  onClick={() => sendEvent(`PC_${translate.get(item.title)}_Drawer`)}
+                >
+                  {translate.get(item.title)}
+                </div>
+              </Link>
+            ))}
           </Drawer>
-          <Link
-            to="/"
-            className={styles.logoContainer}
-            onClick={() => {
-              if (pathname === '/') {
-                window.scrollTo(0, 0);
-              }
-            }}
-          >
+          <Link to="/" onClick={() => window.scrollTo(0, 0)} className={styles.logoContainer}>
             <div className={styles.logo} />
           </Link>
         </div>
         <div className={styles.nav}>
-          {navAnchor.map((item) => {
-            return (
-              <div
-                className={styles.navItem}
-                key={item.key}
-                onClick={() => sendEvent(`PC_${translate.get(item.title)}_Header`)}
-              >
-                <Link
-                  to="/"
-                  onClick={() => {
-                    // Hack: 等跳转到首页之后，再加 hash 锚点
-                    setTimeout(() => {
-                      window.location.hash = item.href;
-                    });
-                  }}
-                >
-                  {translate.get(item.title)}
-                </Link>
-              </div>
-            );
-          })}
+          {navAnchor.map((item) => (
+            <div
+              className={styles.navItem}
+              key={item.link}
+              onClick={() => sendEvent(`PC_${translate.get(item.title)}_Header`)}
+            >
+              <Link to={item.link}>{translate.get(item.title)}</Link>
+            </div>
+          ))}
         </div>
         <div className={styles.right}>
           <MediaIcon mediaList={mediaList} size={48} cln={styles.media} pos={'Header'} />

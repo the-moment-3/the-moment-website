@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Footer, FreeMintSteps, Header, WinnerListBtn } from '@/components';
-import { navAnchor } from '@/constants/home';
+import { navAnchor } from '@/utils/nav';
 import { NOW } from '@/constants/time';
 import { StepStatus } from '@/constants/freeMintSteps';
 import { useStepStatus } from '@/hooks/use-step-status';
