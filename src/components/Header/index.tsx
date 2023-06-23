@@ -141,24 +141,22 @@ export const Header = () => {
         </div>
         <div className={styles.right}>
           <MediaIcon mediaList={mediaList} size={48} cln={styles.media} pos={'Header'} />
-          <div className={styles.translate} onClick={handleLangUpdate}></div>
+          <div className={styles.translate} onClick={handleLangUpdate} />
           <Button
             className={styles.wallet}
             loading={loading}
             disabled={loading}
             onClick={() => {
-              shortAddress
-                ? () => {
-                    sendEvent('PC_DisconnectWallet_Header');
-                    disconnect();
-                  }
-                : () => {
-                    sendEvent('PC_ConnectWallet_Header');
-                    connect();
-                  };
+              if (shortAddress) {
+                sendEvent('PC_DisconnectWallet_Header');
+                disconnect();
+              } else {
+                sendEvent('PC_ConnectWallet_Header');
+                connect();
+              }
             }}
           >
-            <div className={styles.btnIcon}></div>
+            <div className={styles.btnIcon} />
             {shortAddress || translate.get('nft_Connectwallet')}
           </Button>
         </div>
