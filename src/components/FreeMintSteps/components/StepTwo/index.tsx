@@ -57,12 +57,12 @@ export const StepTwo = ({ status }: { status: StepStatus }) => {
           content: translate.get('nftwebsite_open.notqualified'),
         },
         {
-          content: `${dayjs(publicStartTime).tz(time.timezone).format('YYYY.MM.DD HH:mm')} (${time.timezoneAbbr})`, //mds
+          content: translate.get('nftwebsite_open.75'),
         },
       ],
       bottom: {
         title: translate.get('nftwebsite_overtime.havent'),
-        content: translate.get('nftwebsite_overtime.havent1'),
+        content: translate.get('nftwebsite_thankyou'),
       },
     },
     [StepStatus.LOST]: {
@@ -71,12 +71,12 @@ export const StepTwo = ({ status }: { status: StepStatus }) => {
           content: translate.get('nftwebsite_lost.Lost'),
         },
         {
-          content: `${dayjs(publicStartTime).tz(time.timezone).format('YYYY.MM.DD HH:mm')} (${time.timezoneAbbr})`, //mds
+          content: translate.get('nftwebsite_zhu_76'),
         },
       ],
       bottom: {
         title: translate.get('nftwebsite_lost.not'),
-        content: translate.get('nftwebsite_lost.not1'),
+        content: translate.get('nftwebsite_thankyou'),
       },
     },
     [StepStatus.MINTED]: { top: [], bottom: { title: '', content: '' } },

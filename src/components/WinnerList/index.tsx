@@ -1,13 +1,8 @@
+import { useState, useEffect, useMemo } from 'react';
 import { Button, Modal } from 'antd';
-import { useState, useEffect } from 'react';
 import { useI18n } from '@/hooks/use-i18n';
 import { GetLotteryWinnerListResponse } from '@/services/korea-nft/lottery-winner-list';
 import styles from './styles.module.css';
-
-const _winnerList = new Array(2000).fill(0).map((item, idx) => {
-  return { luckyNumber: idx, address: '0x****123' };
-});
-
 interface WinnerListBtnProp {
   winnerList: GetLotteryWinnerListResponse[];
   cln: string;
@@ -17,6 +12,19 @@ export const WinnerListBtn = ({ winnerList, cln }: WinnerListBtnProp) => {
   const [visible, setVisible] = useState(false);
   const [showAddress, setShowAddress] = useState(true);
   const translate = useI18n();
+
+  const _winnerList = new Array(2000).fill(0).map((item, idx) => {
+    return { luckyNumber: idx, address: '0xaB553Cb9393752a314d48b55506BF7912b4B1Cdb' };
+  });
+
+  const formattedWinnerList = useMemo(() => {
+    return _winnerList.map((winner) => {
+      return {
+        ...winner,
+        address: `${winner.address.slice(0, 4)}...${winner.address.slice(-3)}`,
+      };
+    });
+  }, winnerList);
 
   useEffect(() => {
     handleWindowResize();
@@ -55,7 +63,7 @@ export const WinnerListBtn = ({ winnerList, cln }: WinnerListBtnProp) => {
           <div className={styles.box}></div>
           <div className={styles.title}> {translate.get('nftwebsite_lost.Winnerslist')} </div>
           <div className={styles.list}>
-            {_winnerList.map((winner, idx) => {
+            {formattedWinnerList.map((winner, idx) => {
               return (
                 <div className={styles.winner} key={idx}>
                   <span className={styles.luckyNumber}>#{winner.luckyNumber}</span>
@@ -65,7 +73,7 @@ export const WinnerListBtn = ({ winnerList, cln }: WinnerListBtnProp) => {
             })}
           </div>
           <Button className={styles.closeBtn} onClick={handleCancel}>
-            Close
+            {translate.get('nftwebsite_number.close')}
           </Button>
         </div>
       </Modal>
