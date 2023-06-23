@@ -37,6 +37,10 @@ function CheckRoutes() {
 
   useVConsole();
 
+  useEffect(() => {
+    console.log('test vercel deploy. ^_^');
+  }, []);
+
   return null;
 }
 
