@@ -28,7 +28,7 @@ export function useWallet() {
   }, [wagmiAddress]);
 
   useEffect(() => {
-    if (isConnected || isDisconnected) {
+    if (!autoConnectFinished && (isConnected || isDisconnected)) {
       setAutoConnectFinished(true);
     }
   }, [isConnected, isDisconnected]);
