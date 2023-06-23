@@ -1,22 +1,22 @@
 import { useRef } from 'react';
 import { useAnimation } from '@/hooks/use-animation';
 import { useI18n } from '@/hooks/use-i18n';
+import { getPageIdByLink } from '@/utils/nav';
 import { Banner } from '../Banner';
 import { Gallery } from './componnets';
 import styles from './styles.module.css';
 import { Link } from '@ice/runtime';
 import { sendEvent } from '@/utils/aes';
 
-export const Activity = ({ pageIdx }: { pageIdx?: string }) => {
+export const Activity = () => {
   const refs = useAnimation({
     cooperationWrapper: { heightOffsetRatio: 0.8, className: styles.fadeIn, ref: useRef<HTMLDivElement>(null) },
     btnWrapper: { heightOffsetRatio: 0.8, className: styles.fadeIn, ref: useRef<HTMLDivElement>(null) },
   });
   const translate = useI18n();
-
   return (
     <>
-      <div className={styles.pageWrapper} id={pageIdx}>
+      <div className={styles.pageWrapper} id={getPageIdByLink('/vision')}>
         <Gallery />
         <div className={styles.container}>
           <div className={styles.blooming}></div>

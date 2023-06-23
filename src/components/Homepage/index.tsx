@@ -56,7 +56,7 @@ const Steps = ({ label, date, price, active }: { label?: string; date?: string; 
   );
 };
 
-export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
+export const Homepage = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const { address, connect } = useWallet();
   const [{ taskStartTime, allowListStartTime, allowListEndTime, publicStartTime }] = store.useModel('onchain');
@@ -100,7 +100,7 @@ export const Homepage = ({ pageIdx }: { pageIdx?: string }) => {
   };
 
   return (
-    <div className={styles.pageWrapper} id={pageIdx}>
+    <div className={styles.pageWrapper}>
       <div className={styles.container}>
         <div className={styles.blooming}></div>
         <div className={styles.leftSide}>

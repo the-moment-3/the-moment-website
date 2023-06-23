@@ -10,11 +10,8 @@ export const Minted = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <div className={styles.title}>{translate.get('nftwebsite_free.participating')}</div>
-
-        <div className={styles.content}>{`${dayjs(publicStartTime).tz(time.timezone).format('YYYY.MM.DD HH:mm')} (${
-          time.timezoneAbbr
-        })`}</div>
+        <div className={styles.title}>{translate.get('nftwebsite_thankyou')}</div>
+        <div className={styles.content}>{translate.get('nftwebsite_zhu_76')}</div>
       </div>
       <div className={styles.nftBox}></div>
     </div>

@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import classNames from 'classnames';
 import { Header } from '@/components/Header';
-import { navAnchor } from '@/constants/home';
+import { navAnchor } from '@/utils/nav';
 import { useI18n } from '@/hooks/use-i18n';
 import store from '@/store';
-import styles from './rules.module.css';
+import classNames from 'classnames';
+import styles from './index.module.css';
 
 export default () => {
   const translate = useI18n();

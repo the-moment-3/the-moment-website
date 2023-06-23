@@ -1,4 +1,8 @@
-import IndexPage from '.';
+import { useLocation } from 'ice';
+import { isNavLink } from '@/utils/nav';
+import IndexPage from './index';
 
-// Hack: for anchor
-export default IndexPage;
+export default () => {
+  const { pathname } = useLocation();
+  return isNavLink(pathname) ? <IndexPage /> : '404 Not Found.';
+};

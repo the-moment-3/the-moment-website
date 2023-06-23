@@ -2,11 +2,12 @@ import { useRef } from 'react';
 import { Banner } from '../Banner';
 import { PageInfo } from '../PageInfo';
 import { useAnimation } from '@/hooks/use-animation';
+import { getPageIdByLink } from '@/utils/nav';
 import styles from './styles.module.css';
 import { useI18n } from '@/hooks/use-i18n';
 import { sendEvent } from '@/utils/aes';
 
-export const Culture = ({ pageIdx }: { pageIdx?: string }) => {
+export const Culture = () => {
   const refs = useAnimation({
     pageInfo: { heightOffsetRatio: 0.75, className: styles.fadeIn, ref: useRef<HTMLDivElement>(null) },
     btnWrapper: { heightOffsetRatio: 0.9, className: styles.fadeIn, ref: useRef<HTMLDivElement>(null) },
@@ -15,7 +16,7 @@ export const Culture = ({ pageIdx }: { pageIdx?: string }) => {
   const translate = useI18n();
   return (
     <>
-      <div className={styles.pageWrapper} id={pageIdx}>
+      <div className={styles.pageWrapper} id={getPageIdByLink('/whitepaper')}>
         <div className={styles.container}>
           <div className={styles.blooming}></div>
           <div className={styles.backgroundDots}></div>

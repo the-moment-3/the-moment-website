@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { PageInfo } from '../PageInfo';
 import { useAnimation } from '@/hooks/use-animation';
 import { useI18n } from '@/hooks/use-i18n';
+import { getPageIdByLink } from '@/utils/nav';
 import { Media } from '@/constants/media';
 import { MediaIcon } from '../MediaIcon';
 import styles from './styles.module.css';
@@ -14,7 +15,7 @@ export interface Member {
   linkedin?: Media;
 }
 
-export const Team = ({ pageIdx }: { pageIdx?: string }) => {
+export const Team = () => {
   const refs = useAnimation({
     pageInfo: { heightOffsetRatio: 0.8, className: styles.fadeIn, ref: useRef<HTMLDivElement>(null) },
     membersWrapper: { heightOffsetRatio: 0.8, className: styles.fadeIn, ref: useRef<HTMLDivElement>(null) },
@@ -72,7 +73,7 @@ export const Team = ({ pageIdx }: { pageIdx?: string }) => {
   ];
   return (
     <>
-      <div className={styles.pageWrapper} id={pageIdx}>
+      <div className={styles.pageWrapper} id={getPageIdByLink('/team')}>
         <div className={styles.container}>
           <div className={styles.blooming1}></div>
           <div className={styles.blooming2}></div>

@@ -3,9 +3,10 @@ import { PageInfo } from '../PageInfo';
 import { Banner } from '../Banner';
 import { useAnimation } from '@/hooks/use-animation';
 import { useI18n } from '@/hooks/use-i18n';
+import { getPageIdByLink } from '@/utils/nav';
 import styles from './styles.module.css';
 
-export const Roadmap = ({ pageIdx }: { pageIdx?: string }) => {
+export const Roadmap = () => {
   const roadmapRefs = [useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null)];
   const refs = useAnimation({
     pageInfo: { heightOffsetRatio: 0.8, className: styles.fadeInUp, ref: useRef<HTMLDivElement>(null) },
@@ -75,7 +76,7 @@ export const Roadmap = ({ pageIdx }: { pageIdx?: string }) => {
 
   return (
     <>
-      <div className={styles.pageWrapper} id={pageIdx}>
+      <div className={styles.pageWrapper} id={getPageIdByLink('/roadmap')}>
         <div className={styles.container}>
           <div className={styles.blooming1}></div>
           <div className={styles.blooming2}></div>
