@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'ice';
+import { Link } from 'ice';
 import { Drawer, Button } from 'antd';
 import { useEffect, useState } from 'react';
 import { mediaList } from '@/constants/media';
@@ -6,14 +6,13 @@ import { LANGUAGES, TIMEZONE, TIMEZONE_ABBR } from '@/constants/i18n';
 import { useI18n } from '@/hooks/use-i18n';
 import { useWallet } from '@/hooks/use-wallet';
 import { MediaIcon } from '../MediaIcon';
-import { navAnchor } from '@/utils/nav';
+import { navAnchor, scrollByLink } from '@/utils/nav';
 import { sendEvent } from '@/utils/aes';
 import store from '@/store';
 import cl from 'classnames';
 import styles from './styles.module.css';
 
 export const Header = () => {
-  const { pathname } = useLocation();
   const { shortAddress, loading, connect, disconnect } = useWallet();
   const [drawerActive, setDrawerActive] = useState(false);
   const [opacity, setOpacity] = useState(0.6);
@@ -112,7 +111,10 @@ export const Header = () => {
               <Link className={styles.drawerNavItemWrapper} to={item.link} key={item.link}>
                 <div
                   className={styles.drawerNavItem}
-                  onClick={() => sendEvent(`PC_${translate.get(item.title)}_Drawer`)}
+                  onClick={() => {
+                    sendEvent(`PC_${translate.get(item.title)}_Drawer`);
+                    scrollByLink(item.link);
+                  }}
                 >
                   {translate.get(item.title)}
                 </div>
@@ -128,7 +130,10 @@ export const Header = () => {
             <div
               className={styles.navItem}
               key={item.link}
-              onClick={() => sendEvent(`PC_${translate.get(item.title)}_Header`)}
+              onClick={() => {
+                sendEvent(`PC_${translate.get(item.title)}_Header`);
+                scrollByLink(item.link);
+              }}
             >
               <Link to={item.link}>{translate.get(item.title)}</Link>
             </div>

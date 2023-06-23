@@ -40,13 +40,15 @@ export function getPageIdByLink(link: string) {
   return link;
 }
 
+export function scrollByLink(link: string) {
+  setTimeout(() => {
+    document.getElementById(link)?.scrollIntoView();
+  }, 300);
+}
+
 export function useNavPageScroll() {
   const { pathname } = useLocation();
   useEffect(() => {
-    if (isNavLink(pathname)) {
-      setTimeout(() => {
-        document.getElementById(pathname)?.scrollIntoView();
-      }, 300);
-    }
+    if (isNavLink(pathname)) scrollByLink(pathname);
   }, [pathname]);
 }
