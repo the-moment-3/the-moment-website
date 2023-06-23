@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import store from '@/store';
 import { Footer, FreeMintSteps, Header, WinnerListBtn } from '@/components';
 import { navAnchor } from '@/constants/home';
 import { NOW } from '@/constants/time';
 import { StepStatus } from '@/constants/freeMintSteps';
 import { useStepStatus } from '@/hooks/use-step-status';
-import styles from './mint.module.css';
 import { useI18n } from '@/hooks/use-i18n';
+import store from '@/store';
+import styles from './index.module.css';
 
 export default () => {
   const [onchainData] = store.useModel('onchain');
