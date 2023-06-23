@@ -1,7 +1,6 @@
-import store from '@/store';
 import { LANGUAGES } from '@/constants/i18n';
-
-import styles from './transfer.module.css';
+import store from '@/store';
+import styles from './index.module.css';
 
 export default () => {
   const [i18n] = store.useModel('i18n');
