@@ -86,6 +86,8 @@
 }
 
 .stepContainer {
+  position: relative;
+  animation: fade-in-up 1.5s forwards;
   display: flex;
   max-width: 1200px;
   .step {
@@ -109,5 +111,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    bottom: -15%;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
   }
 }
