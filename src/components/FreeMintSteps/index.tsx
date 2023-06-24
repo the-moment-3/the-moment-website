@@ -3,6 +3,7 @@ import { StepStatus } from '@/constants/freeMintSteps';
 import { useI18n } from '@/hooks/use-i18n';
 import { FreeMintAndPublicSale, Minted, StepOne, StepTwo } from './components';
 import styles from './styles.module.css';
+import { sendEvent } from '@/utils/aes';
 
 export const FreeMintSteps = ({ status }: { status: StepStatus }) => {
   const translate = useI18n();
@@ -38,7 +39,9 @@ export const FreeMintSteps = ({ status }: { status: StepStatus }) => {
                     <>
                       <div>{translate.get('nftwebsite_tasks.allowlist')}</div>
                       <Link to={'/rules'}>
-                        <div className={styles.questionIcon}>?</div>
+                        <div className={styles.questionIcon} onClick={() => sendEvent('PC_Rules_StepOne')}>
+                          ?
+                        </div>
                       </Link>
                     </>
                   ) : (
