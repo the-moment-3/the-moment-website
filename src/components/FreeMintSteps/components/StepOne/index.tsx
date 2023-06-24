@@ -6,6 +6,7 @@ import { useI18n } from '@/hooks/use-i18n';
 import { evoke } from '@/utils/evoke';
 import store from '@/store';
 import styles from './styles.module.css';
+import { sendEvent } from '@/utils/aes';
 
 export const StepOne = ({ status }: { status: StepStatus }) => {
   const [taskData] = store.useModel('task');
@@ -32,6 +33,7 @@ export const StepOne = ({ status }: { status: StepStatus }) => {
   };
 
   const handleClick = () => {
+    sendEvent('PC_Transfer_StepOneMobile');
     const url = 'https://web3.aliexpress.com/korea-nft/home?_immersiveMode=true';
     evoke(`aliexpress://goto?url=${encodeURIComponent(url)}`, {
       fail: () => {
@@ -71,7 +73,9 @@ export const StepOne = ({ status }: { status: StepStatus }) => {
       {status === StepStatus.TASK_IN_PROGRESS &&
         (!isMobile ? (
           <Link to={'/transfer'}>
-            <div className={styles.goNowButton}>{translate.get('nftwebsite_open.gonow')}</div>
+            <div className={styles.goNowButton} onClick={() => sendEvent('PC_Transfer_StepOne')}>
+              {translate.get('nftwebsite_open.gonow')}
+            </div>
           </Link>
         ) : (
           <div className={styles.goNowButton} onClick={handleClick}>

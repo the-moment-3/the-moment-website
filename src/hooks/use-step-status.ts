@@ -5,6 +5,7 @@ import dayjs from 'dayjs';
 
 export const useStepStatus = (now: number | dayjs.Dayjs, onchainData: OnchainData): StepStatus => {
   const [taskData] = store.useModel('task');
+  if (!onchainData.collectionSize) return StepStatus.TASK_IN_PROGRESS;
   //before task end
   if (dayjs(now).diff(onchainData.taskEndTime) < 0) {
     if (onchainData?.allowListTotalAmount > 0) {
