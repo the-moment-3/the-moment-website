@@ -19,7 +19,7 @@ export default () => {
         background: `#1c1c1b url(${imgSrc[i18n.lang]})  center center/cover no-repeat`,
       }}
     >
-      <Header navAnchor={navAnchor} />
+      <Header />
     </div>
   );
 };
