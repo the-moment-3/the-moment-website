@@ -6,7 +6,7 @@ import { Banner } from '../Banner';
 import { Gallery } from './componnets';
 import styles from './styles.module.css';
 import { Link } from '@ice/runtime';
-import { sendEvent } from '@/utils/aes';
+import { sumEvent } from '@/utils/arms';
 
 export const Activity = () => {
   const refs = useAnimation({
@@ -25,7 +25,7 @@ export const Activity = () => {
             <div className={styles.desc}>{translate.get('nftwebsite_introduc')}</div>
           </div>
           <Link to={'/rules'}>
-            <div className={styles.btnWrapper} ref={refs['btnWrapper']} onClick={() => sendEvent('PC_Rules_Vision')}>
+            <div className={styles.btnWrapper} ref={refs['btnWrapper']} onClick={() => sumEvent('PC_Rules_Vision')}>
               {translate.get('nft_Learnmore')}
             </div>
           </Link>

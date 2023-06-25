@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 import styles from './styles.module.css';
-import { sendEvent } from '@/utils/aes';
+import { sumEvent } from '@/utils/arms';
 
 interface PageInfoProps {
   title?: string;
@@ -21,7 +21,7 @@ export const PageInfo = forwardRef((props: PageInfoProps, ref: React.RefObject<H
             <div
               className={styles.icon}
               style={{ background: `url(${icon.img}) no-repeat center`, backgroundSize: 'contain' }}
-              onClick={() => sendEvent(`PC_Whitepaper_${pos}`)}
+              onClick={() => sumEvent(`PC_Whitepaper_${pos}`)}
             ></div>
           </a>
         )}

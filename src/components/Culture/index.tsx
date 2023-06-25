@@ -5,7 +5,7 @@ import { useAnimation } from '@/hooks/use-animation';
 import { getPageIdByLink } from '@/utils/nav';
 import styles from './styles.module.css';
 import { useI18n } from '@/hooks/use-i18n';
-import { sendEvent } from '@/utils/aes';
+import { sumEvent } from '@/utils/arms';
 
 export const Culture = () => {
   const refs = useAnimation({
@@ -36,7 +36,7 @@ export const Culture = () => {
               <div
                 className={styles.btnWrapper}
                 ref={refs['btnWrapper']}
-                onClick={() => sendEvent('PC_Discord_Whitepaper')}
+                onClick={() => sumEvent('PC_Discord_Whitepaper')}
               >
                 <div className={styles.icon}></div>
                 <span>{translate.get('nftwebsite_introduc.JoinDiscord')}</span>

@@ -7,7 +7,7 @@ import { useI18n } from '@/hooks/use-i18n';
 import { useWallet } from '@/hooks/use-wallet';
 import { MediaIcon } from '../MediaIcon';
 import { navAnchor, scrollByLink } from '@/utils/nav';
-import { sendEvent } from '@/utils/aes';
+import { sumEvent } from '@/utils/arms';
 import store from '@/store';
 import cl from 'classnames';
 import styles from './styles.module.css';
@@ -47,7 +47,7 @@ export const Header = () => {
   };
 
   const handleLangUpdate = () => {
-    sendEvent('PC_Translate_Header');
+    sumEvent('PC_Translate_Header');
     i18nDispatcher.update({
       lang: i18n.lang === LANGUAGES.EN ? LANGUAGES.KO : LANGUAGES.EN,
       time:
@@ -112,7 +112,7 @@ export const Header = () => {
                 <div
                   className={styles.drawerNavItem}
                   onClick={() => {
-                    sendEvent(`PC_${translate.get(item.title)}_Drawer`);
+                    sumEvent(`PC_${translate.get(item.title)}_Drawer`);
                     scrollByLink(item.link);
                   }}
                 >
@@ -131,7 +131,7 @@ export const Header = () => {
               className={styles.navItem}
               key={item.link}
               onClick={() => {
-                sendEvent(`PC_${translate.get(item.title)}_Header`);
+                sumEvent(`PC_${translate.get(item.title)}_Header`);
                 scrollByLink(item.link);
               }}
             >
@@ -148,10 +148,10 @@ export const Header = () => {
             disabled={loading}
             onClick={() => {
               if (shortAddress) {
-                sendEvent('PC_DisconnectWallet_Header');
+                sumEvent('PC_DisconnectWallet_Header');
                 disconnect();
               } else {
-                sendEvent('PC_ConnectWallet_Header');
+                sumEvent('PC_ConnectWallet_Header');
                 connect();
               }
             }}
