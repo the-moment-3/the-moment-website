@@ -1,6 +1,5 @@
 import store from '@/store';
 import { Header } from '@/components';
-import { navAnchor } from '@/utils/nav';
 import { LANGUAGES } from '@/constants/i18n';
 
 export default () => {
@@ -19,7 +18,7 @@ export default () => {
         background: `#1c1c1b url(${imgSrc[i18n.lang]})  center center/cover no-repeat`,
       }}
     >
-      <Header navAnchor={navAnchor} />
+      <Header />
     </div>
   );
 };
