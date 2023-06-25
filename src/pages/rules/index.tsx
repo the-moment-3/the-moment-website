@@ -28,7 +28,7 @@ export default () => {
   ];
   return (
     <>
-      <Header navAnchor={navAnchor} />
+      <Header />
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.content}>

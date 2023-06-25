@@ -1,11 +1,12 @@
 import store from '@/store';
+import { Header } from '@/components';
 import { LANGUAGES } from '@/constants/i18n';
 
 export default () => {
   const [i18n] = store.useModel('i18n');
   const imgSrc = {
-    [LANGUAGES.EN]: 'https://img.alicdn.com/imgextra/i4/O1CN01hYIz3T1iMKkWWSNyh_!!6000000004398-2-tps-3285-1350.png',
-    [LANGUAGES.KO]: 'https://img.alicdn.com/imgextra/i4/O1CN01tTVB2m1SXINNrTnNU_!!6000000002256-2-tps-3285-1350.png',
+    [LANGUAGES.EN]: 'https://img.alicdn.com/imgextra/i1/O1CN018qYfbI1IAihKVzATc_!!6000000000853-2-tps-3285-1350.png',
+    [LANGUAGES.KO]: 'https://img.alicdn.com/imgextra/i4/O1CN01gO6kuf1Z7pfPVrzx6_!!6000000003148-2-tps-3285-1350.png',
   };
 
   return (
@@ -14,10 +15,10 @@ export default () => {
       style={{
         width: '100vw',
         height: '100vh',
-        background: `url(${imgSrc[i18n.lang]}) no-repeat center center`,
-        backgroundSize: 'cover',
-        backgroundColor: '#1c1c1b',
+        background: `#1c1c1b url(${imgSrc[i18n.lang]})  center center/cover no-repeat`,
       }}
-    ></div>
+    >
+      <Header />
+    </div>
   );
 };
