@@ -2,7 +2,7 @@ import { Media } from '@/constants/media';
 import cl from 'classnames';
 import { useEffect, useState } from 'react';
 import styles from './styles.module.css';
-import { sendEvent } from '@/utils/aes';
+import { sumEvent } from '@/utils/arms';
 
 export const MediaIcon = ({
   mediaList,
@@ -53,7 +53,7 @@ export const MediaIcon = ({
             key={media.name}
             style={{ width: iconSize, height: iconSize, backgroundColor: bgc }}
           >
-            <a href={media.url} target="_blank" onClick={() => sendEvent(`PC_${media.name}_${pos}`)}>
+            <a href={media.url} target="_blank" onClick={() => sumEvent(`PC_${media.name}_${pos}`)}>
               <img
                 src={media.icon}
                 alt={media.name}

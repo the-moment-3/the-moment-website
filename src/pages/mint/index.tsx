@@ -19,7 +19,7 @@ export default () => {
 
   return (
     <div className={styles.wrapper}>
-      <Header navAnchor={navAnchor} />
+      <Header />
       <div className={styles.container} data-testid={currStepStatus}>
         {[StepStatus.WIN, StepStatus.MINTED, StepStatus.FREE_MINT_FOR_ALL].includes(currStepStatus) ? (
           currStepStatus === StepStatus.FREE_MINT_FOR_ALL ? (

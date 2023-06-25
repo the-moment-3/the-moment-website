@@ -7,7 +7,7 @@ import { useI18n } from '@/hooks/use-i18n';
 import { useWallet } from '@/hooks/use-wallet';
 import { NOW, TASK_START_TIME, FREE_MINT_START_TIME, FREE_MINT_END_TIME } from '@/constants/time';
 import styles from './styles.module.css';
-import { sendEvent } from '@/utils/aes';
+import { sumEvent } from '@/utils/arms';
 
 const Steps = ({ label, date, price, active }: { label?: string; date?: string; price?: string; active: boolean }) => {
   return (
@@ -83,7 +83,7 @@ export const Homepage = () => {
   ];
 
   const openInfo = () => {
-    sendEvent('PC_MintBeforeTaskStart_Homepage');
+    sumEvent('PC_MintBeforeTaskStart_Homepage');
     messageApi.open({
       className: styles.message,
       type: 'info',
@@ -128,7 +128,7 @@ export const Homepage = () => {
             {address ? (
               hasTaskStart ? (
                 <Link to="/mint">
-                  <button onClick={() => sendEvent('PC_MintAfterTaskStart_Homepage')}>
+                  <button onClick={() => sumEvent('PC_MintAfterTaskStart_Homepage')}>
                     {translate.get('nftwebsite_zhuzao.Mintnow')}
                   </button>
                 </Link>
@@ -138,7 +138,7 @@ export const Homepage = () => {
             ) : (
               <button
                 onClick={() => {
-                  sendEvent('PC_ConeectWallet_Homepage');
+                  sumEvent('PC_ConeectWallet_Homepage');
                   connect();
                 }}
               >
