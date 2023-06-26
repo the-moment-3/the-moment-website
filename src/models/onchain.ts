@@ -17,6 +17,7 @@ export default createModel({
     allowListPrice: 0,
     publicStartTime: 0,
     publicPrice: 0,
+    publicDisplayPrice: 0,
     totalMintedAmount: 0,
     addressMintedAmount: 0,
     allowListRemainAmount: 0,

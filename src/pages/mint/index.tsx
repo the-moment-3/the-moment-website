@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { Footer, FreeMintSteps, Header, WinnerListBtn } from '@/components';
-import { navAnchor } from '@/utils/nav';
 import { NOW } from '@/constants/time';
 import { StepStatus } from '@/constants/freeMintSteps';
 import { useStepStatus } from '@/hooks/use-step-status';
@@ -56,8 +55,8 @@ export default () => {
               <div className={styles.nftBox}></div>
               <div className={styles.processInfo}>
                 <div className={styles.remainder}>
-                  {translate.get('nftwebsite_open.only0', '', {
-                    0: onchainData.collectionSize - onchainData.totalMintedAmount,
+                  {translate.get('nft_home_qualified', '', {
+                    0: onchainData.taskFinishedCount,
                   })}
                 </div>
 
