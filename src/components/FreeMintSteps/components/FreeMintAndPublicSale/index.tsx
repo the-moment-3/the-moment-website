@@ -19,7 +19,7 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
       allowListRemainAmount,
       allowListTotalAmount,
       allowListMerkleProof,
-      publicPrice,
+      publicDisplayPrice,
     },
   ] = store.useModel('onchain');
   const translate = useI18n();
@@ -29,8 +29,8 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
     setCount(allowListRemainAmount);
   }, [allowListRemainAmount]);
 
-  const subtotal = NP.times(publicPrice, count);
-  const discount = NP.times(publicPrice, count);
+  const subtotal = NP.times(publicDisplayPrice, count);
+  const discount = NP.times(publicDisplayPrice, count);
   const total = NP.minus(subtotal, discount);
 
   const totalRemainAmount = NP.minus(collectionSize, totalMintedAmount);
@@ -115,7 +115,7 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
               <div className={styles.totalDesc}>{translate.get('nftwebsite_Congratulate.Amountdue')}</div>
             </div>
             <div className={styles.price}>
-              <div className={styles.nftPrice}>{`${publicPrice}ETH`}</div>
+              <div className={styles.nftPrice}>{`${publicDisplayPrice}ETH`}</div>
               <div className={styles.subtotal}>{`${subtotal}ETH`}</div>
               <div className={styles.discounts}>{`-${discount}ETH`}</div>
               <div className={styles.total}>{`${total}ETH`}</div>

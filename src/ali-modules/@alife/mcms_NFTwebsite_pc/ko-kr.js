@@ -193,5 +193,6 @@ module.exports = {
     "nftwebsite_Congratulate.mint": "NFT 수량",
     "nftwebsite_tase3": "미션 3: AliExpress 앱에 가입한 친구 3명 중 1명이 US $1 이상의 주문을 완료하게 도와주세요",
     "nftwebsite_public.Publicminting": "퍼블릭 민팅",
-    "nftwebsite_roadmap.quarterlyroll": "The Moment3!의 분기별 계획 및 방향을 공개합니다. 앞으로 단계적으로 선보일 다양한 베네핏을 기대해 주세요. 여러분과 함께 더 나은 커뮤니티를 만들어가길 기대합니다."
+    "nftwebsite_roadmap.quarterlyroll": "The Moment3!의 분기별 계획 및 방향을 공개합니다. 앞으로 단계적으로 선보일 다양한 베네핏을 기대해 주세요. 여러분과 함께 더 나은 커뮤니티를 만들어가길 기대합니다.",
+    "nft_home_qualified": "참가인원 {0}명",
 };

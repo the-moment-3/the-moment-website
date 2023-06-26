@@ -193,5 +193,6 @@ module.exports = {
     "providecontent": "The number of participants per group is equal to the total number of qualified divided by 2,000.",
     "nftwebsite_open.gonow": "Go now",
     "nftwebsite_limit.5nfts": "Limit: 5 NFTs per person",
-    "nftwebsite_schedule_free": "Allowlist pre-sale: Jul 6, 2023 15:00 (KST)"
+    "nftwebsite_schedule_free": "Allowlist pre-sale: Jul 6, 2023 15:00 (KST)",
+    "nft_home_qualified": "{0} have qualified",
 };
