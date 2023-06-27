@@ -93,7 +93,7 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
             {status === StepStatus.WIN && (
               <div className={styles.counterDesc}>
                 <ReplaceMDSText
-                  text={translate.get('nftwebsite_Congratulate.5NFTs')} // mds
+                  text={translate.get('nftwebsite_Congratulate.5NFTs')}
                   ReplacedTag={'span'}
                   replaceClassName={styles.discountTips}
                   replaceText={{
