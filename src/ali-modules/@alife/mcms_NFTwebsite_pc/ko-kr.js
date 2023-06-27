@@ -56,7 +56,7 @@ module.exports = {
     "nftwebsite_tasks.Complete": "한정판 NFT 증정 이벤트에 참여하세요",
     "nftwebsite_team.Teamunitesveterans": "저희 The Moment3!는 다양한 배경에서 수많은 경험에 도전해 본 여러 분야의 베테랑들이 모여 하나의 목소리를 내는 팀입니다. 책임감과 사명을 가지고 새로운 에픽, The Moment3! NFT를 이뤄내겠습니다. ",
     "nftwebsite_free.Jul7": "2023년 7월 7일 15:00(한국시간)",
-    "nftwebsite_Congratulate.5NFTs": "NFT {1}개 무료 획득. 얼리버드 혜택으로 최대 5개까지 민팅해 보세요.",
+    "nftwebsite_Congratulate.5NFTs": "{0} 개 무료 획득.",
     "nftwebsite_team.FounderCobe": "파운더 Cobe",
     "nftwebsite_lost.Won": "당첨",
     "nftwebsite_culture.story": "모든 순간의 선택이 모여 \"내\"가 됩니다. 그렇기에 모든 순간은 무엇과도 바꿀 수 없는 소중하고 특별한 것입니다. 체인 속 영원히 변함없는 모든 순간을 담은 The Moment3! NFT를 만나보세요. \nThe Moment3!는 커뮤니티와 함께 테마를 선정하고, 같은 비전을 공유하는 더 큰 프로젝트, 단체 및 기업과 협업하여 유니크한 컬렉션을 선보일 예정입니다.",

@@ -131,7 +131,7 @@ module.exports = {
     "nftwebsite_public.title": "The Moment3!",
     "nftwebsite_culture.story1": "The choices you make in every moment add up to you, and that's why every moment is so precious and special. Meet The Moment3! NFT, which captures all the eternal moments in your chain.",
     "nftwebsite_introduc.learnmore": "Learn more",
-    "nftwebsite_Congratulate.5NFTs": "Early qualifiers can mint up to 5 NFTs. You can mint up to {1} NFTs for free. ",
+    "nftwebsite_Congratulate.5NFTs": "You can mint up to {0} for free. ",
     "nftwebsite_lost.Lost": "Lost ",
     "nftwebsite_team.MaggieC": "MaggieC",
     "nftwebsite_tasks.allowlist": "Get added to the allowlist",
