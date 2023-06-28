@@ -7,7 +7,7 @@ import store from '@/store';
 import styles from './styles.module.css';
 
 export const StepTwo = ({ status }: { status: StepStatus }) => {
-  const [{ lotteryTime, publicStartTime }] = store.useModel('onchain');
+  const [{ allowListCount }] = store.useModel('onchain');
   const [{ time }] = store.useModel('i18n');
   const translate = useI18n();
 
@@ -18,7 +18,7 @@ export const StepTwo = ({ status }: { status: StepStatus }) => {
       }[];
       bottom: {
         title: string | undefined;
-        content: string | undefined;
+        content: string | number | undefined;
       };
     };
   };
@@ -34,7 +34,7 @@ export const StepTwo = ({ status }: { status: StepStatus }) => {
       ],
       bottom: {
         title: translate.get('nftwebsite_tasks.winners1'),
-        content: '4500',
+        content: allowListCount,
       },
     },
     [StepStatus.TASK_COMPLETED]: {
@@ -48,7 +48,7 @@ export const StepTwo = ({ status }: { status: StepStatus }) => {
       ],
       bottom: {
         title: translate.get('nftwebsite_tasks.winners1'),
-        content: '4500',
+        content: allowListCount,
       },
     },
     [StepStatus.TASK_NOT_COMPLETED]: {

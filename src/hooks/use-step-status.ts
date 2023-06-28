@@ -29,6 +29,6 @@ export const useStepStatus = (now: number | dayjs.Dayjs, onchainData: OnchainDat
     }
     //after end of allow list mint
   } else {
-    return StepStatus.FREE_MINT_FOR_ALL;
+    return onchainData?.addressMintedAmount ? StepStatus.MINTED : StepStatus.FREE_MINT_FOR_ALL;
   }
 };
