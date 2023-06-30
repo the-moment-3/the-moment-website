@@ -40,7 +40,7 @@ export default () => {
             <div className={styles.subtitle}>{translate.get('nftwebsite_rules.mintingschedule')}</div>
             <div className={styles.desc}>
               {translate.get('nftwebsite_rules.allowlist')}{' '}
-              <span className={styles.descBold}>{translate.get('nftwebsite_rules.75')}</span>
+              <span className={styles.descBold}>{translate.get('nftwebsite_homepage_freemint_start_time')}</span>
             </div>
           </div>
           <div className={styles.content}>
@@ -107,7 +107,7 @@ export default () => {
             <div className={styles.title}>{translate.get('nftwebsite_rules.mintingschedule')}</div>
             <div className={styles.subTitleWrap}>
               <span className={styles.commonText}>{translate.get('nftwebsite_rules.allowlist')} </span>
-              <span className={styles.subTitleVal}> {translate.get('nftwebsite_rules.75')} </span>
+              <span className={styles.subTitleVal}> {translate.get('nftwebsite_homepage_freemint_start_time')} </span>
             </div>
 
             <div className={styles.title}>{translate.get('nftwebsite_rules.howtoqualify')}</div>
