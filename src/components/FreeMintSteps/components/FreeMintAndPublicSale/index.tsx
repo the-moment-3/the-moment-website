@@ -7,6 +7,7 @@ import { useMint } from '@/hooks/use-mint';
 import { ReplaceMDSText } from '@/components';
 import store from '@/store';
 import styles from './styles.module.css';
+import { LANGUAGES } from '@/constants/i18n';
 
 export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
   const [
@@ -23,10 +24,11 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
     },
   ] = store.useModel('onchain');
   const translate = useI18n();
+  const [i18n] = store.useModel('i18n');
 
   const [count, setCount] = useState(allowListRemainAmount);
   useEffect(() => {
-    setCount(allowListRemainAmount);
+    setCount(status === StepStatus.WIN ? allowListRemainAmount : 1);
   }, [allowListRemainAmount]);
 
   const subtotal = NP.times(publicDisplayPrice, count);
@@ -66,9 +68,9 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
               <button
                 className={cl({
                   [styles.minusBtn]: true,
-                  [styles.disabled]: status === StepStatus.WIN || count === 0,
+                  [styles.disabled]: true,
                 })}
-                disabled={status === StepStatus.WIN || count === 0}
+                disabled={true}
                 onClick={handleMinus}
               >
                 <div className={styles.minus}></div>
@@ -77,14 +79,9 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
               <button
                 className={cl({
                   [styles.addBtn]: true,
-                  [styles.disabled]:
-                    status === StepStatus.WIN ||
-                    count >= Math.min(perAddressMaxMintAmount - addressMintedAmount, totalRemainAmount),
+                  [styles.disabled]: true,
                 })}
-                disabled={
-                  status === StepStatus.WIN ||
-                  count >= Math.min(perAddressMaxMintAmount - addressMintedAmount, totalRemainAmount)
-                }
+                disabled={true}
                 onClick={handleAdd}
               >
                 <div className={styles.adds}>
@@ -93,15 +90,14 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
                 </div>
               </button>
             </div>
-            {status === StepStatus.FREE_MINT_FOR_ALL && (
+            {status === StepStatus.WIN && (
               <div className={styles.counterDesc}>
                 <ReplaceMDSText
-                  text={translate.get('nft_minted')} // mds
+                  text={translate.get('nftwebsite_Congratulate.5NFTs')}
                   ReplacedTag={'span'}
                   replaceClassName={styles.discountTips}
                   replaceText={{
-                    0: `${addressMintedAmount} NFTs`,
-                    1: `${Math.min(perAddressMaxMintAmount - addressMintedAmount, totalRemainAmount)} NFT(s)`,
+                    0: i18n.lang === LANGUAGES.EN ? `${allowListTotalAmount} NFT(s)` : `NFT ${allowListTotalAmount}`,
                   }}
                 />
               </div>
@@ -129,23 +125,29 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
             </button>
           </div>
           <div className={styles.mobileNftRemainer}>
-            {translate.get('nftwebsite_Congratulate.Remaining1', '', { 0: totalMintedAmount, 1: collectionSize })}
+            {translate.get('nftwebsite_Congratulate.Remaining1', '', {
+              0: collectionSize - totalMintedAmount,
+              1: collectionSize,
+            })}
           </div>
         </div>
         <div
           className={cl({
-            [styles.rightSide]: status === StepStatus.WIN,
-            [styles.rightSideLarger]: status === StepStatus.FREE_MINT_FOR_ALL,
+            [styles.rightSide]: status === StepStatus.FREE_MINT_FOR_ALL,
+            [styles.rightSideLarger]: status === StepStatus.WIN,
           })}
         >
           <div
             className={cl({
-              [styles.nftBox]: status === StepStatus.WIN,
-              [styles.nftBoxLarger]: status === StepStatus.FREE_MINT_FOR_ALL,
+              [styles.nftBox]: status === StepStatus.FREE_MINT_FOR_ALL,
+              [styles.nftBoxLarger]: status === StepStatus.WIN,
             })}
           />
           <div className={styles.nftRemainer}>
-            {translate.get('nftwebsite_Congratulate.Remaining1', '', { 0: totalMintedAmount, 1: collectionSize })}
+            {translate.get('nftwebsite_Congratulate.Remaining1', '', {
+              0: collectionSize - totalMintedAmount,
+              1: collectionSize,
+            })}
           </div>
         </div>
       </div>
