@@ -70,13 +70,13 @@ export const Homepage = () => {
   const timeLineSteps = [
     {
       label: translate.get('nftwebsite_zhu_freemint'),
-      date: translate.get('nftwebsite_zhu_75'),
+      date: translate.get('nftwebsite_homepage_freemint_start_time'),
       price: translate.get('nftwebsite_zhuzao.free'),
       active: true,
     },
     {
       label: translate.get('nftwebsite_zhu_freeend'),
-      date: translate.get('nftwebsite_zhu_76'),
+      date: translate.get('nftwebsite_homepage_freemint_end_time'),
       price: translate.get('nftwebsite_zhuzao.free'),
       active: hasFreeMintEnd,
     },

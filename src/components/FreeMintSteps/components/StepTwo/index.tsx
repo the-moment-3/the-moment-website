@@ -71,7 +71,7 @@ export const StepTwo = ({ status }: { status: StepStatus }) => {
           content: translate.get('nftwebsite_lost.Lost'),
         },
         {
-          content: translate.get('nftwebsite_zhu_76'),
+          content: translate.get('nftwebsite_homepage_freemint_end_time'),
         },
       ],
       bottom: {
