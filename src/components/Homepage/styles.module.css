@@ -84,6 +84,7 @@
   }
 
   .connectBtn {
+    gap: 32px;
     margin-bottom: 144px;
     button {
       width: 220px;
@@ -91,6 +92,19 @@
       font-size: 16px;
       border-radius: 16px;
       font-weight: 700;
+    }
+    .thirdpartyExchange {
+      width: 220px;
+      height: 48px;
+      border-radius: 16px;
+      background: #3d3d3d
+        url(https://img.alicdn.com/imgextra/i3/O1CN016WOI0p1Nky7unQtQf_!!6000000001609-2-tps-696-242.png) center
+        center/25% no-repeat;
+    }
+    .thirdpartyExchange:hover {
+      background: #bdea4d
+        url(https://img.alicdn.com/imgextra/i4/O1CN01wEsHct1MonpTKUGqH_!!6000000001482-2-tps-696-242.png) center
+        center/25% no-repeat;
     }
   }
   .message {
@@ -190,6 +204,7 @@
   }
 
   .connectBtn {
+    gap: 2.66666667vw;
     margin-bottom: 12vw;
     button {
       width: 18.33333333vw;
@@ -197,6 +212,19 @@
       font-size: 1.33333333vw;
       border-radius: 1.33333333vw;
       font-weight: 700;
+    }
+    .thirdpartyExchange {
+      width: 18.33333333vw;
+      height: 4vw;
+      border-radius: 1.16666667vw;
+      background: #3d3d3d
+        url(https://img.alicdn.com/imgextra/i3/O1CN016WOI0p1Nky7unQtQf_!!6000000001609-2-tps-696-242.png) center
+        center/25% no-repeat;
+    }
+    .thirdpartyExchange:hover {
+      background: #bdea4d
+        url(https://img.alicdn.com/imgextra/i4/O1CN01wEsHct1MonpTKUGqH_!!6000000001482-2-tps-696-242.png) center
+        center/25% no-repeat;
     }
   }
   .message {
@@ -292,8 +320,9 @@
   }
 
   .connectBtn {
-    display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32rpx;
     margin-bottom: 64rpx;
     button {
       width: 624rpx;
@@ -301,6 +330,19 @@
       font-size: 30rpx;
       border-radius: 28rpx;
       font-weight: 900;
+    }
+    .thirdpartyExchange {
+      width: 624rpx;
+      height: 80rpx;
+      border-radius: 28rpx;
+      background: #3d3d3d
+        url(https://img.alicdn.com/imgextra/i3/O1CN016WOI0p1Nky7unQtQf_!!6000000001609-2-tps-696-242.png) center
+        center/15% no-repeat;
+    }
+    .thirdpartyExchange:hover {
+      background: #bdea4d
+        url(https://img.alicdn.com/imgextra/i4/O1CN01wEsHct1MonpTKUGqH_!!6000000001482-2-tps-696-242.png) no-repeat
+        center center/15%;
     }
   }
 
@@ -420,10 +462,17 @@
       .connectBtn {
         position: relative;
         animation: fade-in-right 1.25s forwards;
+        display: flex;
         button {
           color: #1c1c1b;
           background-color: #bdea4d;
           border: none;
+        }
+        .thirdpartyExchange {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #bdea4d;
         }
       }
     }
