@@ -68,7 +68,8 @@ export function useMint({ contractAddress, args, value = 0, channelCode = '' }: 
           args.amount,
           args.allowListTotalAmount,
           // viem 需要把 buffer 转成 hex 字符串，不然会报错
-          args.allowListMerkleProof.map((buffer) => '0x' + Buffer.from(buffer).toString('hex')),
+          [],
+          // args.allowListMerkleProof.map((buffer) => '0x' + Buffer.from(buffer).toString('hex')),
         ],
         // @ts-ignore
         // TODO: TypeError: Cannot convert a BigInt value to a number
