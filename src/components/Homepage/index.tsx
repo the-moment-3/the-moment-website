@@ -145,6 +145,14 @@ export const Homepage = () => {
                 {translate.get('nft_Connectwallet')}
               </button>
             )}
+            <a href="https://www.bybit.com/en-US/nft/detail/?id=2096644&source=aliexpress" target="_blank">
+              <div
+                className={styles.thirdpartyExchange}
+                onClick={() => {
+                  sumEvent('PC_ByBit_Homepage');
+                }}
+              ></div>
+            </a>
           </div>
         </div>
         <div className={styles.rightSide}>
