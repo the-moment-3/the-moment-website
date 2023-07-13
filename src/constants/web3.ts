@@ -1,6 +1,7 @@
-import { mainnet } from 'wagmi/chains';
+import { mainnet, goerli } from 'wagmi/chains';
+import { isProd } from './env';
 
-export const chain = mainnet;
+export const chain = isProd ? mainnet : goerli;
 
 export const chainId = chain.id;
 
