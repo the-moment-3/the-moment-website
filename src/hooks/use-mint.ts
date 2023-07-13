@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { message } from 'antd';
-import { utils } from 'ethers';
-import { usePublicClient, useWalletClient } from 'wagmi';
+import { providers, Contract } from 'ethers';
+import { useWalletClient, WalletClient } from 'wagmi';
 import { mintChannel } from '@/services/korea-nft/mint-channel';
 
 const abi = [
@@ -41,11 +41,23 @@ interface MintParams {
   channelCode?: string;
 }
 
+// https://wagmi.sh/react/ethers-adapters
+function walletClientToSigner(walletClient: WalletClient) {
+  const { account, chain, transport } = walletClient;
+  const network = {
+    chainId: chain.id,
+    name: chain.name,
+    ensAddress: chain.contracts?.ensRegistry?.address,
+  };
+  const provider = new providers.Web3Provider(transport, network);
+  const signer = provider.getSigner(account.address);
+  return signer;
+}
+
 export function useMint({ contractAddress, args, value = 0, channelCode = '' }: MintParams) {
   const [txHash, setTxHash] = useState('');
   const [loading, setLoading] = useState(false);
   const { data: walletClient } = useWalletClient();
-  const publicClient = usePublicClient();
 
   const mint = async () => {
     if (!walletClient) throw new Error('Missing wallet client.');
@@ -58,22 +70,16 @@ export function useMint({ contractAddress, args, value = 0, channelCode = '' }: 
     let txHash = '';
     // 发起铸造请求
     try {
-      const [walletAddress] = await walletClient.getAddresses();
-      const { request } = await publicClient.simulateContract({
-        account: walletAddress,
-        address: contractAddress as `0x${string}`,
-        functionName: 'mint',
-        abi,
-        args: [
-          args.amount,
-          args.allowListTotalAmount,
-          // viem 需要把 buffer 转成 hex 字符串，不然会报错
-          args.allowListMerkleProof.map((buffer) => '0x' + Buffer.from(buffer).toString('hex')),
-        ],
-        // @ts-ignore
-        value: utils.parseEther(value.toString()),
-      });
-      txHash = await walletClient.writeContract(request);
+      const signer = walletClientToSigner(walletClient);
+      const contract = new Contract(contractAddress, abi, signer);
+      const tx = await contract.mint(
+        args.amount,
+        args.allowListTotalAmount,
+        args.allowListMerkleProof.map((buffer) => '0x' + Buffer.from(buffer).toString('hex')),
+        { value },
+      );
+      await tx.wait();
+      txHash = tx.hash;
     } catch (e) {
       message.error('Mint failed.');
       console.log('[mint] error:', e);
