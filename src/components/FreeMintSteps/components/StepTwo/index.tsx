@@ -103,9 +103,9 @@ export const StepTwo = ({ status }: { status: StepStatus }) => {
                 })}
               >
                 {item.content}
-                {!index && status === StepStatus.LOST && (
+                {/* {!index && status === StepStatus.LOST && (
                   <WinnerListBtn winnerList={lotteryWinnerList} cln={styles.winnerList} />
-                )}
+                )} */}
               </div>
             </div>
           );

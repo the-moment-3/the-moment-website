@@ -37,7 +37,7 @@ export default () => {
               <div className={styles.title}>
                 <span>{translate.get('nftwebsite_Congratulate.lucky')}</span>
               </div>
-              <WinnerListBtn winnerList={lotteryWinnerList} cln={styles.winnerList} />
+              {/* <WinnerListBtn winnerList={lotteryWinnerList} cln={styles.winnerList} /> */}
             </div>
           )
         ) : (
