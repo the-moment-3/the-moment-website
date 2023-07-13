@@ -5,7 +5,7 @@ import { message } from 'antd';
 import store from '@/store';
 import { useI18n } from '@/hooks/use-i18n';
 import { useWallet } from '@/hooks/use-wallet';
-import { NOW, TASK_START_TIME, FREE_MINT_START_TIME, FREE_MINT_END_TIME } from '@/constants/time';
+import { NOW } from '@/constants/time';
 import styles from './styles.module.css';
 import { sumEvent } from '@/utils/arms';
 
@@ -59,13 +59,12 @@ const Steps = ({ label, date, price, active }: { label?: string; date?: string; 
 export const Homepage = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const { address, connect } = useWallet();
-  const [{ taskStartTime, allowListStartTime, allowListEndTime, publicStartTime }] = store.useModel('onchain');
+  const [{ taskStartTime, allowListEndTime }] = store.useModel('onchain');
   const translate = useI18n();
 
   const hasTaskStart = dayjs(NOW).diff(taskStartTime) >= 0;
 
-  const hasFreeMintStart = dayjs(NOW).diff(FREE_MINT_START_TIME) >= 0;
-  const hasFreeMintEnd = dayjs(NOW).diff(FREE_MINT_END_TIME) >= 0;
+  const hasFreeMintEnd = dayjs(NOW).diff(allowListEndTime) >= 0;
 
   const timeLineSteps = [
     {
