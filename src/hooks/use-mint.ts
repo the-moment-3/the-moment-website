@@ -71,7 +71,9 @@ export function useMint({ contractAddress, args, value = 0, channelCode = '' }: 
           args.allowListMerkleProof.map((buffer) => '0x' + Buffer.from(buffer).toString('hex')),
         ],
         // @ts-ignore
-        value: utils.parseEther(value.toString()),
+        // TODO: TypeError: Cannot convert a BigInt value to a number
+        // value: utils.parseEther(value.toString()),
+        value,
       });
       txHash = await walletClient.writeContract(request);
     } catch (e) {
