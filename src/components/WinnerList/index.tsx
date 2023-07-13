@@ -4,7 +4,7 @@ import { useI18n } from '@/hooks/use-i18n';
 import { GetLotteryWinnerListResponse } from '@/services/korea-nft/lottery-winner-list';
 import styles from './styles.module.css';
 interface WinnerListBtnProp {
-  winnerList: GetLotteryWinnerListResponse[];
+  winnerList: GetLotteryWinnerListResponse;
   cln: string;
 }
 
@@ -13,15 +13,11 @@ export const WinnerListBtn = ({ winnerList, cln }: WinnerListBtnProp) => {
   const [showAddress, setShowAddress] = useState(true);
   const translate = useI18n();
 
-  const _winnerList = new Array(2000).fill(0).map((item, idx) => {
-    return { luckyNumber: idx, address: '0xaB553Cb9393752a314d48b55506BF7912b4B1Cdb' };
-  });
-
   const formattedWinnerList = useMemo(() => {
-    return _winnerList.map((winner) => {
+    return winnerList.map((winner) => {
       return {
         ...winner,
-        address: `${winner.address.slice(0, 4)}...${winner.address.slice(-3)}`,
+        formatEthereumAddress: `${winner.ethereumAddress.slice(0, 4)}...${winner.ethereumAddress.slice(-3)}`,
       };
     });
   }, winnerList);
@@ -66,8 +62,8 @@ export const WinnerListBtn = ({ winnerList, cln }: WinnerListBtnProp) => {
             {formattedWinnerList.map((winner, idx) => {
               return (
                 <div className={styles.winner} key={idx}>
-                  <span className={styles.luckyNumber}>#{winner.luckyNumber}</span>
-                  {showAddress && <span className={styles.address}>{winner.address}</span>}
+                  <span className={styles.luckyNumber}>#{winner.lotteryNumber}</span>
+                  {showAddress && <span className={styles.address}>{winner.formatEthereumAddress}</span>}
                 </div>
               );
             })}

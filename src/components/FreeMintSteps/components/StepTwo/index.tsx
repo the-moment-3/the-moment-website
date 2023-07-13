@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 
 export const StepTwo = ({ status }: { status: StepStatus }) => {
   const [{ allowListCount }] = store.useModel('onchain');
-  const [{ time }] = store.useModel('i18n');
+  const [{ lotteryWinnerList }] = store.useModel('task');
   const translate = useI18n();
 
   type StepContent = {
@@ -103,7 +103,9 @@ export const StepTwo = ({ status }: { status: StepStatus }) => {
                 })}
               >
                 {item.content}
-                {!index && status === StepStatus.LOST && <WinnerListBtn winnerList={[]} cln={styles.winnerList} />}
+                {/* {!index && status === StepStatus.LOST && (
+                  <WinnerListBtn winnerList={lotteryWinnerList} cln={styles.winnerList} />
+                )} */}
               </div>
             </div>
           );
