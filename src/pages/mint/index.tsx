@@ -9,6 +9,7 @@ import styles from './index.module.css';
 
 export default () => {
   const [onchainData] = store.useModel('onchain');
+  const [{ lotteryWinnerList }] = store.useModel('task');
   const currStepStatus = useStepStatus(NOW, onchainData);
   const translate = useI18n();
 
@@ -36,7 +37,7 @@ export default () => {
               <div className={styles.title}>
                 <span>{translate.get('nftwebsite_Congratulate.lucky')}</span>
               </div>
-              <WinnerListBtn winnerList={[]} cln={styles.winnerList} />
+              {/* <WinnerListBtn winnerList={lotteryWinnerList} cln={styles.winnerList} /> */}
             </div>
           )
         ) : (

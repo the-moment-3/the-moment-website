@@ -30,7 +30,7 @@ function CheckRoutes() {
       if (address) {
         fetchOnchainUserData();
         fetchTaskData();
-        fetchLotteryWinnerList();
+        // fetchLotteryWinnerList();
       }
     }
   }, [autoConnectFinished, address]);
