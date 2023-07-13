@@ -1,13 +1,16 @@
-import { StepStatus } from '@/constants/freeMintSteps';
 import cl from 'classnames';
 import NP from 'number-precision';
+import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
+import { StepStatus } from '@/constants/freeMintSteps';
 import { useI18n } from '@/hooks/use-i18n';
 import { useMint } from '@/hooks/use-mint';
 import { ReplaceMDSText } from '@/components';
 import store from '@/store';
-import styles from './styles.module.css';
+import { NOW } from '@/constants/time';
 import { LANGUAGES } from '@/constants/i18n';
+
+import styles from './styles.module.css';
 
 export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
   const [
@@ -21,6 +24,7 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
       allowListTotalAmount,
       allowListMerkleProof,
       publicDisplayPrice,
+      allowListStartTime,
     },
   ] = store.useModel('onchain');
   const translate = useI18n();
@@ -30,6 +34,8 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
   useEffect(() => {
     setCount(status === StepStatus.WIN ? allowListRemainAmount : 1);
   }, [allowListRemainAmount]);
+
+  const canMint = dayjs(NOW).diff(allowListStartTime) >= 0;
 
   const subtotal = NP.times(publicDisplayPrice, count);
   const discount = NP.times(publicDisplayPrice, count);
@@ -117,13 +123,15 @@ export const FreeMintAndPublicSale = ({ status }: { status: StepStatus }) => {
               <div className={styles.total}>{`${total}ETH`}</div>
             </div>
           </div>
-          <div className={styles.mintButton}>
-            <button onClick={mint}>
-              {status === StepStatus.WIN
-                ? translate.get('nftwebsite_zhuzao.Freemint')
-                : translate.get('nftwebsite_Congratulate.Mintnow')}
-            </button>
-          </div>
+          {canMint && (
+            <div className={styles.mintButton}>
+              <button onClick={mint}>
+                {status === StepStatus.WIN
+                  ? translate.get('nftwebsite_zhuzao.Freemint')
+                  : translate.get('nftwebsite_Congratulate.Mintnow')}
+              </button>
+            </div>
+          )}
           <div className={styles.mobileNftRemainer}>
             {translate.get('nftwebsite_Congratulate.Remaining1', '', {
               0: collectionSize - totalMintedAmount,
